@@ -25,23 +25,30 @@ namespace RPGLab.RPGLab
             if (GameManager.players.ContainsKey(Client.instance.myId))
             {
                 Vector2 GameWindowCenterPosition = GameManager.players[Client.instance.myId].position;
-                if (CurrentWindowPosition != GameWindowCenterPosition)
+                if (Vector2.Distance(CurrentWindowPosition, GameWindowCenterPosition)>10)
                 {
                     MapTileSprites2D.DestroyList();
-                    for (int i = -10; i < GameWindowCenterPosition.X + 10; i++)
+                    for (int i = -20; i < GameWindowCenterPosition.X + 20; i++)
                     {
-                        for (int j = -10; j < GameWindowCenterPosition.Y + 10; j++)
+                        for (int j = -20; j < GameWindowCenterPosition.Y + 20; j++)
                         {
-                            if (MainMap[(int)GameWindowCenterPosition.Y + j, (int)GameWindowCenterPosition.X + i] != ".")
+                            int x = (int)GameWindowCenterPosition.X + i;
+                            int y = (int)GameWindowCenterPosition.Y + j;
+                            if (x < 0)
                             {
-                                int x = (int)GameWindowCenterPosition.X + i;
-                                int y = (int)GameWindowCenterPosition.Y + j;
+                                x = 0;
+                            }
+                            if (y < 0)
+                            {
+                                y = 0;
+                            }
+                            if (MainMap[y, x] != ".")
+                            {
                                 string tileName = mapTileNames[Convert.ToInt32(MainMap[y, x])];
                                 for (int k = 0; k < mapTileColliders.Length; k++)
                                 {
                                     if (tileName.Contains(mapTileColliders[k]))
                                     {
-                                        new Collider(new Vector2(x, y), false);
                                     }
                                 }
                                 new MapTileSprites2D(new Vector2(x, y), new Vector2(98, 66), (Image)Properties.Resources.ResourceManager.GetObject("_" + MainMap[y, x]), tileName);
