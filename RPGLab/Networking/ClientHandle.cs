@@ -228,7 +228,6 @@ namespace RPGLab.Networking
                     }
                 }
             }
-
             GameManager.MonsterUpdate(respawn, monsterData);
         }
         public static void UpdateMonsterPosition(Packet _packet)
@@ -267,19 +266,24 @@ namespace RPGLab.Networking
             int monsterID = _packet.ReadInt();
             int damage = _packet.ReadInt();
             Vector2 position = _packet.ReadVector2();
-            int _fromClient = _packet.ReadInt();
+            int _toClient = _packet.ReadInt();
             int playerHealth = _packet.ReadInt();
-            if (Client.instance.myId == _fromClient)
+            if (Client.instance.myId == _toClient)
             {
-                if (damage != 0)
+                GameManager.players[_toClient].currentHitPoints = playerHealth;
+                if (monsters.ContainsKey(monsterID))
                 {
-                    AdventuresOnlineWindow.UpdateGameChatBox($"{monsters[monsterID].monsterName} hit {GameManager.players[_fromClient].username} {playerHealth} / {GameManager.players[_fromClient].maxHitPoints} for {damage} damage.");
-                }
-                if (damage == 0)
-                {
-                    AdventuresOnlineWindow.UpdateGameChatBox($"{monsters[monsterID].monsterName} missed {GameManager.players[_fromClient].username} {playerHealth} / {GameManager.players[_fromClient].maxHitPoints}.");
+                    if (damage != 0)
+                    {
+                        AdventuresOnlineWindow.UpdateGameChatBox($"{monsters[monsterID].monsterName} hit {GameManager.players[_toClient].username} for {damage} damage.");
+                    }
+                    if (damage == 0)
+                    {
+                        AdventuresOnlineWindow.UpdateGameChatBox($"{monsters[monsterID].monsterName} missed {GameManager.players[_toClient].username}.");
+                    }
                 }
             }
+            AdventuresOnlineWindow.UpdateNameLevelRaceLabel(_toClient);
         }
         public static void ChatBox(Packet _packet)
         {
