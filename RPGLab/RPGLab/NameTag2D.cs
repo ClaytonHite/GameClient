@@ -15,7 +15,7 @@ namespace RPGLab.RPGLab
         public string PlayerName = "";
         public Bitmap nameTag = null;
         public Font Font;
-        private static List<NameTag2D> NameTags;
+        private static List<NameTag2D> NameTags = new List<NameTag2D>();
         public NameTag2D(Vector2 Position, Vector2 Scale, string PlayerNames, string Tag)
         {
             this.Position = Position;
@@ -26,10 +26,6 @@ namespace RPGLab.RPGLab
             Bitmap sprite = new Bitmap((int)this.Scale.X, (int)this.Scale.Y);
             nameTag = sprite;
             RegisterNameTag(this);
-        }
-        public static void onLoad()
-        {
-            NameTags = new List<NameTag2D>();
         }
         public void DestroySelf()
         {

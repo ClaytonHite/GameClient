@@ -535,6 +535,10 @@ namespace RPGLab.Networking
             {
                 g.FillRectangle(new SolidBrush(Color.Red), shape.Position.X * 96, shape.Position.Y * 64, shape.Scale.X, shape.Scale.Y);
             }
+            foreach (MapTileSprites2D MapTileSprite in MapTileSprites2D.GetSprites())
+            {
+                g.DrawImage(MapTileSprite.Sprite, MapTileSprite.Position.X * 96, MapTileSprite.Position.Y * 64, MapTileSprite.Scale.X, MapTileSprite.Scale.Y);
+            }
             foreach (Sprite2D sprite in Sprite2D.GetSprites())
             {
                 g.DrawImage(sprite.Sprite, sprite.Position.X * 96, sprite.Position.Y * 64, sprite.Scale.X, sprite.Scale.Y);

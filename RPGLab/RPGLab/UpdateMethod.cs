@@ -9,12 +9,10 @@ namespace RPGLab.RPGLab
     {
         public void Start()
         {
-            Sprite2D.onLoad();
-            Shape2D.onLoad();
-            NameTag2D.onLoad();
         }
         public virtual void Update()
         {
+            TileMap.UpdateVisibleSprites();
             ThreadManager.UpdateMain();
             AdventuresOnlineWindow.loginWindow.UpdateForm();
             Combat.Combat.Update();

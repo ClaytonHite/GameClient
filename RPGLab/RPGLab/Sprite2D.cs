@@ -15,7 +15,7 @@ namespace RPGLab.RPGLab
         public Image Image;
         public string Tag = "";
         public Bitmap Sprite = null;
-        private static List<Sprite2D> Sprites;
+        private static List<Sprite2D> Sprites = new List<Sprite2D>();
         public Sprite2D(Vector2 Position, Vector2 Scale, Image CharImage, string Tag)
         {
             this.Position = Position;
@@ -29,10 +29,6 @@ namespace RPGLab.RPGLab
 
             Log.Info($"[SPRITE2D]({Tag}) - has been registered! at X{Position.X} Y{Position.Y}");
             RegisterSprite(this);
-        }
-        public static void onLoad()
-        {
-            Sprites = new List<Sprite2D>();
         }
         public void DestroySelf()
         {

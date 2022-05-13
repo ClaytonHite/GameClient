@@ -15,26 +15,41 @@ namespace RPGLab.RPGLab
         public static int mapSize;
         public static string[] mapTileNames = {"Grass", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DungeonFortress", "DungeonTower", "MainCity", "DeadTree", "GreenTree", "TealTree", "MapleTree", "Autumn Tree", "RedoTree", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "DoubleCabin", "Cabin", "TripleCabin", "MowedGrass", "Water", "SandWaterSW", "SandWaterSE", "SandWaterNE", "SandWaterNW", "Sand", "GrassWaterNW", "GrassWaterSW", "GrassWaterSE", "GrassWaterNE", "MountainSnow", "Mountain", "Mountain", "Mountain", "CaveEntrance", "MountainSnow" };
         static string[] mapTileColliders = { "Water", "Mountain" };
+        public bool UpdatePlayerLocation;
+        public static Vector2 CurrentWindowPosition = new Vector2(0, 0);
         public static void OnLoad()
         {
-            for (int i = 0; i < TileMap.MainMap.GetLength(1); i++)
+        }
+        public static void UpdateVisibleSprites()
+        {
+            if (GameManager.players.ContainsKey(Client.instance.myId))
             {
-                for (int j = 0; j < TileMap.MainMap.GetLength(0); j++)
+                Vector2 GameWindowCenterPosition = GameManager.players[Client.instance.myId].position;
+                if (CurrentWindowPosition != GameWindowCenterPosition)
                 {
-                    if (MainMap[j, i] != ".")
+                    MapTileSprites2D.DestroyList();
+                    for (int i = -10; i < GameWindowCenterPosition.X + 10; i++)
                     {
-                        string tileName = mapTileNames[Convert.ToInt32(MainMap[j, i])];
-                        for (int k = 0; k < mapTileColliders.Length; k++)
+                        for (int j = -10; j < GameWindowCenterPosition.Y + 10; j++)
                         {
-                            if (tileName.Contains(mapTileColliders[k]))
+                            if (MainMap[(int)GameWindowCenterPosition.Y + j, (int)GameWindowCenterPosition.X + i] != ".")
                             {
-                                new Collider(new Vector2(i, j), false);
+                                int x = (int)GameWindowCenterPosition.X + i;
+                                int y = (int)GameWindowCenterPosition.Y + j;
+                                string tileName = mapTileNames[Convert.ToInt32(MainMap[y, x])];
+                                for (int k = 0; k < mapTileColliders.Length; k++)
+                                {
+                                    if (tileName.Contains(mapTileColliders[k]))
+                                    {
+                                        new Collider(new Vector2(x, y), false);
+                                    }
+                                }
+                                new MapTileSprites2D(new Vector2(x, y), new Vector2(98, 66), (Image)Properties.Resources.ResourceManager.GetObject("_" + MainMap[y, x]), tileName);
                             }
                         }
-                        Vector2 imagePos = new Vector2(i, j);
-                        new Sprite2D(new Vector2(i, j), new Vector2(98, 66), (Image)Properties.Resources.ResourceManager.GetObject("_" + MainMap[j, i]), tileName);
                     }
                 }
+                CurrentWindowPosition = GameWindowCenterPosition;
             }
         }
         public static void LoadMapSprites(ImageList Images)

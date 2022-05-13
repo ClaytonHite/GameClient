@@ -12,7 +12,7 @@ namespace RPGLab.RPGLab
         public Vector2 Position = null;
         public Vector2 Scale = null;
         public string Tag = "";
-        private static List<Shape2D> Shapes;
+        private static List<Shape2D> Shapes = new List<Shape2D>();
 
         public Shape2D(Vector2 Position, Vector2 Scale, string Tag)
         {
@@ -22,10 +22,6 @@ namespace RPGLab.RPGLab
 
             Log.Info($"[SHAPE2D]({Tag}) - has been registered!");
             RegisterShape(this);
-        }
-        public static void onLoad()
-        {
-            Shapes = new List<Shape2D>();
         }
 
         public void DestroySelf()
