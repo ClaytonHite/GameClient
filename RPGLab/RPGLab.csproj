@@ -86,6 +86,7 @@
     <Compile Include="RPGLab\Collider.cs" />
     <Compile Include="RPGLab\Constants.cs" />
     <Compile Include="RPGLab\Log.cs" />
+    <Compile Include="RPGLab\MapTileSprites2DSecondThread.cs" />
     <Compile Include="RPGLab\MapTileSprites2D.cs" />
     <Compile Include="RPGLab\NameTag2D.cs" />
     <Compile Include="RPGLab\Player.cs" />

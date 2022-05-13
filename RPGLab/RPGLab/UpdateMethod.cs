@@ -12,7 +12,6 @@ namespace RPGLab.RPGLab
         }
         public virtual void Update()
         {
-            TileMap.UpdateVisibleSprites();
             ThreadManager.UpdateMain();
             AdventuresOnlineWindow.loginWindow.UpdateForm();
             Combat.Combat.Update();

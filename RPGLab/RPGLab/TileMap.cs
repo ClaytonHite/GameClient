@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPGLab.Networking;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,49 +16,32 @@ namespace RPGLab.RPGLab
         public static int mapSize;
         public static string[] mapTileNames = {"Grass", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DungeonFortress", "DungeonTower", "MainCity", "DeadTree", "GreenTree", "TealTree", "MapleTree", "Autumn Tree", "RedoTree", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "DoubleCabin", "Cabin", "TripleCabin", "MowedGrass", "Water", "SandWaterSW", "SandWaterSE", "SandWaterNE", "SandWaterNW", "Sand", "GrassWaterNW", "GrassWaterSW", "GrassWaterSE", "GrassWaterNE", "MountainSnow", "Mountain", "Mountain", "Mountain", "CaveEntrance", "MountainSnow" };
         static string[] mapTileColliders = { "Water", "Mountain" };
-        public bool UpdatePlayerLocation;
+        public static bool OpenNewThreadToUpdateMapTiles;
         public static Vector2 CurrentWindowPosition = new Vector2(0, 0);
         public static void OnLoad()
         {
-        }
-        public static void UpdateVisibleSprites()
-        {
-            if (GameManager.players.ContainsKey(Client.instance.myId))
+            for (int i = 0; i < mapSize; i++)
             {
-                Vector2 GameWindowCenterPosition = GameManager.players[Client.instance.myId].position;
-                if (Vector2.Distance(CurrentWindowPosition, GameWindowCenterPosition)>10)
+                for (int j = 0; j < mapSize; j++)
                 {
-                    MapTileSprites2D.DestroyList();
-                    for (int i = -20; i < GameWindowCenterPosition.X + 20; i++)
+                    int x = i;
+                    int y = j;
+                    if (MainMap[y, x] != ".")
                     {
-                        for (int j = -20; j < GameWindowCenterPosition.Y + 20; j++)
+                        string tileName = mapTileNames[Convert.ToInt32(MainMap[y, x])];
+                        for (int k = 0; k < mapTileColliders.Length; k++)
                         {
-                            int x = (int)GameWindowCenterPosition.X + i;
-                            int y = (int)GameWindowCenterPosition.Y + j;
-                            if (x < 0)
+                            if (tileName.Contains(mapTileColliders[k]))
                             {
-                                x = 0;
-                            }
-                            if (y < 0)
-                            {
-                                y = 0;
-                            }
-                            if (MainMap[y, x] != ".")
-                            {
-                                string tileName = mapTileNames[Convert.ToInt32(MainMap[y, x])];
-                                for (int k = 0; k < mapTileColliders.Length; k++)
-                                {
-                                    if (tileName.Contains(mapTileColliders[k]))
-                                    {
-                                    }
-                                }
-                                new MapTileSprites2D(new Vector2(x, y), new Vector2(98, 66), (Image)Properties.Resources.ResourceManager.GetObject("_" + MainMap[y, x]), tileName);
+                                new Collider(new Vector2(x, y), false);
                             }
                         }
+                        new MapTileSprites2D(new Vector2(x, y), new Vector2(98, 66), Convert.ToInt32(MainMap[y, x]), tileName);
+                        AdventuresOnlineWindow.LoadingBar(x, 200, true);
                     }
                 }
-                CurrentWindowPosition = GameWindowCenterPosition;
             }
+            AdventuresOnlineWindow.LoadingBar(200, 200, false);
         }
         public static void LoadMapSprites(ImageList Images)
         {

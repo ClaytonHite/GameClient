@@ -139,6 +139,7 @@ namespace RPGLab.Networking
             this.GameRenderer = new System.Windows.Forms.PictureBox();
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
+            this.LoadingStartBar = new System.Windows.Forms.ProgressBar();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.CreateCharacterPanel.SuspendLayout();
@@ -159,6 +160,7 @@ namespace RPGLab.Networking
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
+            this.LoginPanel.Controls.Add(this.LoadingStartBar);
             this.LoginPanel.Controls.Add(this.LoginLabelAccountInfoBoolean);
             this.LoginPanel.Controls.Add(this.CreateAccountButton);
             this.LoginPanel.Controls.Add(this.ConnectButton);
@@ -181,7 +183,7 @@ namespace RPGLab.Networking
             this.LoginLabelAccountInfoBoolean.Location = new System.Drawing.Point(844, 697);
             this.LoginLabelAccountInfoBoolean.MinimumSize = new System.Drawing.Size(200, 30);
             this.LoginLabelAccountInfoBoolean.Name = "LoginLabelAccountInfoBoolean";
-            this.LoginLabelAccountInfoBoolean.Size = new System.Drawing.Size(200, 30);
+            this.LoginLabelAccountInfoBoolean.Size = new System.Drawing.Size(200, 44);
             this.LoginLabelAccountInfoBoolean.TabIndex = 9;
             this.LoginLabelAccountInfoBoolean.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -216,7 +218,7 @@ namespace RPGLab.Networking
             this.UsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.UsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(119, 26);
+            this.UsernameLabel.Size = new System.Drawing.Size(228, 46);
             this.UsernameLabel.TabIndex = 4;
             this.UsernameLabel.Text = "Username :";
             // 
@@ -229,7 +231,7 @@ namespace RPGLab.Networking
             this.PasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.PasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(120, 26);
+            this.PasswordLabel.Size = new System.Drawing.Size(229, 46);
             this.PasswordLabel.TabIndex = 3;
             this.PasswordLabel.Text = "Password : ";
             // 
@@ -250,7 +252,7 @@ namespace RPGLab.Networking
             this.Password.MinimumSize = new System.Drawing.Size(200, 30);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(200, 30);
+            this.Password.Size = new System.Drawing.Size(200, 51);
             this.Password.TabIndex = 1;
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -260,7 +262,7 @@ namespace RPGLab.Networking
             this.Username.Location = new System.Drawing.Point(844, 466);
             this.Username.MinimumSize = new System.Drawing.Size(200, 30);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(200, 30);
+            this.Username.Size = new System.Drawing.Size(200, 51);
             this.Username.TabIndex = 0;
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -299,7 +301,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRejectionLabel.Location = new System.Drawing.Point(744, 838);
             this.CreateCharacterRejectionLabel.MinimumSize = new System.Drawing.Size(400, 30);
             this.CreateCharacterRejectionLabel.Name = "CreateCharacterRejectionLabel";
-            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 30);
+            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 44);
             this.CreateCharacterRejectionLabel.TabIndex = 18;
             this.CreateCharacterRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -358,7 +360,7 @@ namespace RPGLab.Networking
             this.CreateCharacterAvatarLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterAvatarLabel.Location = new System.Drawing.Point(654, 640);
             this.CreateCharacterAvatarLabel.Name = "CreateCharacterAvatarLabel";
-            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(148, 26);
+            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(281, 46);
             this.CreateCharacterAvatarLabel.TabIndex = 13;
             this.CreateCharacterAvatarLabel.Text = "Avatar :           ";
             // 
@@ -405,7 +407,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClass.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterClass.Name = "CreateCharacterClass";
             this.CreateCharacterClass.ReadOnly = true;
-            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterClass.TabIndex = 9;
             this.CreateCharacterClass.Text = "Fighter";
             this.CreateCharacterClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -417,7 +419,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRace.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterRace.Name = "CreateCharacterRace";
             this.CreateCharacterRace.ReadOnly = true;
-            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterRace.TabIndex = 8;
             this.CreateCharacterRace.Text = "Human";
             this.CreateCharacterRace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -431,7 +433,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClassLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterClassLabel.Location = new System.Drawing.Point(654, 571);
             this.CreateCharacterClassLabel.Name = "CreateCharacterClassLabel";
-            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(146, 26);
+            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(276, 46);
             this.CreateCharacterClassLabel.TabIndex = 7;
             this.CreateCharacterClassLabel.Text = "Class :            ";
             // 
@@ -466,7 +468,7 @@ namespace RPGLab.Networking
             this.CreateCharacterPlayerNameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterPlayerNameLabel.Location = new System.Drawing.Point(654, 459);
             this.CreateCharacterPlayerNameLabel.Name = "CreateCharacterPlayerNameLabel";
-            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(143, 26);
+            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(275, 46);
             this.CreateCharacterPlayerNameLabel.TabIndex = 4;
             this.CreateCharacterPlayerNameLabel.Text = "Player Name :";
             // 
@@ -479,7 +481,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRaceLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterRaceLabel.Location = new System.Drawing.Point(653, 515);
             this.CreateCharacterRaceLabel.Name = "CreateCharacterRaceLabel";
-            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(144, 26);
+            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(268, 46);
             this.CreateCharacterRaceLabel.TabIndex = 3;
             this.CreateCharacterRaceLabel.Text = "Race :            ";
             // 
@@ -499,7 +501,7 @@ namespace RPGLab.Networking
             this.CreateCharacterName.Location = new System.Drawing.Point(848, 456);
             this.CreateCharacterName.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterName.Name = "CreateCharacterName";
-            this.CreateCharacterName.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterName.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterName.TabIndex = 0;
             this.CreateCharacterName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -537,7 +539,7 @@ namespace RPGLab.Networking
             this.CharacterSelectDropdownBox.FormattingEnabled = true;
             this.CharacterSelectDropdownBox.Location = new System.Drawing.Point(848, 567);
             this.CharacterSelectDropdownBox.Name = "CharacterSelectDropdownBox";
-            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 32);
+            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 52);
             this.CharacterSelectDropdownBox.TabIndex = 14;
             this.CharacterSelectDropdownBox.SelectedValueChanged += new System.EventHandler(this.showSelectedDropdown_Click);
             // 
@@ -607,7 +609,7 @@ namespace RPGLab.Networking
             this.CharacterSelectCharacterInfo.Location = new System.Drawing.Point(832, 518);
             this.CharacterSelectCharacterInfo.MinimumSize = new System.Drawing.Size(230, 26);
             this.CharacterSelectCharacterInfo.Name = "CharacterSelectCharacterInfo";
-            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 26);
+            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 46);
             this.CharacterSelectCharacterInfo.TabIndex = 4;
             this.CharacterSelectCharacterInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -647,7 +649,7 @@ namespace RPGLab.Networking
             this.CreateAccountRejectionLabel.Location = new System.Drawing.Point(844, 700);
             this.CreateAccountRejectionLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountRejectionLabel.Name = "CreateAccountRejectionLabel";
-            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 44);
             this.CreateAccountRejectionLabel.TabIndex = 8;
             this.CreateAccountRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -661,7 +663,7 @@ namespace RPGLab.Networking
             this.CreateAccountLabel.Location = new System.Drawing.Point(844, 419);
             this.CreateAccountLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountLabel.Name = "CreateAccountLabel";
-            this.CreateAccountLabel.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountLabel.Size = new System.Drawing.Size(296, 46);
             this.CreateAccountLabel.TabIndex = 7;
             this.CreateAccountLabel.Text = "Create Account";
             this.CreateAccountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -697,7 +699,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountUsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.CreateAccountUsernameLabel.Name = "CreateAccountUsernameLabel";
-            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(119, 26);
+            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(228, 46);
             this.CreateAccountUsernameLabel.TabIndex = 4;
             this.CreateAccountUsernameLabel.Text = "Username :";
             // 
@@ -710,7 +712,7 @@ namespace RPGLab.Networking
             this.CreateAccountPasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountPasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.CreateAccountPasswordLabel.Name = "CreateAccountPasswordLabel";
-            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(120, 26);
+            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(229, 46);
             this.CreateAccountPasswordLabel.TabIndex = 3;
             this.CreateAccountPasswordLabel.Text = "Password : ";
             // 
@@ -731,7 +733,7 @@ namespace RPGLab.Networking
             this.CreateAccountPassword.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountPassword.Name = "CreateAccountPassword";
             this.CreateAccountPassword.PasswordChar = '*';
-            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 51);
             this.CreateAccountPassword.TabIndex = 1;
             this.CreateAccountPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -741,7 +743,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsername.Location = new System.Drawing.Point(844, 466);
             this.CreateAccountUsername.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountUsername.Name = "CreateAccountUsername";
-            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 51);
             this.CreateAccountUsername.TabIndex = 0;
             this.CreateAccountUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -856,80 +858,80 @@ namespace RPGLab.Networking
             // GamePanelPlayerNameLabel
             // 
             this.GamePanelPlayerNameLabel.AutoSize = true;
-            this.GamePanelPlayerNameLabel.Font = new System.Drawing.Font("Lucida Sans", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerNameLabel.Location = new System.Drawing.Point(1518, -2);
             this.GamePanelPlayerNameLabel.Name = "GamePanelPlayerNameLabel";
-            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(154, 32);
+            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(286, 63);
             this.GamePanelPlayerNameLabel.TabIndex = 0;
             this.GamePanelPlayerNameLabel.Text = "Caelaenor";
             // 
             // GamePanelPlayerLevelRaceClassLabel
             // 
             this.GamePanelPlayerLevelRaceClassLabel.AutoSize = true;
-            this.GamePanelPlayerLevelRaceClassLabel.Font = new System.Drawing.Font("Lucida Sans", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerLevelRaceClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerLevelRaceClassLabel.Location = new System.Drawing.Point(1518, 39);
             this.GamePanelPlayerLevelRaceClassLabel.Name = "GamePanelPlayerLevelRaceClassLabel";
-            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(365, 23);
+            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(652, 48);
             this.GamePanelPlayerLevelRaceClassLabel.TabIndex = 0;
             this.GamePanelPlayerLevelRaceClassLabel.Text = "Level 999 Dragonborn Barbarian";
             // 
             // GamePanelPlayerHealthLabel
             // 
             this.GamePanelPlayerHealthLabel.AutoSize = true;
-            this.GamePanelPlayerHealthLabel.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerHealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthLabel.Location = new System.Drawing.Point(1444, 86);
             this.GamePanelPlayerHealthLabel.Name = "GamePanelPlayerHealthLabel";
-            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(94, 23);
+            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(172, 48);
             this.GamePanelPlayerHealthLabel.TabIndex = 0;
             this.GamePanelPlayerHealthLabel.Text = "Health :";
             // 
             // GamePanelPlayerManaLabel
             // 
             this.GamePanelPlayerManaLabel.AutoSize = true;
-            this.GamePanelPlayerManaLabel.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerManaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaLabel.Location = new System.Drawing.Point(1444, 128);
             this.GamePanelPlayerManaLabel.Name = "GamePanelPlayerManaLabel";
-            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(82, 23);
+            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(153, 48);
             this.GamePanelPlayerManaLabel.TabIndex = 0;
             this.GamePanelPlayerManaLabel.Text = "Mana :";
             // 
             // GamePanelPlayerExperienceLabel
             // 
             this.GamePanelPlayerExperienceLabel.AutoSize = true;
-            this.GamePanelPlayerExperienceLabel.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerExperienceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceLabel.Location = new System.Drawing.Point(1444, 168);
             this.GamePanelPlayerExperienceLabel.Name = "GamePanelPlayerExperienceLabel";
-            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(138, 23);
+            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(264, 48);
             this.GamePanelPlayerExperienceLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceLabel.Text = "Experience :";
             // 
             // GamePanelPlayerHealthAmountLabel
             // 
             this.GamePanelPlayerHealthAmountLabel.AutoSize = true;
-            this.GamePanelPlayerHealthAmountLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerHealthAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthAmountLabel.Location = new System.Drawing.Point(1783, 86);
             this.GamePanelPlayerHealthAmountLabel.Name = "GamePanelPlayerHealthAmountLabel";
-            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(66, 18);
+            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(120, 37);
             this.GamePanelPlayerHealthAmountLabel.TabIndex = 0;
             this.GamePanelPlayerHealthAmountLabel.Text = "50/100";
             // 
             // GamePanelPlayerManaAmountLabel
             // 
             this.GamePanelPlayerManaAmountLabel.AutoSize = true;
-            this.GamePanelPlayerManaAmountLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerManaAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaAmountLabel.Location = new System.Drawing.Point(1783, 128);
             this.GamePanelPlayerManaAmountLabel.Name = "GamePanelPlayerManaAmountLabel";
-            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(66, 18);
+            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(120, 37);
             this.GamePanelPlayerManaAmountLabel.TabIndex = 0;
             this.GamePanelPlayerManaAmountLabel.Text = "50/100";
             // 
             // GamePanelPlayerExperienceAmountPercentLabel
             // 
             this.GamePanelPlayerExperienceAmountPercentLabel.AutoSize = true;
-            this.GamePanelPlayerExperienceAmountPercentLabel.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GamePanelPlayerExperienceAmountPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceAmountPercentLabel.Location = new System.Drawing.Point(1783, 168);
             this.GamePanelPlayerExperienceAmountPercentLabel.Name = "GamePanelPlayerExperienceAmountPercentLabel";
-            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(30, 18);
+            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(65, 37);
             this.GamePanelPlayerExperienceAmountPercentLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceAmountPercentLabel.Text = "0%";
             // 
@@ -1008,11 +1010,11 @@ namespace RPGLab.Networking
             this.GameChatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GameChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameChatBox.FormattingEnabled = true;
-            this.GameChatBox.ItemHeight = 24;
+            this.GameChatBox.ItemHeight = 44;
             this.GameChatBox.Location = new System.Drawing.Point(0, 843);
             this.GameChatBox.Name = "GameChatBox";
             this.GameChatBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.GameChatBox.Size = new System.Drawing.Size(1440, 148);
+            this.GameChatBox.Size = new System.Drawing.Size(1440, 136);
             this.GameChatBox.TabIndex = 0;
             this.GameChatBox.TabStop = false;
             this.GameChatBox.UseTabStops = false;
@@ -1022,7 +1024,7 @@ namespace RPGLab.Networking
             this.GameChatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameChatTextBox.Location = new System.Drawing.Point(0, 991);
             this.GameChatTextBox.Name = "GameChatTextBox";
-            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 26);
+            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 44);
             this.GameChatTextBox.TabIndex = 0;
             this.GameChatTextBox.TabStop = false;
             // 
@@ -1184,7 +1186,7 @@ namespace RPGLab.Networking
             this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterSkillPointsData.Location = new System.Drawing.Point(142, 81);
             this.enterSkillPointsData.Name = "enterSkillPointsData";
-            this.enterSkillPointsData.Size = new System.Drawing.Size(153, 20);
+            this.enterSkillPointsData.Size = new System.Drawing.Size(304, 37);
             this.enterSkillPointsData.TabIndex = 16;
             this.enterSkillPointsData.Text = "enterSkillPointsData";
             // 
@@ -1194,7 +1196,7 @@ namespace RPGLab.Networking
             this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterCharismaData.Location = new System.Drawing.Point(192, 277);
             this.enterCharismaData.Name = "enterCharismaData";
-            this.enterCharismaData.Size = new System.Drawing.Size(148, 20);
+            this.enterCharismaData.Size = new System.Drawing.Size(295, 37);
             this.enterCharismaData.TabIndex = 15;
             this.enterCharismaData.Text = "enterCharismaData";
             // 
@@ -1204,7 +1206,7 @@ namespace RPGLab.Networking
             this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharismaLabel.Location = new System.Drawing.Point(3, 277);
             this.CharismaLabel.Name = "CharismaLabel";
-            this.CharismaLabel.Size = new System.Drawing.Size(84, 20);
+            this.CharismaLabel.Size = new System.Drawing.Size(173, 37);
             this.CharismaLabel.TabIndex = 14;
             this.CharismaLabel.Text = "Charisma :";
             // 
@@ -1214,7 +1216,7 @@ namespace RPGLab.Networking
             this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterWisdomData.Location = new System.Drawing.Point(192, 247);
             this.enterWisdomData.Name = "enterWisdomData";
-            this.enterWisdomData.Size = new System.Drawing.Size(138, 20);
+            this.enterWisdomData.Size = new System.Drawing.Size(274, 37);
             this.enterWisdomData.TabIndex = 13;
             this.enterWisdomData.Text = "enterWisdomData";
             // 
@@ -1224,7 +1226,7 @@ namespace RPGLab.Networking
             this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WisdomLabel.Location = new System.Drawing.Point(3, 247);
             this.WisdomLabel.Name = "WisdomLabel";
-            this.WisdomLabel.Size = new System.Drawing.Size(74, 20);
+            this.WisdomLabel.Size = new System.Drawing.Size(152, 37);
             this.WisdomLabel.TabIndex = 12;
             this.WisdomLabel.Text = "Wisdom :";
             // 
@@ -1234,7 +1236,7 @@ namespace RPGLab.Networking
             this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterIntellectData.Location = new System.Drawing.Point(192, 217);
             this.enterIntellectData.Name = "enterIntellectData";
-            this.enterIntellectData.Size = new System.Drawing.Size(137, 20);
+            this.enterIntellectData.Size = new System.Drawing.Size(265, 37);
             this.enterIntellectData.TabIndex = 11;
             this.enterIntellectData.Text = "enterIntellectData";
             // 
@@ -1244,7 +1246,7 @@ namespace RPGLab.Networking
             this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntellectLabel.Location = new System.Drawing.Point(3, 217);
             this.IntellectLabel.Name = "IntellectLabel";
-            this.IntellectLabel.Size = new System.Drawing.Size(73, 20);
+            this.IntellectLabel.Size = new System.Drawing.Size(143, 37);
             this.IntellectLabel.TabIndex = 10;
             this.IntellectLabel.Text = "Intellect :";
             // 
@@ -1254,7 +1256,7 @@ namespace RPGLab.Networking
             this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterConstitutionData.Location = new System.Drawing.Point(192, 187);
             this.enterConstitutionData.Name = "enterConstitutionData";
-            this.enterConstitutionData.Size = new System.Drawing.Size(166, 20);
+            this.enterConstitutionData.Size = new System.Drawing.Size(327, 37);
             this.enterConstitutionData.TabIndex = 9;
             this.enterConstitutionData.Text = "enterConstitutionData";
             // 
@@ -1264,7 +1266,7 @@ namespace RPGLab.Networking
             this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConstitutionLabel.Location = new System.Drawing.Point(3, 187);
             this.ConstitutionLabel.Name = "ConstitutionLabel";
-            this.ConstitutionLabel.Size = new System.Drawing.Size(102, 20);
+            this.ConstitutionLabel.Size = new System.Drawing.Size(205, 37);
             this.ConstitutionLabel.TabIndex = 8;
             this.ConstitutionLabel.Text = "Constitution :";
             // 
@@ -1274,7 +1276,7 @@ namespace RPGLab.Networking
             this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterDexterityData.Location = new System.Drawing.Point(192, 157);
             this.enterDexterityData.Name = "enterDexterityData";
-            this.enterDexterityData.Size = new System.Drawing.Size(143, 20);
+            this.enterDexterityData.Size = new System.Drawing.Size(280, 37);
             this.enterDexterityData.TabIndex = 7;
             this.enterDexterityData.Text = "enterDexterityData";
             // 
@@ -1284,7 +1286,7 @@ namespace RPGLab.Networking
             this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DexterityLabel.Location = new System.Drawing.Point(3, 157);
             this.DexterityLabel.Name = "DexterityLabel";
-            this.DexterityLabel.Size = new System.Drawing.Size(79, 20);
+            this.DexterityLabel.Size = new System.Drawing.Size(158, 37);
             this.DexterityLabel.TabIndex = 6;
             this.DexterityLabel.Text = "Dexterity :";
             // 
@@ -1294,7 +1296,7 @@ namespace RPGLab.Networking
             this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterStrengthData.Location = new System.Drawing.Point(192, 127);
             this.enterStrengthData.Name = "enterStrengthData";
-            this.enterStrengthData.Size = new System.Drawing.Size(143, 20);
+            this.enterStrengthData.Size = new System.Drawing.Size(278, 37);
             this.enterStrengthData.TabIndex = 5;
             this.enterStrengthData.Text = "enterStrengthData";
             // 
@@ -1304,7 +1306,7 @@ namespace RPGLab.Networking
             this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StrengthLabel.Location = new System.Drawing.Point(3, 127);
             this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(79, 20);
+            this.StrengthLabel.Size = new System.Drawing.Size(156, 37);
             this.StrengthLabel.TabIndex = 4;
             this.StrengthLabel.Text = "Strength :";
             // 
@@ -1314,7 +1316,7 @@ namespace RPGLab.Networking
             this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterCarryingWeightData.Location = new System.Drawing.Point(192, 30);
             this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
-            this.EnterCarryingWeightData.Size = new System.Drawing.Size(189, 20);
+            this.EnterCarryingWeightData.Size = new System.Drawing.Size(378, 37);
             this.EnterCarryingWeightData.TabIndex = 3;
             this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
             // 
@@ -1324,7 +1326,7 @@ namespace RPGLab.Networking
             this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CapacityLabel.Location = new System.Drawing.Point(3, 30);
             this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(129, 20);
+            this.CapacityLabel.Size = new System.Drawing.Size(265, 37);
             this.CapacityLabel.TabIndex = 2;
             this.CapacityLabel.Text = "Carrying Weight :";
             // 
@@ -1334,7 +1336,7 @@ namespace RPGLab.Networking
             this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterExperienceData.Location = new System.Drawing.Point(192, 0);
             this.enterExperienceData.Name = "enterExperienceData";
-            this.enterExperienceData.Size = new System.Drawing.Size(160, 20);
+            this.enterExperienceData.Size = new System.Drawing.Size(314, 37);
             this.enterExperienceData.TabIndex = 1;
             this.enterExperienceData.Text = "enterExperienceData";
             // 
@@ -1344,7 +1346,7 @@ namespace RPGLab.Networking
             this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xpToLevelLabel.Location = new System.Drawing.Point(3, 0);
             this.xpToLevelLabel.Name = "xpToLevelLabel";
-            this.xpToLevelLabel.Size = new System.Drawing.Size(183, 20);
+            this.xpToLevelLabel.Size = new System.Drawing.Size(368, 37);
             this.xpToLevelLabel.TabIndex = 0;
             this.xpToLevelLabel.Text = "Experience to next level :";
             // 
@@ -1450,6 +1452,13 @@ namespace RPGLab.Networking
             this.monsterImageList.Images.SetKeyName(1, "1.png");
             this.monsterImageList.Images.SetKeyName(2, "2.png");
             // 
+            // LoadingStartBar
+            // 
+            this.LoadingStartBar.Location = new System.Drawing.Point(777, 392);
+            this.LoadingStartBar.Name = "LoadingStartBar";
+            this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
+            this.LoadingStartBar.TabIndex = 10;
+            // 
             // AdventuresOnlineWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -1460,11 +1469,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
             this.Controls.Add(this.CreateCharacterPanel);
+            this.Controls.Add(this.GamePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -1603,5 +1612,6 @@ namespace RPGLab.Networking
         private Button AddSkillButton3;
         private Button AddSkillButton2;
         public Panel SkillsPanel;
+        private ProgressBar LoadingStartBar;
     }
 }

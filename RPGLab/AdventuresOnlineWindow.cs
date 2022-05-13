@@ -27,6 +27,7 @@ namespace RPGLab.Networking
         static string PlayerRace;
         static string PlayerClass;
         static string PlayerAvatar;
+        static List<Image> ImageNumber = new List<Image>();
         public AdventuresOnlineWindow()
         {
             InitializeComponent();
@@ -40,6 +41,10 @@ namespace RPGLab.Networking
             GameRenderer.Paint += Renderer;
             TileMap.LoadMapSprites(MainMapImageList);
             loginWindow = this;
+            for (int i = 0; i < 52; i++)
+            {
+                ImageNumber.Add((Image)Properties.Resources.ResourceManager.GetObject("_" + i));
+            }
             //DOUBLE BUFFERING ON PANELS.... SWEEETTTT
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, LoginPanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, CreateCharacterPanel, new object[] { true });
@@ -74,6 +79,16 @@ namespace RPGLab.Networking
             }
             MethodInvoker acc = delegate { loginWindow.LoginLabelAccountInfoBoolean.Text = accmsg; };
             loginWindow.Invoke(acc);
+        }
+        public static void LoadingBar(int value, int maxValue, bool visible)
+        {
+            MethodInvoker loadingBar = delegate 
+            { 
+                loginWindow.LoadingStartBar.Value = value;
+                loginWindow.LoadingStartBar.Maximum = maxValue;
+                loginWindow.LoadingStartBar.Visible = visible;
+            };
+            loginWindow.Invoke(loadingBar) ;
         }
         private void AccountInfo()
         {
@@ -537,7 +552,7 @@ namespace RPGLab.Networking
             }
             foreach (MapTileSprites2D MapTileSprite in MapTileSprites2D.GetSprites())
             {
-                g.DrawImage(MapTileSprite.Sprite, MapTileSprite.Position.X * 96, MapTileSprite.Position.Y * 64, MapTileSprite.Scale.X, MapTileSprite.Scale.Y);
+                g.DrawImage(ImageNumber[MapTileSprite.ImageNumber], MapTileSprite.Position.X * 96, MapTileSprite.Position.Y * 64, MapTileSprite.Scale.X, MapTileSprite.Scale.Y);
             }
             foreach (Sprite2D sprite in Sprite2D.GetSprites())
             {
