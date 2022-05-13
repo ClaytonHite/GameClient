@@ -164,7 +164,6 @@ namespace RPGLab.Networking
                 {
                     loginWindow.ExperienceProgressBar.Value = 100;
                 }
-                Log.Info($" current experience = {players[Client.instance.myId].playerExperience} experience required for last level = {players[Client.instance.myId].PreviousExperienceRequired} experience need for next level {players[Client.instance.myId].ExperienceRequired}");
             };
             loginWindow.Invoke(UpdateLabel);
         }

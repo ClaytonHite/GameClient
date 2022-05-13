@@ -162,11 +162,9 @@ namespace RPGLab.Networking
 
             if (Client.instance.myId == _myId)
             {
-                Log.Warning($"playerPos = {player[_myId].position.X}, {player[_myId].position.Y} spritePos = {player[_myId].sprite.Position.X}, {player[_myId].sprite.Position.Y} nameTag = {player[_myId].nameTag.Position.X}, {player[_myId].nameTag.Position.Y}");
                 player[_myId].position = _position;
                 player[_myId].sprite.Position = _position;
                 player[_myId].nameTag.Position = _position;
-                Log.Warning($"NOW ITS playerPos = {player[_myId].position.X}, {player[_myId].position.Y} spritePos = {player[_myId].sprite.Position.X}, {player[_myId].sprite.Position.Y} nameTag = {player[_myId].nameTag.Position.X}, {player[_myId].nameTag.Position.Y}");
                 player[_myId].level = _playerLevel;
                 player[_myId].currentHitPoints = currentHitPoints;
                 player[_myId].maxHitPoints = maxHitPoints;
@@ -202,7 +200,6 @@ namespace RPGLab.Networking
                         player[_myId].position = _position;
                         player[_myId].sprite.Position = _position;
                         player[_myId].nameTag.Position = _position;
-                        Log.Error($"we got to the camera and pos xy ={_position.X}, {_position.Y}");
                         AdventuresOnlineWindow.ChaseCamera(player[Client.instance.myId].sprite.Position);
                     }
                 }
@@ -234,7 +231,6 @@ namespace RPGLab.Networking
         {
             int monsterID = _packet.ReadInt();
             Vector2 monsterPos = _packet.ReadVector2();
-            Log.Info($"Received MONSTER UPDATE");
             if(monsters.ContainsKey(monsterID))
             {
                 monsters[monsterID].position = monsterPos;
@@ -299,10 +295,8 @@ namespace RPGLab.Networking
             foreach(string monster in Monsters)
             {
                 string[] monsterData = monster.Split(',');
-                Log.Error($"Data 0 = {monsterData[0]}");
                 if (monsterData.Length > 1 && monsterData[0] != "")
                 {
-                    Log.Error($"Data 0 = {monsterData[0]} Data 1 = {monsterData[1]}");
                     int _id = Convert.ToInt32(monsterData[1]);
                     Vector2 position = new Vector2(Convert.ToInt32(monsterData[5]), Convert.ToInt32(monsterData[6]));
                     GameManager.SpawnMonster(_id, monsterData[0], position, monsterData[2]);
