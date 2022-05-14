@@ -219,10 +219,6 @@ namespace RPGLab.Networking
                 {
                     loginWindow.ExperienceProgressBar.Value = expPercentage;
                 }
-                else
-                {
-                    loginWindow.ExperienceProgressBar.Value = 100;
-                }
             };
             loginWindow.Invoke(UpdateLabel);
         }
@@ -703,8 +699,8 @@ namespace RPGLab.Networking
             if (Client.instance.myId == _myId)
             {
                 Image CharImage = loginWindow.CharacterSelectAvatarImage.Image;
-                loginWindow.PlayerInfoGamePanel(_username, Stats, Info, experienceNeeded, previousExperienceNeeded);
                 GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
+                loginWindow.PlayerInfoGamePanel(_username, Stats, Info, experienceNeeded, previousExperienceNeeded);
             }
             else
             {
@@ -734,10 +730,9 @@ namespace RPGLab.Networking
                 {
                     loginWindow.ExperienceProgressBar.Value = expPercentage;
                 }
-                else
-                {
-                    loginWindow.ExperienceProgressBar.Value = 100;
-                }
+                players[Client.instance.myId].playerExperience = _characterStats[12];
+                players[Client.instance.myId].PreviousExperienceRequired = previousExperienceNeeded;
+                players[Client.instance.myId].ExperienceRequired = experienceNeeded;
                 GamePanelPlayerAvatar.BackgroundImage = CharacterSelectAvatarImage.Image;
                 GamePanelPlayerLevelRaceClassLabel.Text = CharacterSelectCharacterInfo.Text;
                 GamePanelPlayerNameLabel.Text = CharacterSelectDropdownBox.Text;

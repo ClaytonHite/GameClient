@@ -1558,11 +1558,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.CreateCharacterPanel);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
+            this.Controls.Add(this.CreateCharacterPanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
