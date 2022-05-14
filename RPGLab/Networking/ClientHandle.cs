@@ -116,6 +116,7 @@ namespace RPGLab.Networking
             int playerExperience = _packet.ReadInt();
             int playerSkillPoints = _packet.ReadInt();
             bool isStealth = _packet.ReadBool();
+            int ExperienceNeeded = _packet.ReadInt();
 
             List<int> Stats = new List<int>();
             Stats.Add(_playerLevel);

@@ -726,6 +726,8 @@ namespace RPGLab.Networking
                 HealthProgressBar.Value = _characterStats[1];
                 ManaProgressBar.Maximum = _characterStats[3];
                 ManaProgressBar.Value = _characterStats[4];
+                ExperienceProgressBar.Maximum = 100;
+                ExperienceProgressBar.Value = 0;
                 GamePanelPlayerAvatar.BackgroundImage = CharacterSelectAvatarImage.Image;
                 GamePanelPlayerLevelRaceClassLabel.Text = CharacterSelectCharacterInfo.Text;
                 GamePanelPlayerNameLabel.Text = CharacterSelectDropdownBox.Text;
