@@ -189,15 +189,19 @@ namespace RPGLab.Networking
             // LoadingBarLabel
             // 
             this.LoadingBarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadingBarLabel.Location = new System.Drawing.Point(895, 742);
+            this.LoadingBarLabel.Location = new System.Drawing.Point(895, 702);
             this.LoadingBarLabel.Name = "LoadingBarLabel";
-            this.LoadingBarLabel.Size = new System.Drawing.Size(283, 61);
+            this.LoadingBarLabel.Size = new System.Drawing.Size(283, 101);
             this.LoadingBarLabel.TabIndex = 11;
             this.LoadingBarLabel.Text = "Loading....";
             this.LoadingBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DeleteAccountButton
             // 
+            this.DeleteAccountButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteAccountButton.BackgroundImage")));
+            this.DeleteAccountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteAccountButton.FlatAppearance.BorderSize = 0;
+            this.DeleteAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteAccountButton.Location = new System.Drawing.Point(3, 976);
             this.DeleteAccountButton.Name = "DeleteAccountButton";
@@ -210,19 +214,22 @@ namespace RPGLab.Networking
             // 
             // LoginLabelAccountInfoBoolean
             // 
-            this.LoginLabelAccountInfoBoolean.AutoSize = true;
             this.LoginLabelAccountInfoBoolean.BackColor = System.Drawing.Color.Transparent;
             this.LoginLabelAccountInfoBoolean.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginLabelAccountInfoBoolean.ForeColor = System.Drawing.Color.Red;
-            this.LoginLabelAccountInfoBoolean.Location = new System.Drawing.Point(844, 697);
+            this.LoginLabelAccountInfoBoolean.Location = new System.Drawing.Point(465, 673);
             this.LoginLabelAccountInfoBoolean.MinimumSize = new System.Drawing.Size(200, 30);
             this.LoginLabelAccountInfoBoolean.Name = "LoginLabelAccountInfoBoolean";
-            this.LoginLabelAccountInfoBoolean.Size = new System.Drawing.Size(200, 44);
+            this.LoginLabelAccountInfoBoolean.Size = new System.Drawing.Size(1000, 100);
             this.LoginLabelAccountInfoBoolean.TabIndex = 9;
             this.LoginLabelAccountInfoBoolean.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CreateAccountButton
             // 
+            this.CreateAccountButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CreateAccountButton.BackgroundImage")));
+            this.CreateAccountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CreateAccountButton.FlatAppearance.BorderSize = 0;
+            this.CreateAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButton.Location = new System.Drawing.Point(1677, 973);
             this.CreateAccountButton.Name = "CreateAccountButton";
@@ -235,6 +242,10 @@ namespace RPGLab.Networking
             // 
             // ConnectButton
             // 
+            this.ConnectButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConnectButton.BackgroundImage")));
+            this.ConnectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ConnectButton.FlatAppearance.BorderSize = 0;
+            this.ConnectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConnectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConnectButton.Location = new System.Drawing.Point(844, 601);
             this.ConnectButton.Name = "ConnectButton";
@@ -479,6 +490,10 @@ namespace RPGLab.Networking
             // 
             // CreateCharacterCancelButton
             // 
+            this.CreateCharacterCancelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CreateCharacterCancelButton.BackgroundImage")));
+            this.CreateCharacterCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CreateCharacterCancelButton.FlatAppearance.BorderSize = 0;
+            this.CreateCharacterCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateCharacterCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateCharacterCancelButton.Location = new System.Drawing.Point(1677, 973);
             this.CreateCharacterCancelButton.Name = "CreateCharacterCancelButton";
@@ -490,6 +505,10 @@ namespace RPGLab.Networking
             // 
             // CreateCharacterButton
             // 
+            this.CreateCharacterButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CreateCharacterButton.BackgroundImage")));
+            this.CreateCharacterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CreateCharacterButton.FlatAppearance.BorderSize = 0;
+            this.CreateCharacterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateCharacterButton.Location = new System.Drawing.Point(848, 716);
             this.CreateCharacterButton.Name = "CreateCharacterButton";
@@ -565,6 +584,10 @@ namespace RPGLab.Networking
             // 
             // DeleteCharacterButton
             // 
+            this.DeleteCharacterButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteCharacterButton.BackgroundImage")));
+            this.DeleteCharacterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteCharacterButton.FlatAppearance.BorderSize = 0;
+            this.DeleteCharacterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteCharacterButton.Location = new System.Drawing.Point(844, 973);
             this.DeleteCharacterButton.Name = "DeleteCharacterButton";
@@ -576,6 +599,10 @@ namespace RPGLab.Networking
             // 
             // CharacterSelectLogOffButton
             // 
+            this.CharacterSelectLogOffButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CharacterSelectLogOffButton.BackgroundImage")));
+            this.CharacterSelectLogOffButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CharacterSelectLogOffButton.FlatAppearance.BorderSize = 0;
+            this.CharacterSelectLogOffButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CharacterSelectLogOffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharacterSelectLogOffButton.Location = new System.Drawing.Point(4, 973);
             this.CharacterSelectLogOffButton.Name = "CharacterSelectLogOffButton";
@@ -631,6 +658,10 @@ namespace RPGLab.Networking
             // 
             // CharacterSelectCreateCharacterButton
             // 
+            this.CharacterSelectCreateCharacterButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CharacterSelectCreateCharacterButton.BackgroundImage")));
+            this.CharacterSelectCreateCharacterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CharacterSelectCreateCharacterButton.FlatAppearance.BorderSize = 0;
+            this.CharacterSelectCreateCharacterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CharacterSelectCreateCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharacterSelectCreateCharacterButton.Location = new System.Drawing.Point(1677, 973);
             this.CharacterSelectCreateCharacterButton.Name = "CharacterSelectCreateCharacterButton";
@@ -642,6 +673,10 @@ namespace RPGLab.Networking
             // 
             // CharacterSelectConnectButton
             // 
+            this.CharacterSelectConnectButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CharacterSelectConnectButton.BackgroundImage")));
+            this.CharacterSelectConnectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CharacterSelectConnectButton.FlatAppearance.BorderSize = 0;
+            this.CharacterSelectConnectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CharacterSelectConnectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharacterSelectConnectButton.Location = new System.Drawing.Point(848, 647);
             this.CharacterSelectConnectButton.Name = "CharacterSelectConnectButton";
@@ -722,6 +757,10 @@ namespace RPGLab.Networking
             // 
             // CreateAccountCancelButton
             // 
+            this.CreateAccountCancelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CreateAccountCancelButton.BackgroundImage")));
+            this.CreateAccountCancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CreateAccountCancelButton.FlatAppearance.BorderSize = 0;
+            this.CreateAccountCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccountCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountCancelButton.Location = new System.Drawing.Point(1677, 973);
             this.CreateAccountCancelButton.Name = "CreateAccountCancelButton";
@@ -733,6 +772,10 @@ namespace RPGLab.Networking
             // 
             // CreateAccountButtonSendtoServer
             // 
+            this.CreateAccountButtonSendtoServer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CreateAccountButtonSendtoServer.BackgroundImage")));
+            this.CreateAccountButtonSendtoServer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CreateAccountButtonSendtoServer.FlatAppearance.BorderSize = 0;
+            this.CreateAccountButtonSendtoServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateAccountButtonSendtoServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButtonSendtoServer.Location = new System.Drawing.Point(844, 601);
             this.CreateAccountButtonSendtoServer.Name = "CreateAccountButtonSendtoServer";

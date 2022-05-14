@@ -68,9 +68,7 @@ namespace RPGLab.Networking
             string accmsg;
             if (!_accinput)
             {
-                accmsg = "Invalid Username or Password!";
-                WaitTime.InSeconds(2);
-                Client.instance.Start();
+                accmsg = $"Invalid Username or Password! ({4 - Client.instance.ConnectionAttempts}) Attempts Left.";
             }
             else
             {
@@ -244,6 +242,19 @@ namespace RPGLab.Networking
                 loginWindow.CreateCharacterPanel.Show();
             };
             loginWindow.Invoke(CharacterCreate);
+        }
+        public static void SendtoLoginScreen()
+        {
+            MethodInvoker LoginScreen = delegate
+            {
+                loginWindow.CharacterSelectPanel.Hide();
+                loginWindow.CreateAccountPanel.Hide();
+                loginWindow.LoginPanel.Show();
+                loginWindow.CharacterSelectPanel.Hide();
+                loginWindow.CreateCharacterPanel.Hide();
+                loginWindow.GamePanel.Hide();
+            };
+            loginWindow.Invoke(LoginScreen);
         }
         public void GotoCreateCharacterPanelButton_Click(object sender, System.EventArgs e)
         {

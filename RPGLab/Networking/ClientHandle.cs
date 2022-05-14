@@ -46,7 +46,18 @@ namespace RPGLab.Networking
             bool _input = _packet.ReadBool();
             AdventuresOnlineWindow.CreateAccountBool(_input);
         }
-
+        public static void WrongAccountorPassword(Packet _packet)
+        {
+            int _myId = _packet.ReadInt();
+            bool _input = _packet.ReadBool();
+            int _connectionAttempts = _packet.ReadInt();
+            Log.Error($"{_myId} {_input} {_connectionAttempts}");
+            if (Client.instance.myId == _myId)
+            {
+                Client.instance.ConnectionAttempts = _connectionAttempts;
+            }
+            AdventuresOnlineWindow.WrongAccountorPassword(_input);
+        }
         public static void CreateCharacter(Packet _packet)
         {
             int _myId = _packet.ReadInt();

@@ -10,6 +10,7 @@ using RPGLab.Networking;
 public class Client
 {
     public static Client instance;
+    public int ConnectionAttempts;
     public static int dataBufferSize = 4096;
     public string ip = "24.166.1.201";
     //public string ip = "192.168.1.239";
@@ -333,6 +334,7 @@ public class Client
             { (int)ServerPackets.PlayerDamageDone, ClientHandle.PlayerDamageDone },
             { (int)ServerPackets.MonsterDamageDone, ClientHandle.MonsterDamageDone },
             { (int)ServerPackets.updatePlayer, ClientHandle.UpdatePlayer },
+            { (int)ServerPackets.wrongAccountorPassword, ClientHandle.WrongAccountorPassword },
             { (int)ServerPackets.ChatBox, ClientHandle.ChatBox }
         };
         Log.Info("Initialized packets.");
@@ -347,6 +349,7 @@ public class Client
             udp.socket.Close();
             Log.Error("Disconnected from server.");
         }
+        AdventuresOnlineWindow.SendtoLoginScreen();
     }
 
     public void Start()

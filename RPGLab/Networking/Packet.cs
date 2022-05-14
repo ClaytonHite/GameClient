@@ -21,6 +21,7 @@ public enum ServerPackets
     PlayerDamageDone,
     MonsterDamageDone,
     updatePlayer,
+    wrongAccountorPassword,
     ChatBox
 }
 
