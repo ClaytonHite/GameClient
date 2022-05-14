@@ -75,7 +75,6 @@ namespace RPGLab.Networking
             bool _accountExists = _packet.ReadBool();
             if (Client.instance.myId == _myId)
             {
-                Log.Error(_characters);
                 if (_accountExists)
                 {
                     if (_characters != "No Characters")
