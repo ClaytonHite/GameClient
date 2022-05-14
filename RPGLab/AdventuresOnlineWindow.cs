@@ -92,6 +92,11 @@ namespace RPGLab.Networking
         }
         private void AccountInfo()
         {
+            MethodInvoker ClearCharacterSelectBox = delegate
+            {
+                CharacterSelectDropdownBox.Items.Clear();
+            };
+            Invoke(ClearCharacterSelectBox);
             for (int i = 0; i < characterList.Length; i++)
             {
                 if ((i + 1) % 14 == 0)
@@ -184,8 +189,8 @@ namespace RPGLab.Networking
         }
         public static void SendtoCharacterSelectScreen(string[] character)
         {
-            characterList = character;
-            loginWindow.AccountInfo();
+                characterList = character;
+                loginWindow.AccountInfo();
         }
         public static void CreateAccountBool(bool _input)
         {
@@ -198,13 +203,16 @@ namespace RPGLab.Networking
             {
                 msg = "Invalid Username or Password!";
             }
-            MethodInvoker inv = delegate { loginWindow.CreateAccountRejectionLabel.Text = msg; };
+            MethodInvoker inv = delegate { loginWindow.LoginLabelAccountInfoBoolean.Text = msg; };
             loginWindow.Invoke(inv);
         }
         public static void SendtoCharacterCreateScreen()
         {
             MethodInvoker CharacterCreate = delegate
             {
+                loginWindow.CharacterSelectPanel.Hide();
+                loginWindow.CreateAccountPanel.Hide();
+                loginWindow.LoginPanel.Hide();
                 loginWindow.CharacterSelectPanel.Hide();
                 loginWindow.CreateCharacterPanel.Show();
             };
@@ -507,6 +515,8 @@ namespace RPGLab.Networking
                 if (CreateAccountUsername.Text != null && CreateAccountPassword.Text != null)
                 {
                     ClientSend.CreateAccount(_username, _password);
+                    CreateCharacterPanel.Hide();
+                    LoginPanel.Show();
                 }
             }
             else
@@ -708,5 +718,31 @@ namespace RPGLab.Networking
         private void AddSkillButton4_Click(object sender, EventArgs e) { if (players[Client.instance.myId].playerSkillPoints > 0) { ClientSend.AddSkill(3); } GamePanel.Focus(); }
         private void AddSkillButton5_Click(object sender, EventArgs e) { if (players[Client.instance.myId].playerSkillPoints > 0) { ClientSend.AddSkill(4); } GamePanel.Focus(); }
         private void AddSkillButton6_Click(object sender, EventArgs e) { if (players[Client.instance.myId].playerSkillPoints > 0) { ClientSend.AddSkill(5); } GamePanel.Focus(); }
+
+        private void DeleteCharacterButton_Click(object sender, EventArgs e)
+        {
+            string loginUsername = Username.Text;
+            string loginPassword = Password.Text;
+            string characterToDelete = CharacterSelectDropdownBox.Text;
+            ClientSend.CharacterToDelete(loginUsername, loginPassword, characterToDelete);
+            CharacterSelectPanel.Hide();
+            CreateAccountPanel.Hide();
+            CreateCharacterPanel.Hide();
+            LoginPanel.Show();
+        }
+
+        private void DeleteAccountButton_Click(object sender, EventArgs e)
+        {
+            string loginUsername = Username.Text;
+            string loginPassword = Password.Text;
+            ClientSend.AccountToDelete(loginUsername, loginPassword);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Client.instance.OnRejection();
+            Application.Exit();
+            Environment.Exit(0);
+        }
     }
 }

@@ -127,6 +127,27 @@ namespace RPGLab.Networking
                 SendUDPData(_packet);
             }
         }
+        public static void CharacterToDelete(string loginUsername, string loginPassword, string characterToDelete)
+        {
+            using (Packet _packet = new Packet((int)ClientPackets.CharacterToDelete))
+            {
+                _packet.Write(loginUsername);
+                _packet.Write(loginPassword);
+                _packet.Write(characterToDelete);
+
+                SendTCPData(_packet);
+            }
+        }
+        public static void AccountToDelete(string loginUsername, string loginPassword)
+        {
+            using (Packet _packet = new Packet((int)ClientPackets.AccountToDelete))
+            {
+                _packet.Write(loginUsername);
+                _packet.Write(loginPassword);
+
+                SendTCPData(_packet);
+            }
+        }
         #endregion
     }
 }

@@ -37,6 +37,8 @@ namespace RPGLab.Networking
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdventuresOnlineWindow));
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
+            this.LoadingStartBar = new System.Windows.Forms.ProgressBar();
             this.LoginLabelAccountInfoBoolean = new System.Windows.Forms.Label();
             this.CreateAccountButton = new System.Windows.Forms.Button();
             this.ConnectButton = new System.Windows.Forms.Button();
@@ -65,6 +67,7 @@ namespace RPGLab.Networking
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.CreateCharacterName = new System.Windows.Forms.TextBox();
             this.CharacterSelectPanel = new System.Windows.Forms.Panel();
+            this.DeleteCharacterButton = new System.Windows.Forms.Button();
             this.CharacterSelectLogOffButton = new System.Windows.Forms.Button();
             this.CharacterSelectDropdownBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -139,7 +142,6 @@ namespace RPGLab.Networking
             this.GameRenderer = new System.Windows.Forms.PictureBox();
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
-            this.LoadingStartBar = new System.Windows.Forms.ProgressBar();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.CreateCharacterPanel.SuspendLayout();
@@ -160,6 +162,7 @@ namespace RPGLab.Networking
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
+            this.LoginPanel.Controls.Add(this.DeleteAccountButton);
             this.LoginPanel.Controls.Add(this.LoadingStartBar);
             this.LoginPanel.Controls.Add(this.LoginLabelAccountInfoBoolean);
             this.LoginPanel.Controls.Add(this.CreateAccountButton);
@@ -173,6 +176,24 @@ namespace RPGLab.Networking
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(1880, 1017);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // DeleteAccountButton
+            // 
+            this.DeleteAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAccountButton.Location = new System.Drawing.Point(3, 976);
+            this.DeleteAccountButton.Name = "DeleteAccountButton";
+            this.DeleteAccountButton.Size = new System.Drawing.Size(200, 41);
+            this.DeleteAccountButton.TabIndex = 11;
+            this.DeleteAccountButton.Text = "Delete Account";
+            this.DeleteAccountButton.UseVisualStyleBackColor = true;
+            this.DeleteAccountButton.Click += new System.EventHandler(this.DeleteAccountButton_Click);
+            // 
+            // LoadingStartBar
+            // 
+            this.LoadingStartBar.Location = new System.Drawing.Point(777, 392);
+            this.LoadingStartBar.Name = "LoadingStartBar";
+            this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
+            this.LoadingStartBar.TabIndex = 10;
             // 
             // LoginLabelAccountInfoBoolean
             // 
@@ -508,6 +529,7 @@ namespace RPGLab.Networking
             // CharacterSelectPanel
             // 
             this.CharacterSelectPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterSelectPanel.Controls.Add(this.DeleteCharacterButton);
             this.CharacterSelectPanel.Controls.Add(this.CharacterSelectLogOffButton);
             this.CharacterSelectPanel.Controls.Add(this.CharacterSelectDropdownBox);
             this.CharacterSelectPanel.Controls.Add(this.button1);
@@ -521,6 +543,17 @@ namespace RPGLab.Networking
             this.CharacterSelectPanel.Name = "CharacterSelectPanel";
             this.CharacterSelectPanel.Size = new System.Drawing.Size(1880, 1017);
             this.CharacterSelectPanel.TabIndex = 14;
+            // 
+            // DeleteCharacterButton
+            // 
+            this.DeleteCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteCharacterButton.Location = new System.Drawing.Point(844, 973);
+            this.DeleteCharacterButton.Name = "DeleteCharacterButton";
+            this.DeleteCharacterButton.Size = new System.Drawing.Size(200, 41);
+            this.DeleteCharacterButton.TabIndex = 16;
+            this.DeleteCharacterButton.Text = "Delete Character";
+            this.DeleteCharacterButton.UseVisualStyleBackColor = true;
+            this.DeleteCharacterButton.Click += new System.EventHandler(this.DeleteCharacterButton_Click);
             // 
             // CharacterSelectLogOffButton
             // 
@@ -1004,6 +1037,7 @@ namespace RPGLab.Networking
             this.button5.TabStop = false;
             this.button5.Text = "Log Out";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // GameChatBox
             // 
@@ -1452,13 +1486,6 @@ namespace RPGLab.Networking
             this.monsterImageList.Images.SetKeyName(1, "1.png");
             this.monsterImageList.Images.SetKeyName(2, "2.png");
             // 
-            // LoadingStartBar
-            // 
-            this.LoadingStartBar.Location = new System.Drawing.Point(777, 392);
-            this.LoadingStartBar.Name = "LoadingStartBar";
-            this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
-            this.LoadingStartBar.TabIndex = 10;
-            // 
             // AdventuresOnlineWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -1469,11 +1496,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
             this.Controls.Add(this.CreateCharacterPanel);
-            this.Controls.Add(this.GamePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -1613,5 +1640,7 @@ namespace RPGLab.Networking
         private Button AddSkillButton2;
         public Panel SkillsPanel;
         private ProgressBar LoadingStartBar;
+        private Button DeleteCharacterButton;
+        private Button DeleteAccountButton;
     }
 }

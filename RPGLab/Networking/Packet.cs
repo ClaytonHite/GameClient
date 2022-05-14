@@ -35,6 +35,8 @@ public enum ClientPackets
     createCharacter,
     playerCombat,
     addSkill,
+    CharacterToDelete,
+    AccountToDelete,
     ChatBox
 }
 

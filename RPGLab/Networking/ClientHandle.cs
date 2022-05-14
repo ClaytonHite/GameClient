@@ -69,13 +69,14 @@ namespace RPGLab.Networking
             int _myId = _packet.ReadInt();
             string _characters = _packet.ReadString();
             bool _accountExists = _packet.ReadBool();
-            string[] character = _characters.Split(',');
             if (Client.instance.myId == _myId)
             {
+                Log.Error(_characters);
                 if (_accountExists)
                 {
-                    if (character[0] != "No Characters")
+                    if (_characters != "No Characters")
                     {
+                        string[] character = _characters.Split(',');
                         AdventuresOnlineWindow.SendtoCharacterSelectScreen(character);
                     }
                     else
