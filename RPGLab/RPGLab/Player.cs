@@ -62,7 +62,6 @@ namespace RPGLab.RPGLab
             this.Class = playerClass;
             this.Position = currentLocation;
             this.playerBusy = false;
-            AdventuresOnlineWindow.PlayerData(this);
         }
     }
 }

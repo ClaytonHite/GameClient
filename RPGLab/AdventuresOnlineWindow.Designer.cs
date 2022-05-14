@@ -37,8 +37,9 @@ namespace RPGLab.Networking
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdventuresOnlineWindow));
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.DeleteAccountButton = new System.Windows.Forms.Button();
             this.LoadingStartBar = new System.Windows.Forms.ProgressBar();
+            this.LoadingBarLabel = new System.Windows.Forms.Label();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
             this.LoginLabelAccountInfoBoolean = new System.Windows.Forms.Label();
             this.CreateAccountButton = new System.Windows.Forms.Button();
             this.ConnectButton = new System.Windows.Forms.Button();
@@ -162,8 +163,9 @@ namespace RPGLab.Networking
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
-            this.LoginPanel.Controls.Add(this.DeleteAccountButton);
             this.LoginPanel.Controls.Add(this.LoadingStartBar);
+            this.LoginPanel.Controls.Add(this.LoadingBarLabel);
+            this.LoginPanel.Controls.Add(this.DeleteAccountButton);
             this.LoginPanel.Controls.Add(this.LoginLabelAccountInfoBoolean);
             this.LoginPanel.Controls.Add(this.CreateAccountButton);
             this.LoginPanel.Controls.Add(this.ConnectButton);
@@ -172,10 +174,27 @@ namespace RPGLab.Networking
             this.LoginPanel.Controls.Add(this.pictureBox2);
             this.LoginPanel.Controls.Add(this.Password);
             this.LoginPanel.Controls.Add(this.Username);
-            this.LoginPanel.Location = new System.Drawing.Point(12, 12);
+            this.LoginPanel.Location = new System.Drawing.Point(12, 10);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(1880, 1017);
+            this.LoginPanel.Size = new System.Drawing.Size(1900, 1019);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // LoadingStartBar
+            // 
+            this.LoadingStartBar.Location = new System.Drawing.Point(777, 806);
+            this.LoadingStartBar.Name = "LoadingStartBar";
+            this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
+            this.LoadingStartBar.TabIndex = 10;
+            // 
+            // LoadingBarLabel
+            // 
+            this.LoadingBarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadingBarLabel.Location = new System.Drawing.Point(895, 742);
+            this.LoadingBarLabel.Name = "LoadingBarLabel";
+            this.LoadingBarLabel.Size = new System.Drawing.Size(283, 61);
+            this.LoadingBarLabel.TabIndex = 11;
+            this.LoadingBarLabel.Text = "Loading....";
+            this.LoadingBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DeleteAccountButton
             // 
@@ -184,16 +203,10 @@ namespace RPGLab.Networking
             this.DeleteAccountButton.Name = "DeleteAccountButton";
             this.DeleteAccountButton.Size = new System.Drawing.Size(200, 41);
             this.DeleteAccountButton.TabIndex = 11;
+            this.DeleteAccountButton.Tag = "LoginAccessoriesVisible";
             this.DeleteAccountButton.Text = "Delete Account";
             this.DeleteAccountButton.UseVisualStyleBackColor = true;
             this.DeleteAccountButton.Click += new System.EventHandler(this.DeleteAccountButton_Click);
-            // 
-            // LoadingStartBar
-            // 
-            this.LoadingStartBar.Location = new System.Drawing.Point(777, 392);
-            this.LoadingStartBar.Name = "LoadingStartBar";
-            this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
-            this.LoadingStartBar.TabIndex = 10;
             // 
             // LoginLabelAccountInfoBoolean
             // 
@@ -215,6 +228,7 @@ namespace RPGLab.Networking
             this.CreateAccountButton.Name = "CreateAccountButton";
             this.CreateAccountButton.Size = new System.Drawing.Size(200, 41);
             this.CreateAccountButton.TabIndex = 6;
+            this.CreateAccountButton.Tag = "LoginAccessoriesVisible";
             this.CreateAccountButton.Text = "Create Account";
             this.CreateAccountButton.UseVisualStyleBackColor = true;
             this.CreateAccountButton.Click += new System.EventHandler(this.GotoCreateAccountPanelButton_Click);
@@ -226,6 +240,7 @@ namespace RPGLab.Networking
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(200, 59);
             this.ConnectButton.TabIndex = 5;
+            this.ConnectButton.Tag = "LoginAccessoriesVisible";
             this.ConnectButton.Text = "CONNECT";
             this.ConnectButton.UseVisualStyleBackColor = true;
             this.ConnectButton.Click += new System.EventHandler(this.CONNECT_Click);
@@ -241,6 +256,7 @@ namespace RPGLab.Networking
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(228, 46);
             this.UsernameLabel.TabIndex = 4;
+            this.UsernameLabel.Tag = "LoginAccessoriesVisible";
             this.UsernameLabel.Text = "Username :";
             // 
             // PasswordLabel
@@ -254,6 +270,7 @@ namespace RPGLab.Networking
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(229, 46);
             this.PasswordLabel.TabIndex = 3;
+            this.PasswordLabel.Tag = "LoginAccessoriesVisible";
             this.PasswordLabel.Text = "Password : ";
             // 
             // pictureBox2
@@ -275,6 +292,7 @@ namespace RPGLab.Networking
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(200, 51);
             this.Password.TabIndex = 1;
+            this.Password.Tag = "LoginAccessoriesVisible";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Username
@@ -285,6 +303,7 @@ namespace RPGLab.Networking
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(200, 51);
             this.Username.TabIndex = 0;
+            this.Username.Tag = "LoginAccessoriesVisible";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CreateCharacterPanel
@@ -1496,11 +1515,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
             this.Controls.Add(this.CreateCharacterPanel);
+            this.Controls.Add(this.GamePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -1639,8 +1658,9 @@ namespace RPGLab.Networking
         private Button AddSkillButton3;
         private Button AddSkillButton2;
         public Panel SkillsPanel;
-        private ProgressBar LoadingStartBar;
         private Button DeleteCharacterButton;
         private Button DeleteAccountButton;
+        private Label LoadingBarLabel;
+        private ProgressBar LoadingStartBar;
     }
 }

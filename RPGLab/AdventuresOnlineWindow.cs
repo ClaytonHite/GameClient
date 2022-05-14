@@ -23,14 +23,13 @@ namespace RPGLab.Networking
         private static int classIndexList;
         public Color BackgroundColor = Color.Black;
         public static Vector2 CameraPosition = Vector2.Zero();
-        static string PlayerName;
-        static string PlayerRace;
-        static string PlayerClass;
-        static string PlayerAvatar;
         static List<Image> ImageNumber = new List<Image>();
+        static int counter;
+        static string periodCount;
         public AdventuresOnlineWindow()
         {
             InitializeComponent();
+            InitializeStartMenu();
             CharacterSelectPanel.Hide();
             CreateAccountPanel.Hide();
             CreateCharacterPanel.Hide();
@@ -80,6 +79,16 @@ namespace RPGLab.Networking
             MethodInvoker acc = delegate { loginWindow.LoginLabelAccountInfoBoolean.Text = accmsg; };
             loginWindow.Invoke(acc);
         }
+        public void InitializeStartMenu()
+        {
+            CreateAccountButton.Visible = false;
+            ConnectButton.Visible = false;
+            Password.Visible = false;
+            Username.Visible = false;
+            PasswordLabel.Visible = false;
+            UsernameLabel.Visible = false;
+            DeleteAccountButton.Visible = false;
+        }
         public static void LoadingBar(int value, int maxValue, bool visible)
         {
             MethodInvoker loadingBar = delegate 
@@ -87,6 +96,24 @@ namespace RPGLab.Networking
                 loginWindow.LoadingStartBar.Value = value;
                 loginWindow.LoadingStartBar.Maximum = maxValue;
                 loginWindow.LoadingStartBar.Visible = visible;
+                loginWindow.LoadingBarLabel.Visible = visible;
+                counter++;
+                periodCount = new string('.', counter / 400);
+                loginWindow.LoadingBarLabel.Text = ("Loading"+periodCount);
+                if(counter > 2000)
+                {
+                    counter = 0;
+                }
+                if (!visible)
+                {
+                    loginWindow.CreateAccountButton.Visible = true;
+                    loginWindow.ConnectButton.Visible = true;
+                    loginWindow.Password.Visible = true;
+                    loginWindow.Username.Visible = true;
+                    loginWindow.PasswordLabel.Visible = true;
+                    loginWindow.UsernameLabel.Visible = true;
+                    loginWindow.DeleteAccountButton.Visible=true;
+                }
             };
             loginWindow.Invoke(loadingBar) ;
         }
@@ -539,13 +566,6 @@ namespace RPGLab.Networking
             characterList = null;
             loginWindow.CharacterSelectPanel.Hide();
             loginWindow.LoginPanel.Show();
-        }
-        public static void PlayerData(Player playerData)
-        {
-            PlayerName = playerData.Name;
-            PlayerRace = playerData.Race;
-            PlayerClass = playerData.Class;
-            PlayerAvatar = playerData.Avatar;
         }
         public static void ChaseCamera(Vector2 Position)
         {
