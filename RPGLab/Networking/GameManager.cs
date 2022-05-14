@@ -20,7 +20,7 @@ namespace RPGLab
         public static Dictionary<int, Collider> Colliders = Collider.Colliders;
         public static PlayerManager _player = new PlayerManager();
 
-        public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth)
+        public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth, int experienceNeeded)
         {
             if (players.ContainsKey(_id))
             {
@@ -68,6 +68,7 @@ namespace RPGLab
             _player.playerSkillPoints = Stats[13];
             _player.isStealth = isStealth;
             _player.playerBusy = false;
+            _player.ExperienceRequired = experienceNeeded;
             Log.Info($"Registering client {_id}");
             if (!players.ContainsKey(_id))
             {

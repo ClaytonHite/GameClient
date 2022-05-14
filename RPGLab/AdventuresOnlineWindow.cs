@@ -696,24 +696,24 @@ namespace RPGLab.Networking
             }
             return avatarImage;
         }
-        public void SpawnPlayer(int _myId, string _username, Vector2 _position, List<int> Stats, List<string> Info, bool isStealth)
+        public void SpawnPlayer(int _myId, string _username, Vector2 _position, List<int> Stats, List<string> Info, bool isStealth, int experienceNeeded, int previousExperienceNeeded)
         {
             loginWindow.BackgroundImage = null;
             loginWindow.BackColor = Color.MidnightBlue;
             if (Client.instance.myId == _myId)
             {
                 Image CharImage = loginWindow.CharacterSelectAvatarImage.Image;
-                loginWindow.PlayerInfoGamePanel(_username, Stats, Info);
-                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, CharImage, isStealth);
+                loginWindow.PlayerInfoGamePanel(_username, Stats, Info, experienceNeeded, previousExperienceNeeded);
+                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
             }
             else
             {
                 Player otherPlayer = new Player(_myId, _username, _position, Stats, Info);
                 Image otherPlayerImage = GetOtherAvatarImage(otherPlayer.Race, otherPlayer.Avatar);
-                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, otherPlayerImage, isStealth);
+                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, otherPlayerImage, isStealth, experienceNeeded);
             }
         }
-        public void PlayerInfoGamePanel(string _username, List<int> _characterStats, List<string> _characterInfo)
+        public void PlayerInfoGamePanel(string _username, List<int> _characterStats, List<string> _characterInfo, int experienceNeeded, int previousExperienceNeeded)
         {
             MethodInvoker Char3 = delegate
             {
@@ -726,8 +726,18 @@ namespace RPGLab.Networking
                 HealthProgressBar.Value = _characterStats[1];
                 ManaProgressBar.Maximum = _characterStats[3];
                 ManaProgressBar.Value = _characterStats[4];
-                ExperienceProgressBar.Maximum = 100;
-                ExperienceProgressBar.Value = 0;
+                int expPercentage = (int)(((_characterStats[12] - previousExperienceNeeded) * 100) / ((experienceNeeded - previousExperienceNeeded)));
+                loginWindow.GamePanelPlayerExperienceAmountPercentLabel.Text = $"{expPercentage}%";
+                loginWindow.enterExperienceData.Text = $"{_characterStats[12]} / {experienceNeeded}";
+                Log.Error($"{_characterStats[12]} - {previousExperienceNeeded} * 100 / {experienceNeeded} - {previousExperienceNeeded} = {expPercentage}");
+                if (expPercentage <= 100 && expPercentage >= 0)
+                {
+                    loginWindow.ExperienceProgressBar.Value = expPercentage;
+                }
+                else
+                {
+                    loginWindow.ExperienceProgressBar.Value = 100;
+                }
                 GamePanelPlayerAvatar.BackgroundImage = CharacterSelectAvatarImage.Image;
                 GamePanelPlayerLevelRaceClassLabel.Text = CharacterSelectCharacterInfo.Text;
                 GamePanelPlayerNameLabel.Text = CharacterSelectDropdownBox.Text;
@@ -746,7 +756,7 @@ namespace RPGLab.Networking
                 enterIntellectData.Text = Convert.ToString(players[Client.instance.myId].intellect);
                 enterWisdomData.Text = Convert.ToString(players[Client.instance.myId].wisdom);
                 enterCharismaData.Text = Convert.ToString(players[Client.instance.myId].charisma);
-                enterExperienceData.Text = Convert.ToString(players[Client.instance.myId].playerExperience);
+                enterExperienceData.Text = Convert.ToString($"{players[Client.instance.myId].playerExperience} / {players[Client.instance.myId].ExperienceRequired}");
                 enterSkillPointsData.Text = $" Skill Points Available : {Convert.ToString(players[Client.instance.myId].playerSkillPoints)}";
                 EnterCarryingWeightData.Text = Convert.ToString(players[Client.instance.myId].playerCarryingWeight);
                 SkillsPanel.Visible = true;

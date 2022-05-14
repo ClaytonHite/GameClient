@@ -116,7 +116,8 @@ namespace RPGLab.Networking
             int playerExperience = _packet.ReadInt();
             int playerSkillPoints = _packet.ReadInt();
             bool isStealth = _packet.ReadBool();
-            int ExperienceNeeded = _packet.ReadInt();
+            int experienceNeeded = _packet.ReadInt();
+            int previousExperienceNeeded = _packet.ReadInt();
 
             List<int> Stats = new List<int>();
             Stats.Add(_playerLevel);
@@ -139,7 +140,7 @@ namespace RPGLab.Networking
             Info.Add(playerRace);
             Info.Add(playerClass);
 
-            AdventuresOnlineWindow.loginWindow.SpawnPlayer(_myId, _username, _position, Stats, Info, isStealth);
+            AdventuresOnlineWindow.loginWindow.SpawnPlayer(_myId, _username, _position, Stats, Info, isStealth, experienceNeeded, previousExperienceNeeded);
             isOnline = true;
         }
         public static void UpdatePlayer(Packet _packet)
