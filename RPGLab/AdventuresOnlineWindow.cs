@@ -63,6 +63,20 @@ namespace RPGLab.Networking
             string loginPassword = Password.Text;
             ClientSend.Login(loginUsername, loginPassword);
         }
+        public static void CreateCharacterBool(bool _accinput)
+        {
+            string accmsg;
+            if (!_accinput)
+            {
+                accmsg = $"Invalid Character Name.";
+            }
+            else
+            {
+                accmsg = "You have succesfully created a character!";
+            }
+            MethodInvoker acc = delegate { loginWindow.CreateCharacterRejectionLabel.Text = accmsg; };
+            loginWindow.Invoke(acc);
+        }
         public static void WrongAccountorPassword(bool _accinput)
         {
             string accmsg;
@@ -228,7 +242,9 @@ namespace RPGLab.Networking
             {
                 msg = "Invalid Username or Password!";
             }
-            MethodInvoker inv = delegate { loginWindow.LoginLabelAccountInfoBoolean.Text = msg; };
+            MethodInvoker inv = delegate { 
+                loginWindow.CreateAccountRejectionLabel.Text = msg;
+            };
             loginWindow.Invoke(inv);
         }
         public static void SendtoCharacterCreateScreen()

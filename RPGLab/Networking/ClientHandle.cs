@@ -64,14 +64,7 @@ namespace RPGLab.Networking
             bool _input = _packet.ReadBool();
             if (Client.instance.myId == _myId)
             {
-                if (!_input)
-                {
-                    Log.Info($"Invalid Account Character Name!");
-                }
-                else if (_input)
-                {
-                    Log.Info($"Character Created!");
-                }
+                AdventuresOnlineWindow.CreateCharacterBool(_input);
             }
         }
 
