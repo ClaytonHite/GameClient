@@ -106,36 +106,43 @@ namespace RPGLab
             }
             if (!respawn)
             {
-                List<Sprite2D> RemovalList = new List<Sprite2D>();
-                List<NameTag2D> NameRemovalList = new List<NameTag2D>();
-                int monsterID = Convert.ToInt32(MonsterData);
-                Vector2 monsterPos = monsters[monsterID].position;
-                Image monsterImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + monsters[monsterID].monsterAvatar);
-                string monsterName = monsters[monsterID].monsterName;
-                foreach (Sprite2D sprite in Sprite2D.GetSprites())
+                try
                 {
-                    if (sprite.Tag == "Monster" && sprite.Position.X == monsterPos.X && sprite.Position.Y == monsterPos.Y)
+                    List<Sprite2D> RemovalList = new List<Sprite2D>();
+                    List<NameTag2D> NameRemovalList = new List<NameTag2D>();
+                    int monsterID = Convert.ToInt32(MonsterData);
+                    Vector2 monsterPos = monsters[monsterID].position;
+                    Image monsterImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + monsters[monsterID].monsterAvatar);
+                    string monsterName = monsters[monsterID].monsterName;
+                    foreach (Sprite2D sprite in Sprite2D.GetSprites())
                     {
-                        RemovalList.Add(sprite);
+                        if (sprite.Tag == "Monster" && sprite.Position.X == monsterPos.X && sprite.Position.Y == monsterPos.Y)
+                        {
+                            RemovalList.Add(sprite);
+                        }
                     }
-                }
-                foreach (NameTag2D nameTag in NameTag2D.GetNameTags())
-                {
-                    if (nameTag.Tag == "Monster" && nameTag.Position.X == monsterPos.X && nameTag.Position.Y == monsterPos.Y && nameTag.PlayerName == monsterName)
+                    foreach (NameTag2D nameTag in NameTag2D.GetNameTags())
                     {
-                        NameRemovalList.Add(nameTag);
+                        if (nameTag.Tag == "Monster" && nameTag.Position.X == monsterPos.X && nameTag.Position.Y == monsterPos.Y && nameTag.PlayerName == monsterName)
+                        {
+                            NameRemovalList.Add(nameTag);
+                        }
                     }
+                    Collider.DestorySelf(monsterPos);
+                    foreach (Sprite2D sprite in RemovalList)
+                    {
+                        sprite.DestroySelf();
+                    }
+                    foreach (NameTag2D nameTag in NameRemovalList)
+                    {
+                        nameTag.DestroySelf();
+                    }
+                    monsters.Remove(monsterID);
                 }
-                Collider.DestorySelf(monsterPos);
-                foreach(Sprite2D sprite in RemovalList)
+                catch
                 {
-                    sprite.DestroySelf();
+                    Console.WriteLine("DEBUG THIS TOO");
                 }
-                foreach (NameTag2D nameTag in NameRemovalList)
-                {
-                    nameTag.DestroySelf();
-                }
-                monsters.Remove(monsterID);
             }
         }
         public override void OnLoad()

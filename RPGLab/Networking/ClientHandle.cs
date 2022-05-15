@@ -95,7 +95,7 @@ namespace RPGLab.Networking
         }
         public static void SpawnPlayer(Packet _packet)
         {
-            int _myId = _packet.ReadInt();
+            int _clientID = _packet.ReadInt();
             string _username = _packet.ReadString();
             Vector2 _position = _packet.ReadVector2();
             int _playerLevel = _packet.ReadInt();
@@ -140,11 +140,11 @@ namespace RPGLab.Networking
             Info.Add(playerRace);
             Info.Add(playerClass);
 
-            AdventuresOnlineWindow.loginWindow.SpawnPlayer(_myId, _username, _position, Stats, Info, isStealth, experienceNeeded, previousExperienceNeeded);
+            AdventuresOnlineWindow.loginWindow.SpawnPlayer(_clientID, _username, _position, Stats, Info, isStealth, experienceNeeded, previousExperienceNeeded);
             isOnline = true;
         }
         public static void UpdatePlayer(Packet _packet)
-        {
+        {//LOOK INTO THIS METHOD
             int _myId = _packet.ReadInt();
             Vector2 _position = _packet.ReadVector2();
             int _playerLevel = _packet.ReadInt();
@@ -216,7 +216,7 @@ namespace RPGLab.Networking
             }
         }
         public static void MonsterUpdate(Packet _packet)
-        {
+        {//LOOK INTO THIS METHOD
             bool respawn = _packet.ReadBool();
             string monsterData = _packet.ReadString();
             int damage = _packet.ReadInt();
@@ -264,7 +264,7 @@ namespace RPGLab.Networking
             }
         }
         public static void MonsterDamageDone(Packet _packet)
-        {
+        {//LOOK INTO THIS METHOD
             int monsterID = _packet.ReadInt();
             int damage = _packet.ReadInt();
             Vector2 position = _packet.ReadVector2();

@@ -196,28 +196,35 @@ namespace RPGLab.Networking
         {
             MethodInvoker UpdateLabel = delegate
             {
-                loginWindow.GamePanelPlayerLevelRaceClassLabel.Text = $"Level {players[_myId].level} { players[_myId].playerRace} { players[_myId].playerClass}";
-                loginWindow.enterStrengthData.Text = Convert.ToString(players[Client.instance.myId].strength);
-                loginWindow.enterDexterityData.Text = Convert.ToString(players[Client.instance.myId].dexterity);
-                loginWindow.enterConstitutionData.Text = Convert.ToString(players[Client.instance.myId].constitution);
-                loginWindow.enterIntellectData.Text = Convert.ToString(players[Client.instance.myId].intellect);
-                loginWindow.enterWisdomData.Text = Convert.ToString(players[Client.instance.myId].wisdom);
-                loginWindow.enterCharismaData.Text = Convert.ToString(players[Client.instance.myId].charisma);
-                loginWindow.enterExperienceData.Text = Convert.ToString(players[Client.instance.myId].playerExperience);
-                loginWindow.enterSkillPointsData.Text = $" Stat Points Available : {Convert.ToString(players[Client.instance.myId].playerSkillPoints)}";
-                loginWindow.EnterCarryingWeightData.Text = Convert.ToString(players[Client.instance.myId].playerCarryingWeight);
-                loginWindow.GamePanelPlayerHealthAmountLabel.Text = $"{players[Client.instance.myId].currentHitPoints}/{players[Client.instance.myId].maxHitPoints}";
-                loginWindow.HealthProgressBar.Maximum = players[Client.instance.myId].maxHitPoints;
-                loginWindow.HealthProgressBar.Value = players[Client.instance.myId].currentHitPoints;
-                loginWindow.GamePanelPlayerManaAmountLabel.Text = $"{players[Client.instance.myId].currentManaPoints}/{players[Client.instance.myId].maxManaPoints}";
-                loginWindow.ManaProgressBar.Maximum = players[Client.instance.myId].maxManaPoints;
-                loginWindow.ManaProgressBar.Value = players[Client.instance.myId].currentManaPoints;
-                int expPercentage = (int)(((players[Client.instance.myId].playerExperience - players[Client.instance.myId].PreviousExperienceRequired) * 100) / ((players[Client.instance.myId].ExperienceRequired - players[Client.instance.myId].PreviousExperienceRequired)+1));
-                loginWindow.GamePanelPlayerExperienceAmountPercentLabel.Text = $"{expPercentage}%";
-                loginWindow.enterExperienceData.Text = $"{players[Client.instance.myId].playerExperience} / {players[Client.instance.myId].ExperienceRequired}";
-                if (expPercentage <= 100 && expPercentage >= 0)
+                try
                 {
-                    loginWindow.ExperienceProgressBar.Value = expPercentage;
+                    loginWindow.GamePanelPlayerLevelRaceClassLabel.Text = $"Level {players[_myId].level} { players[_myId].playerRace} { players[_myId].playerClass}";
+                    loginWindow.enterStrengthData.Text = Convert.ToString(players[Client.instance.myId].strength);
+                    loginWindow.enterDexterityData.Text = Convert.ToString(players[Client.instance.myId].dexterity);
+                    loginWindow.enterConstitutionData.Text = Convert.ToString(players[Client.instance.myId].constitution);
+                    loginWindow.enterIntellectData.Text = Convert.ToString(players[Client.instance.myId].intellect);
+                    loginWindow.enterWisdomData.Text = Convert.ToString(players[Client.instance.myId].wisdom);
+                    loginWindow.enterCharismaData.Text = Convert.ToString(players[Client.instance.myId].charisma);
+                    loginWindow.enterExperienceData.Text = Convert.ToString(players[Client.instance.myId].playerExperience);
+                    loginWindow.enterSkillPointsData.Text = $" Stat Points Available : {Convert.ToString(players[Client.instance.myId].playerSkillPoints)}";
+                    loginWindow.EnterCarryingWeightData.Text = Convert.ToString(players[Client.instance.myId].playerCarryingWeight);
+                    loginWindow.GamePanelPlayerHealthAmountLabel.Text = $"{players[Client.instance.myId].currentHitPoints}/{players[Client.instance.myId].maxHitPoints}";
+                    loginWindow.HealthProgressBar.Maximum = players[Client.instance.myId].maxHitPoints;
+                    loginWindow.HealthProgressBar.Value = players[Client.instance.myId].currentHitPoints;
+                    loginWindow.GamePanelPlayerManaAmountLabel.Text = $"{players[Client.instance.myId].currentManaPoints}/{players[Client.instance.myId].maxManaPoints}";
+                    loginWindow.ManaProgressBar.Maximum = players[Client.instance.myId].maxManaPoints;
+                    loginWindow.ManaProgressBar.Value = players[Client.instance.myId].currentManaPoints;
+                    int expPercentage = (int)(((players[Client.instance.myId].playerExperience - players[Client.instance.myId].PreviousExperienceRequired) * 100) / ((players[Client.instance.myId].ExperienceRequired - players[Client.instance.myId].PreviousExperienceRequired) + 1));
+                    loginWindow.GamePanelPlayerExperienceAmountPercentLabel.Text = $"{expPercentage}%";
+                    loginWindow.enterExperienceData.Text = $"{players[Client.instance.myId].playerExperience} / {players[Client.instance.myId].ExperienceRequired}";
+                    if (expPercentage <= 100 && expPercentage >= 0)
+                    {
+                        loginWindow.ExperienceProgressBar.Value = expPercentage;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("DEBUG HERE");
                 }
             };
             loginWindow.Invoke(UpdateLabel);
