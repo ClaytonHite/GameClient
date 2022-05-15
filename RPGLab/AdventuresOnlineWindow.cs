@@ -15,7 +15,7 @@ namespace RPGLab.Networking
     public partial class AdventuresOnlineWindow : Form
     {
         public static AdventuresOnlineWindow loginWindow;
-        public static Dictionary<int, PlayerManager> players = GameManager.players;
+        public static Dictionary<int, Player> players = GameManager.players;
         public static bool loggedIn = false;
         public static string[] characterList;
         private static int avatarIndexList;
@@ -686,9 +686,9 @@ namespace RPGLab.Networking
                 ClientSend.CharacterSelect(loginUsername, loginPassword, loginPlayerName);
             }
         }
-        public static Image GetOtherAvatarImage(string playerRace, string PlayerAvatarInt)
+        public static Image GetAvatarImage(string playerRace, string PlayerAvatarInt)
         {
-            Image avatarImage = null;
+            Image avatarImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + PlayerAvatarInt);
             ImageList[] RaceImage = { loginWindow.DragonbornImageList, loginWindow.DwarfImageList, loginWindow.ElfImageList, loginWindow.GnomeImageList, loginWindow.GoblinImageList, loginWindow.HalfElfImageList, loginWindow.HalflingImageList, loginWindow.HumanImageList };
             for (int i = 0; i < RaceImage.Length; i++)
             {
@@ -699,21 +699,13 @@ namespace RPGLab.Networking
             }
             return avatarImage;
         }
-        public void SpawnPlayer(int _myId, string _username, Vector2 _position, List<int> Stats, List<string> Info, bool isStealth, int experienceNeeded, int previousExperienceNeeded)
+        public void SpawnPlayer(int _Id, string _username, Vector2 _position, List<int> Stats, List<string> Info, bool isStealth, int experienceNeeded, int previousExperienceNeeded)
         {
             loginWindow.BackgroundImage = null;
             loginWindow.BackColor = Color.MidnightBlue;
-            if (Client.instance.myId == _myId)
+            if (Client.instance.myId == _Id)
             {
-                Image CharImage = loginWindow.CharacterSelectAvatarImage.Image;
-                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
                 loginWindow.PlayerInfoGamePanel(_username, Stats, Info, experienceNeeded, previousExperienceNeeded);
-            }
-            else
-            {
-                Player otherPlayer = new Player(_myId, _username, _position, Stats, Info);
-                Image otherPlayerImage = GetOtherAvatarImage(otherPlayer.Race, otherPlayer.Avatar);
-                GameManager.SpawnPlayer(_myId, _username, _position, Stats, Info, otherPlayerImage, isStealth, experienceNeeded);
             }
         }
         public void PlayerInfoGamePanel(string _username, List<int> _characterStats, List<string> _characterInfo, int experienceNeeded, int previousExperienceNeeded)

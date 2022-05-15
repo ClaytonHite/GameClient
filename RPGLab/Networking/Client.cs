@@ -16,7 +16,6 @@ public class Client
     //public string ip = "192.168.1.239";
     public int port = 7373;
     public float ClientVersion = 1.0f;
-
     // clients ID and reference to its protocol class
     public int myId = 0;
     public TCP tcp;

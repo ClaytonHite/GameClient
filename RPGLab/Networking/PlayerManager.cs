@@ -22,8 +22,8 @@ public class PlayerManager
     public int intellect;
     public int wisdom;
     public int charisma;
-    public Sprite2D sprite;
-    public NameTag2D nameTag;
+    public Sprite2D sprite = null;
+    public NameTag2D nameTag = null;
     public bool playerBusy;
     public int playerCarryingWeight;
     public int playerExperience;

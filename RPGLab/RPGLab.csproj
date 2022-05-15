@@ -314,5 +314,8 @@
   <ItemGroup>
     <Folder Include="Resources\MenuButtons\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

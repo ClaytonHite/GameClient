@@ -15,7 +15,7 @@ namespace RPGLab
     class AdventuresOnline : RPGLab.RPGLab
     {
         public static AdventuresOnline loginWindow;
-        public static Dictionary<int, PlayerManager> player = GameManager.players;
+        public static Dictionary<int, Player> player = GameManager.players;
         public Vector2 CameraPosition = Vector2.Zero();
         bool left;
         bool right;

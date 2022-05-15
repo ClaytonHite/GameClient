@@ -18,7 +18,7 @@ namespace RPGLab.Combat
         public static bool attackUpRight;
         public static bool attackDownLeft;
         public static bool attackDownRight;
-        public static Dictionary<int, PlayerManager> player = GameManager.players;
+        public static Dictionary<int, Player> player = GameManager.players;
         public static Dictionary<int, MonsterManager> monsters = GameManager.monsters;
         static int playerRange = 6;
         public static void Update()

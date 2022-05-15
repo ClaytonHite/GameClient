@@ -12,7 +12,7 @@ namespace RPGLab
     class GameManager : AdventuresOnline
     {
         //SINGLETON public static GameManager instance;
-        public static Dictionary<int, PlayerManager> players = new Dictionary<int, PlayerManager>();
+        public static Dictionary<int, Player> players = new Dictionary<int, Player>();
         public static Dictionary<int, PlayerManager> playerInfo = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, PlayerManager> playerStats = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, PlayerManager> onlinePlayers = new Dictionary<int, PlayerManager>();
@@ -22,59 +22,13 @@ namespace RPGLab
 
         public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth, int experienceNeeded)
         {
-            if (players.ContainsKey(_id))
-            {
-                if (players[_id].username != _username)
-                {
-                    players.Remove(_id);
-                }
-            }
-            if (_id == Client.instance.myId)
-            {
-                if (!players.ContainsKey(_id))
-                {
-                    _player.sprite = new Sprite2D(_position, new Vector2(96, 64), CharImage, "Player");
-                    AdventuresOnlineWindow.ChaseCamera(_position);
-                    _player.nameTag = new NameTag2D(_position, new Vector2(96, 64), _username, "Player");
-                }
-            }
-            else
-            {
-                if (!players.ContainsKey(_id))
-                {
-                    _player.sprite = new Sprite2D(_position, new Vector2(96, 64), CharImage, "Player");
-                    _player.nameTag = new NameTag2D(_position, new Vector2(96, 64), _username, "Player");
-                }
-            }
-            _player.id = _id;
-            _player.username = _username;
-            _player.position = _position;
-            _player.level = Stats[0];
-            _player.currentHitPoints = Stats[1];
-            _player.maxHitPoints = Stats[2];
-            _player.currentManaPoints = Stats[3];
-            _player.maxManaPoints = Stats[4];
-            _player.strength = Stats[5];
-            _player.dexterity = Stats[6];
-            _player.constitution = Stats[7];
-            _player.intellect = Stats[8];
-            _player.wisdom = Stats[9];
-            _player.charisma = Stats[10];
-            _player.playerAvatar = Info[0];
-            _player.playerRace = Info[1];
-            _player.playerClass = Info[2];
-            _player.playerCarryingWeight = Stats[11];
-            _player.playerExperience = Stats[12];
-            _player.playerSkillPoints = Stats[13];
-            _player.isStealth = isStealth;
-            _player.playerBusy = false;
-            _player.ExperienceRequired = experienceNeeded;
+            Player _player = new Player(_id, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
             Log.Info($"Registering client {_id}");
-            if (!players.ContainsKey(_id))
+            players.Add(_id, _player);
+            if(Client.instance.myId == _id)
             {
-                players.Add(_id, _player);
+                AdventuresOnlineWindow.ChaseCamera(_position);
             }
-            players[_id].nameTag.Position = _position;
         }
         public static void SpawnMonster(int _id, string monsterName, Vector2 _position, string CharImage)
         {
@@ -106,11 +60,11 @@ namespace RPGLab
             }
             if (!respawn)
             {
-                try
+                int monsterID = Convert.ToInt32(MonsterData);
+                if (monsters.ContainsKey(monsterID))
                 {
                     List<Sprite2D> RemovalList = new List<Sprite2D>();
                     List<NameTag2D> NameRemovalList = new List<NameTag2D>();
-                    int monsterID = Convert.ToInt32(MonsterData);
                     Vector2 monsterPos = monsters[monsterID].position;
                     Image monsterImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + monsters[monsterID].monsterAvatar);
                     string monsterName = monsters[monsterID].monsterName;
@@ -139,15 +93,11 @@ namespace RPGLab
                     }
                     monsters.Remove(monsterID);
                 }
-                catch
-                {
-                    Console.WriteLine("DEBUG THIS TOO");
-                }
             }
         }
         public override void OnLoad()
         {
-            players = new Dictionary<int, PlayerManager>();
+            players = new Dictionary<int, Player>();
             playerInfo = new Dictionary<int, PlayerManager>();
             playerStats = new Dictionary<int, PlayerManager>();
             onlinePlayers = new Dictionary<int, PlayerManager>();
