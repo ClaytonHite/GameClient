@@ -316,5 +316,13 @@ namespace RPGLab.Networking
                 }
             }
         }
+        public static void DisconnectPlayer(Packet _packet)
+        {
+            int _id = _packet.ReadInt();
+            Log.Info($"DISCONNECT THIS PLAYER WITH ID {_id} AND REMOVE SPRITES.");
+            player[_id].sprite.DestroySelf();
+            player[_id].nameTag.DestroySelf();
+            player.Remove(_id);
+        }
     }
 }

@@ -22,7 +22,8 @@ public enum ServerPackets
     MonsterDamageDone,
     updatePlayer,
     wrongAccountorPassword,
-    ChatBox
+    ChatBox,
+    DisconnectPlayer
 }
 
 /// <summary>Sent from client to server.</summary>
