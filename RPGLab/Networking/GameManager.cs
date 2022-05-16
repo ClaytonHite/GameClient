@@ -24,6 +24,10 @@ namespace RPGLab
         {
             Player _player = new Player(_id, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
             Log.Info($"Registering client {_id}");
+            if(players.ContainsKey(_id))
+            {
+                players.Remove(_id);
+            }//Make Disconnect function to remove plyaer from dictionary, sprite, nametag, and collider
             players.Add(_id, _player);
             if(Client.instance.myId == _id)
             {

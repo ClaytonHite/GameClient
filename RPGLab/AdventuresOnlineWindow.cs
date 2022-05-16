@@ -724,7 +724,6 @@ namespace RPGLab.Networking
                 int expPercentage = (int)(((_characterStats[12] - previousExperienceNeeded) * 100) / ((experienceNeeded - previousExperienceNeeded)));
                 loginWindow.GamePanelPlayerExperienceAmountPercentLabel.Text = $"{expPercentage}%";
                 loginWindow.enterExperienceData.Text = $"{_characterStats[12]} / {experienceNeeded}";
-                Log.Error($"{_characterStats[12]} - {previousExperienceNeeded} * 100 / {experienceNeeded} - {previousExperienceNeeded} = {expPercentage}");
                 if (expPercentage <= 100 && expPercentage >= 0)
                 {
                     loginWindow.ExperienceProgressBar.Value = expPercentage;
