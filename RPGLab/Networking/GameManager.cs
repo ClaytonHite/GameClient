@@ -17,7 +17,7 @@ namespace RPGLab
         public static Dictionary<int, PlayerManager> playerStats = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, PlayerManager> onlinePlayers = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, MonsterManager> monsters = new Dictionary<int, MonsterManager>();
-        public static Dictionary<int, Collider> Colliders = Collider.Colliders;
+        public static List<Collider> Colliders = Collider.Colliders;
         public static PlayerManager _player = new PlayerManager();
 
         public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth, int experienceNeeded)
@@ -72,29 +72,9 @@ namespace RPGLab
                     Vector2 monsterPos = monsters[monsterID].position;
                     Image monsterImage = (Image)Properties.Resources.ResourceManager.GetObject("_" + monsters[monsterID].monsterAvatar);
                     string monsterName = monsters[monsterID].monsterName;
-                    foreach (Sprite2D sprite in Sprite2D.GetSprites())
-                    {
-                        if (sprite.Tag == "Monster" && sprite.Position.X == monsterPos.X && sprite.Position.Y == monsterPos.Y)
-                        {
-                            RemovalList.Add(sprite);
-                        }
-                    }
-                    foreach (NameTag2D nameTag in NameTag2D.GetNameTags())
-                    {
-                        if (nameTag.Tag == "Monster" && nameTag.Position.X == monsterPos.X && nameTag.Position.Y == monsterPos.Y && nameTag.PlayerName == monsterName)
-                        {
-                            NameRemovalList.Add(nameTag);
-                        }
-                    }
-                    Collider.DestorySelf(monsterPos);
-                    foreach (Sprite2D sprite in RemovalList)
-                    {
-                        sprite.DestroySelf();
-                    }
-                    foreach (NameTag2D nameTag in NameRemovalList)
-                    {
-                        nameTag.DestroySelf();
-                    }
+                    monsters[monsterID].sprite.DestroySelf();
+                    monsters[monsterID].nameTag.DestroySelf();
+                    monsters[monsterID].collider.DestroySelf();
                     monsters.Remove(monsterID);
                 }
             }

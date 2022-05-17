@@ -11,17 +11,17 @@ namespace RPGLab.RPGLab
         public static int colliderId = 0;
         public bool Walkable { get; set; }
         public Vector2 Position;
-        public static Dictionary<int, Collider> Colliders = new Dictionary<int, Collider>();
+        public static List<Collider> Colliders = new List<Collider>();
         public Collider(Vector2 Position, bool Walkable)
         {
             colliderId++;
             this.Position = Position;
             this.Walkable = Walkable;
-            Colliders.Add(colliderId, this);
+            Colliders.Add(this);
         }
         public static bool CheckForCollider(Vector2 position)
         {
-            foreach(Collider collider in Colliders.Values)
+            foreach(Collider collider in Colliders)
             {
                 if (collider.Position.X == position.X && collider.Position.Y == position.Y)
                 {
@@ -33,20 +33,14 @@ namespace RPGLab.RPGLab
             }
             return true;
         }
-        public static void DestorySelf(Vector2 position)
+        public void DestroySelf()
         {
-            int keyToDelete = -1;
-            foreach (KeyValuePair<int,Collider> collider in Colliders)
-            {
-                if (collider.Value.Position.X == position.X && collider.Value.Position.Y == position.Y)
-                {
-                    keyToDelete = collider.Key;
-                }
-            }
-            if (keyToDelete >= 0)
-            {
-                Colliders.Remove(keyToDelete);
-            }
+            UnregisterCollider(this);
+        }
+
+        public static void UnregisterCollider(Collider collider)
+        {
+            Colliders.Remove(collider);
         }
     }
 }
