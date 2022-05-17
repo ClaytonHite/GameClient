@@ -38,7 +38,14 @@ namespace RPGLab.Networking
             TileMap.MainMap = MainMap;
             TileMap.mapSize = _mapSize;
             TileMap.OnLoad();//Load Maps
-            Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+            try
+            {
+                Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error sending connection to server. exception = {ex}");
+            }
         }
 
         public static void CreateAccount(Packet _packet)

@@ -15,7 +15,7 @@ public class Client
     public string ip = "24.166.1.201";
     //public string ip = "192.168.1.239";
     public int port = 7373;
-    public float ClientVersion = 1.0f;
+    public float ClientVersion = 1.12f;
     // clients ID and reference to its protocol class
     public int myId = 0;
     public TCP tcp;
@@ -346,7 +346,10 @@ public class Client
         {
             isConnected = false;
             tcp.socket.Close();
-            udp.socket.Close();
+            if (udp.socket != null)
+            {
+                udp.socket.Close();
+            }
             Log.Error("Disconnected from server.");
         }
         AdventuresOnlineWindow.SendtoLoginScreen();

@@ -111,7 +111,7 @@ namespace RPGLab.Networking
                 loginWindow.LoadingBarLabel.Visible = visible;
                 counter++;
                 periodCount = new string('.', counter / 400);
-                loginWindow.LoadingBarLabel.Text = ("Loading"+periodCount);
+                loginWindow.LoadingBarLabel.Text = ("Loading" + periodCount);
                 if(counter > 2000)
                 {
                     counter = 0;
@@ -266,6 +266,10 @@ namespace RPGLab.Networking
         {
             MethodInvoker LoginScreen = delegate
             {
+                if(Client.instance.udp.socket == null)
+                {
+                    loginWindow.LoginLabelAccountInfoBoolean.Text = "Error connecting to server. Check Client Version to see if you are up to date with latest client.";
+                }
                 loginWindow.CharacterSelectPanel.Hide();
                 loginWindow.CreateAccountPanel.Hide();
                 loginWindow.LoginPanel.Show();

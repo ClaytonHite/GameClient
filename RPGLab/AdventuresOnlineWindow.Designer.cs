@@ -181,7 +181,7 @@ namespace RPGLab.Networking
             // 
             // LoadingStartBar
             // 
-            this.LoadingStartBar.Location = new System.Drawing.Point(777, 806);
+            this.LoadingStartBar.Location = new System.Drawing.Point(777, 900);
             this.LoadingStartBar.Name = "LoadingStartBar";
             this.LoadingStartBar.Size = new System.Drawing.Size(336, 33);
             this.LoadingStartBar.TabIndex = 10;
@@ -189,7 +189,7 @@ namespace RPGLab.Networking
             // LoadingBarLabel
             // 
             this.LoadingBarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadingBarLabel.Location = new System.Drawing.Point(895, 702);
+            this.LoadingBarLabel.Location = new System.Drawing.Point(895, 790);
             this.LoadingBarLabel.Name = "LoadingBarLabel";
             this.LoadingBarLabel.Size = new System.Drawing.Size(283, 101);
             this.LoadingBarLabel.TabIndex = 11;
@@ -1558,11 +1558,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
             this.Controls.Add(this.CreateCharacterPanel);
+            this.Controls.Add(this.GamePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
