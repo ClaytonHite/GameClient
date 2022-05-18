@@ -17,7 +17,6 @@ namespace RPGLab
         public static Dictionary<int, PlayerManager> playerStats = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, PlayerManager> onlinePlayers = new Dictionary<int, PlayerManager>();
         public static Dictionary<int, MonsterManager> monsters = new Dictionary<int, MonsterManager>();
-        public static List<Collider> Colliders = Collider.Colliders;
         public static PlayerManager _player = new PlayerManager();
 
         public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth, int experienceNeeded)
@@ -51,7 +50,7 @@ namespace RPGLab
                 _monster.position = _position;
                 _monster.sprite = new Sprite2D(_position, new Vector2(96, 64), (Image)Properties.Resources.ResourceManager.GetObject("_" + CharImage), "Monster");
                 _monster.nameTag = new NameTag2D(_position, new Vector2(96, 64), monsterName, "Monster");
-                _monster.collider = new Collider(_position, false);
+                _monster.collider = new Collider(_position, false, "Monster");
                 monsters.Add(_id, _monster);
             }
         }

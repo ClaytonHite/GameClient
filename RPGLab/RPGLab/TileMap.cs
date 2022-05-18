@@ -32,7 +32,7 @@ namespace RPGLab.RPGLab
                         {
                             if (tileName.Contains(mapTileColliders[k]))
                             {
-                                new Collider(new Vector2(x, y), false);
+                                new Collider(new Vector2(x, y), false, "TileMap");
                             }
                         }
                         new MapTileSprites2D(new Vector2(x, y), new Vector2(98, 66), Convert.ToInt32(MainMap[y, x]), tileName);

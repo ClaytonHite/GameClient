@@ -8,39 +8,44 @@ namespace RPGLab.RPGLab
 {
     public class Collider
     {
-        public static int colliderId = 0;
         public bool Walkable { get; set; }
         public Vector2 Position;
-        public static List<Collider> Colliders = new List<Collider>();
-        public Collider(Vector2 Position, bool Walkable)
+        public string Tag;
+        public static Collider[,] colliderArray = new Collider[TileMap.mapSize, TileMap.mapSize];
+        public Collider(Vector2 Position, bool walkable, string tag)
         {
-            colliderId++;
             this.Position = Position;
-            this.Walkable = Walkable;
-            Colliders.Add(this);
+            this.Walkable = walkable;
+            this.Tag = tag;
+            RegisterColliderArray(this);
         }
         public static bool CheckForCollider(Vector2 position)
         {
-            foreach(Collider collider in Colliders)
+            if (colliderArray[(int)position.X, (int)position.Y] == null)
             {
-                if (collider.Position.X == position.X && collider.Position.Y == position.Y)
-                {
-                    if(!collider.Walkable)
-                    {
-                        return false;
-                    }
-                }
+                return true;
+            }
+            if (!colliderArray[(int)position.X, (int)position.Y].Walkable)
+            {
+                return false;
             }
             return true;
         }
+        public static Collider GetColliders(Vector2 position)
+        {
+            return colliderArray[(int)position.X, (int)position.Y];
+        }
         public void DestroySelf()
         {
-            UnregisterCollider(this);
+            UnregisterColliderArray(this);
         }
-
-        public static void UnregisterCollider(Collider collider)
+        public void RegisterColliderArray(Collider collider)
         {
-            Colliders.Remove(collider);
+            colliderArray[(int)collider.Position.X, (int)collider.Position.Y] = collider;
+        }
+        public void UnregisterColliderArray(Collider collider)
+        {
+            colliderArray[(int)collider.Position.X, (int)collider.Position.Y] = null;
         }
     }
 }

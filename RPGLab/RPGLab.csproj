@@ -81,7 +81,6 @@
     <Compile Include="Networking\Packet.cs" />
     <Compile Include="Networking\MonsterManager.cs" />
     <Compile Include="Networking\PlayerManager.cs" />
-    <Compile Include="Pathfinding\PathfindingAI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
