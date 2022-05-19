@@ -250,7 +250,9 @@ namespace RPGLab.Networking
             Vector2 monsterPos = _packet.ReadVector2();
             if(monsters.ContainsKey(monsterID))
             {
+                Collider.colliderArray[(int)monsters[monsterID].position.X, (int)monsters[monsterID].position.Y] = null;
                 monsters[monsterID].position = monsterPos;
+                Collider.colliderArray[(int)monsterPos.X, (int)monsterPos.Y] = monsters[monsterID].collider;
                 monsters[monsterID].collider.Position = monsterPos;
                 monsters[monsterID].sprite.Position = monsterPos;
                 monsters[monsterID].nameTag.Position = monsterPos;
