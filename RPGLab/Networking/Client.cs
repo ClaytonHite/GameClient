@@ -11,7 +11,7 @@ public class Client
 {
     public static Client instance;
     public int ConnectionAttempts;
-    public static int dataBufferSize = 4096;
+    public static int dataBufferSize = 2048;
     public string ip = "24.166.1.201";
     //public string ip = "192.168.1.239";
     public int port = 7373;

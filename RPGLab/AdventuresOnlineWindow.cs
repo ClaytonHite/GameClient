@@ -54,8 +54,15 @@ namespace RPGLab.Networking
         public void UpdateForm()
         {
             //MEMORY LEAK if not done right
-            MethodInvoker refresh = delegate { GamePanel.Refresh(); }; 
-            Invoke(refresh);
+            try
+            {
+                MethodInvoker refresh = delegate { GamePanel.Refresh(); };
+                Invoke(refresh);
+            }
+            catch
+            {
+                Application.Exit();
+            }
         }
         private void CONNECT_Click(object sender, EventArgs e)
         {
