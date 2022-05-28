@@ -19,24 +19,24 @@ namespace RPGLab.Networking
         {
             string _msg = _packet.ReadString();
             int _myId = _packet.ReadInt();
-            string _mapData = _packet.ReadString();
-            int _mapSize = _packet.ReadInt();
+            //string _mapData = _packet.ReadString();
+            //int _mapSize = _packet.ReadInt();
 
             Console.WriteLine($"Message from server: {_msg}");
             Client.instance.myId = _myId;
             //also send the packet back to server
             ClientSend.WelcomeReceived();
             //Get Map Data
-            string[] LoadFile = _mapData.Split(':');
-            string[,] MainMap = new string[_mapSize, _mapSize];
-            for (int i = 0; i < LoadFile.Length; i++)
-            {
-                int posY = i / _mapSize;
-                int posX = i % _mapSize;
-                MainMap[posY, posX] = LoadFile[i];
-            }
-            TileMap.MainMap = MainMap;
-            TileMap.mapSize = _mapSize;
+            //string[] LoadFile = _mapData.Split(':');
+            //string[,] MainMap = new string[_mapSize, _mapSize];
+            //for (int i = 0; i < LoadFile.Length; i++)
+            //{
+            //    int posY = i / _mapSize;
+            //    int posX = i % _mapSize;
+            //    MainMap[posY, posX] = LoadFile[i];
+            //}
+            //TileMap.MainMap = MainMap;
+            //TileMap.mapSize = _mapSize;
             TileMap.OnLoad();//Load Maps
             try
             {
