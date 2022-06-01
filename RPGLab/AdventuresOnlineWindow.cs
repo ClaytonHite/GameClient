@@ -50,6 +50,8 @@ namespace RPGLab.Networking
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, CharacterSelectPanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, CreateAccountPanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, GamePanel, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, SkillsPanel, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, ContainerPanel, new object[] { true });
         }
         public void UpdateForm()
         {
@@ -806,6 +808,29 @@ namespace RPGLab.Networking
             Client.instance.OnRejection();
             Application.Exit();
             Environment.Exit(0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {//InventoryButtonClick
+            if (ContainerPanel.Visible == false)
+            {
+                SkillsPanel.Visible = false;
+                SkillsPanel.Hide();
+                ContainerPanel.Visible = true;
+                ContainerPanel.Show();
+                GamePanel.Focus();
+            }
+            else if (ContainerPanel.Visible == true)
+            {
+                ContainerPanel.Visible = false;
+                ContainerPanel.Hide();
+                GamePanel.Focus();
+            }
+        }
+
+        private void ContainerPanel_Resize(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -112,6 +112,43 @@ namespace RPGLab.Networking
             this.GameChatBox = new System.Windows.Forms.ListBox();
             this.GameChatTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ContainerPanel = new System.Windows.Forms.Panel();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.ItemInContainerPictureBox5 = new System.Windows.Forms.PictureBox();
+            this.ItemInContainerPictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ItemInContainerPictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ItemInContainerPictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ItemInContainerPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.ExperienceProgressBar = new System.Windows.Forms.ProgressBar();
+            this.ManaProgressBar = new System.Windows.Forms.ProgressBar();
+            this.HealthProgressBar = new System.Windows.Forms.ProgressBar();
+            this.GameRenderer = new System.Windows.Forms.PictureBox();
             this.SkillsPanel = new System.Windows.Forms.Panel();
             this.AddSkillButton6 = new System.Windows.Forms.Button();
             this.AddSkillButton5 = new System.Windows.Forms.Button();
@@ -136,13 +173,9 @@ namespace RPGLab.Networking
             this.CapacityLabel = new System.Windows.Forms.Label();
             this.enterExperienceData = new System.Windows.Forms.Label();
             this.xpToLevelLabel = new System.Windows.Forms.Label();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.ExperienceProgressBar = new System.Windows.Forms.ProgressBar();
-            this.ManaProgressBar = new System.Windows.Forms.ProgressBar();
-            this.HealthProgressBar = new System.Windows.Forms.ProgressBar();
-            this.GameRenderer = new System.Windows.Forms.PictureBox();
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.CreateCharacterPanel.SuspendLayout();
@@ -155,9 +188,41 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).BeginInit();
             this.GamePanel.SuspendLayout();
-            this.SkillsPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.ContainerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).BeginInit();
+            this.SkillsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -1064,6 +1129,7 @@ namespace RPGLab.Networking
             this.button3.TabStop = false;
             this.button3.Text = "Inventory";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -1110,7 +1176,7 @@ namespace RPGLab.Networking
             this.GameChatBox.Location = new System.Drawing.Point(0, 843);
             this.GameChatBox.Name = "GameChatBox";
             this.GameChatBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.GameChatBox.Size = new System.Drawing.Size(1440, 136);
+            this.GameChatBox.Size = new System.Drawing.Size(1440, 92);
             this.GameChatBox.TabIndex = 0;
             this.GameChatBox.TabStop = false;
             this.GameChatBox.UseTabStops = false;
@@ -1127,7 +1193,7 @@ namespace RPGLab.Networking
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Transparent;
-            this.GamePanel.Controls.Add(this.SkillsPanel);
+            this.GamePanel.Controls.Add(this.flowLayoutPanel1);
             this.GamePanel.Controls.Add(this.pictureBox14);
             this.GamePanel.Controls.Add(this.GameChatTextBox);
             this.GamePanel.Controls.Add(this.GameChatBox);
@@ -1148,303 +1214,367 @@ namespace RPGLab.Networking
             this.GamePanel.Controls.Add(this.GamePanelPlayerNameLabel);
             this.GamePanel.Controls.Add(this.GamePanelPlayerAvatar);
             this.GamePanel.Controls.Add(this.GameRenderer);
+            this.GamePanel.Controls.Add(this.SkillsPanel);
             this.GamePanel.Location = new System.Drawing.Point(9, 12);
             this.GamePanel.Margin = new System.Windows.Forms.Padding(0);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(1893, 1017);
             this.GamePanel.TabIndex = 0;
             // 
-            // SkillsPanel
+            // flowLayoutPanel1
             // 
-            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
-            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
-            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
-            this.SkillsPanel.Controls.Add(this.enterCharismaData);
-            this.SkillsPanel.Controls.Add(this.CharismaLabel);
-            this.SkillsPanel.Controls.Add(this.enterWisdomData);
-            this.SkillsPanel.Controls.Add(this.WisdomLabel);
-            this.SkillsPanel.Controls.Add(this.enterIntellectData);
-            this.SkillsPanel.Controls.Add(this.IntellectLabel);
-            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
-            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
-            this.SkillsPanel.Controls.Add(this.enterDexterityData);
-            this.SkillsPanel.Controls.Add(this.DexterityLabel);
-            this.SkillsPanel.Controls.Add(this.enterStrengthData);
-            this.SkillsPanel.Controls.Add(this.StrengthLabel);
-            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
-            this.SkillsPanel.Controls.Add(this.CapacityLabel);
-            this.SkillsPanel.Controls.Add(this.enterExperienceData);
-            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
-            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
-            this.SkillsPanel.Name = "SkillsPanel";
-            this.SkillsPanel.Size = new System.Drawing.Size(449, 546);
-            this.SkillsPanel.TabIndex = 156;
+            this.flowLayoutPanel1.Controls.Add(this.ContainerPanel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(755, 209);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(461, 546);
+            this.flowLayoutPanel1.TabIndex = 30;
             // 
-            // AddSkillButton6
+            // ContainerPanel
             // 
-            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
-            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton6.Location = new System.Drawing.Point(369, 277);
-            this.AddSkillButton6.Name = "AddSkillButton6";
-            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton6.TabIndex = 22;
-            this.AddSkillButton6.Text = "Add Stat";
-            this.AddSkillButton6.UseVisualStyleBackColor = false;
-            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
+            this.ContainerPanel.AutoScroll = true;
+            this.ContainerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ContainerPanel.BackColor = System.Drawing.Color.Black;
+            this.ContainerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContainerPanel.BackgroundImage")));
+            this.ContainerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ContainerPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ContainerPanel.Controls.Add(this.pictureBox26);
+            this.ContainerPanel.Controls.Add(this.pictureBox27);
+            this.ContainerPanel.Controls.Add(this.pictureBox28);
+            this.ContainerPanel.Controls.Add(this.pictureBox29);
+            this.ContainerPanel.Controls.Add(this.pictureBox30);
+            this.ContainerPanel.Controls.Add(this.pictureBox21);
+            this.ContainerPanel.Controls.Add(this.pictureBox22);
+            this.ContainerPanel.Controls.Add(this.pictureBox23);
+            this.ContainerPanel.Controls.Add(this.pictureBox24);
+            this.ContainerPanel.Controls.Add(this.pictureBox25);
+            this.ContainerPanel.Controls.Add(this.pictureBox16);
+            this.ContainerPanel.Controls.Add(this.pictureBox17);
+            this.ContainerPanel.Controls.Add(this.pictureBox18);
+            this.ContainerPanel.Controls.Add(this.pictureBox19);
+            this.ContainerPanel.Controls.Add(this.pictureBox20);
+            this.ContainerPanel.Controls.Add(this.pictureBox10);
+            this.ContainerPanel.Controls.Add(this.pictureBox11);
+            this.ContainerPanel.Controls.Add(this.pictureBox12);
+            this.ContainerPanel.Controls.Add(this.pictureBox13);
+            this.ContainerPanel.Controls.Add(this.pictureBox15);
+            this.ContainerPanel.Controls.Add(this.pictureBox4);
+            this.ContainerPanel.Controls.Add(this.pictureBox6);
+            this.ContainerPanel.Controls.Add(this.pictureBox7);
+            this.ContainerPanel.Controls.Add(this.pictureBox8);
+            this.ContainerPanel.Controls.Add(this.pictureBox9);
+            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox5);
+            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox4);
+            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox3);
+            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox2);
+            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox1);
+            this.flowLayoutPanel1.SetFlowBreak(this.ContainerPanel, true);
+            this.ContainerPanel.Location = new System.Drawing.Point(3, 3);
+            this.ContainerPanel.MaximumSize = new System.Drawing.Size(456, 525);
+            this.ContainerPanel.MinimumSize = new System.Drawing.Size(456, 106);
+            this.ContainerPanel.Name = "ContainerPanel";
+            this.ContainerPanel.Size = new System.Drawing.Size(456, 525);
+            this.ContainerPanel.TabIndex = 157;
+            this.ContainerPanel.Resize += new System.EventHandler(this.ContainerPanel_Resize);
             // 
-            // AddSkillButton5
+            // pictureBox26
             // 
-            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
-            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton5.Location = new System.Drawing.Point(369, 247);
-            this.AddSkillButton5.Name = "AddSkillButton5";
-            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton5.TabIndex = 21;
-            this.AddSkillButton5.Text = "Add Stat";
-            this.AddSkillButton5.UseVisualStyleBackColor = false;
-            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
+            this.pictureBox26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox26.BackgroundImage")));
+            this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox26.Location = new System.Drawing.Point(351, 429);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox26.TabIndex = 29;
+            this.pictureBox26.TabStop = false;
             // 
-            // AddSkillButton4
+            // pictureBox27
             // 
-            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
-            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton4.Location = new System.Drawing.Point(369, 217);
-            this.AddSkillButton4.Name = "AddSkillButton4";
-            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton4.TabIndex = 20;
-            this.AddSkillButton4.Text = "Add Stat";
-            this.AddSkillButton4.UseVisualStyleBackColor = false;
-            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
+            this.pictureBox27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox27.BackgroundImage")));
+            this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox27.Location = new System.Drawing.Point(270, 429);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox27.TabIndex = 28;
+            this.pictureBox27.TabStop = false;
             // 
-            // AddSkillButton3
+            // pictureBox28
             // 
-            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
-            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton3.Location = new System.Drawing.Point(369, 187);
-            this.AddSkillButton3.Name = "AddSkillButton3";
-            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton3.TabIndex = 19;
-            this.AddSkillButton3.Text = "Add Stat";
-            this.AddSkillButton3.UseVisualStyleBackColor = false;
-            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
+            this.pictureBox28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox28.BackgroundImage")));
+            this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox28.Location = new System.Drawing.Point(185, 429);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox28.TabIndex = 27;
+            this.pictureBox28.TabStop = false;
             // 
-            // AddSkillButton2
+            // pictureBox29
             // 
-            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
-            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton2.Location = new System.Drawing.Point(369, 157);
-            this.AddSkillButton2.Name = "AddSkillButton2";
-            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton2.TabIndex = 18;
-            this.AddSkillButton2.Text = "Add Stat";
-            this.AddSkillButton2.UseVisualStyleBackColor = false;
-            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
+            this.pictureBox29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox29.BackgroundImage")));
+            this.pictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox29.Location = new System.Drawing.Point(104, 429);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox29.TabIndex = 26;
+            this.pictureBox29.TabStop = false;
             // 
-            // AddSkillButton1
+            // pictureBox30
             // 
-            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
-            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton1.Location = new System.Drawing.Point(369, 127);
-            this.AddSkillButton1.Name = "AddSkillButton1";
-            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton1.TabIndex = 17;
-            this.AddSkillButton1.Text = "Add Stat";
-            this.AddSkillButton1.UseVisualStyleBackColor = false;
-            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
+            this.pictureBox30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox30.BackgroundImage")));
+            this.pictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox30.Location = new System.Drawing.Point(24, 429);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox30.TabIndex = 25;
+            this.pictureBox30.TabStop = false;
             // 
-            // enterSkillPointsData
+            // pictureBox21
             // 
-            this.enterSkillPointsData.AutoSize = true;
-            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 81);
-            this.enterSkillPointsData.Name = "enterSkillPointsData";
-            this.enterSkillPointsData.Size = new System.Drawing.Size(304, 37);
-            this.enterSkillPointsData.TabIndex = 16;
-            this.enterSkillPointsData.Text = "enterSkillPointsData";
+            this.pictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox21.BackgroundImage")));
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox21.Location = new System.Drawing.Point(351, 349);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox21.TabIndex = 24;
+            this.pictureBox21.TabStop = false;
             // 
-            // enterCharismaData
+            // pictureBox22
             // 
-            this.enterCharismaData.AutoSize = true;
-            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterCharismaData.Location = new System.Drawing.Point(192, 277);
-            this.enterCharismaData.Name = "enterCharismaData";
-            this.enterCharismaData.Size = new System.Drawing.Size(295, 37);
-            this.enterCharismaData.TabIndex = 15;
-            this.enterCharismaData.Text = "enterCharismaData";
+            this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
+            this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox22.Location = new System.Drawing.Point(270, 349);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox22.TabIndex = 23;
+            this.pictureBox22.TabStop = false;
             // 
-            // CharismaLabel
+            // pictureBox23
             // 
-            this.CharismaLabel.AutoSize = true;
-            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaLabel.Location = new System.Drawing.Point(3, 277);
-            this.CharismaLabel.Name = "CharismaLabel";
-            this.CharismaLabel.Size = new System.Drawing.Size(173, 37);
-            this.CharismaLabel.TabIndex = 14;
-            this.CharismaLabel.Text = "Charisma :";
+            this.pictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.BackgroundImage")));
+            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox23.Location = new System.Drawing.Point(185, 349);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox23.TabIndex = 22;
+            this.pictureBox23.TabStop = false;
             // 
-            // enterWisdomData
+            // pictureBox24
             // 
-            this.enterWisdomData.AutoSize = true;
-            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterWisdomData.Location = new System.Drawing.Point(192, 247);
-            this.enterWisdomData.Name = "enterWisdomData";
-            this.enterWisdomData.Size = new System.Drawing.Size(274, 37);
-            this.enterWisdomData.TabIndex = 13;
-            this.enterWisdomData.Text = "enterWisdomData";
+            this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
+            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox24.Location = new System.Drawing.Point(104, 349);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox24.TabIndex = 21;
+            this.pictureBox24.TabStop = false;
             // 
-            // WisdomLabel
+            // pictureBox25
             // 
-            this.WisdomLabel.AutoSize = true;
-            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomLabel.Location = new System.Drawing.Point(3, 247);
-            this.WisdomLabel.Name = "WisdomLabel";
-            this.WisdomLabel.Size = new System.Drawing.Size(152, 37);
-            this.WisdomLabel.TabIndex = 12;
-            this.WisdomLabel.Text = "Wisdom :";
+            this.pictureBox25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox25.BackgroundImage")));
+            this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox25.Location = new System.Drawing.Point(24, 349);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox25.TabIndex = 20;
+            this.pictureBox25.TabStop = false;
             // 
-            // enterIntellectData
+            // pictureBox16
             // 
-            this.enterIntellectData.AutoSize = true;
-            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterIntellectData.Location = new System.Drawing.Point(192, 217);
-            this.enterIntellectData.Name = "enterIntellectData";
-            this.enterIntellectData.Size = new System.Drawing.Size(265, 37);
-            this.enterIntellectData.TabIndex = 11;
-            this.enterIntellectData.Text = "enterIntellectData";
+            this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox16.Location = new System.Drawing.Point(351, 269);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox16.TabIndex = 19;
+            this.pictureBox16.TabStop = false;
             // 
-            // IntellectLabel
+            // pictureBox17
             // 
-            this.IntellectLabel.AutoSize = true;
-            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntellectLabel.Location = new System.Drawing.Point(3, 217);
-            this.IntellectLabel.Name = "IntellectLabel";
-            this.IntellectLabel.Size = new System.Drawing.Size(143, 37);
-            this.IntellectLabel.TabIndex = 10;
-            this.IntellectLabel.Text = "Intellect :";
+            this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Location = new System.Drawing.Point(270, 269);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox17.TabIndex = 18;
+            this.pictureBox17.TabStop = false;
             // 
-            // enterConstitutionData
+            // pictureBox18
             // 
-            this.enterConstitutionData.AutoSize = true;
-            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterConstitutionData.Location = new System.Drawing.Point(192, 187);
-            this.enterConstitutionData.Name = "enterConstitutionData";
-            this.enterConstitutionData.Size = new System.Drawing.Size(327, 37);
-            this.enterConstitutionData.TabIndex = 9;
-            this.enterConstitutionData.Text = "enterConstitutionData";
+            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox18.Location = new System.Drawing.Point(185, 269);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox18.TabIndex = 17;
+            this.pictureBox18.TabStop = false;
             // 
-            // ConstitutionLabel
+            // pictureBox19
             // 
-            this.ConstitutionLabel.AutoSize = true;
-            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionLabel.Location = new System.Drawing.Point(3, 187);
-            this.ConstitutionLabel.Name = "ConstitutionLabel";
-            this.ConstitutionLabel.Size = new System.Drawing.Size(205, 37);
-            this.ConstitutionLabel.TabIndex = 8;
-            this.ConstitutionLabel.Text = "Constitution :";
+            this.pictureBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox19.BackgroundImage")));
+            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox19.Location = new System.Drawing.Point(104, 269);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox19.TabIndex = 16;
+            this.pictureBox19.TabStop = false;
             // 
-            // enterDexterityData
+            // pictureBox20
             // 
-            this.enterDexterityData.AutoSize = true;
-            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterDexterityData.Location = new System.Drawing.Point(192, 157);
-            this.enterDexterityData.Name = "enterDexterityData";
-            this.enterDexterityData.Size = new System.Drawing.Size(280, 37);
-            this.enterDexterityData.TabIndex = 7;
-            this.enterDexterityData.Text = "enterDexterityData";
+            this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
+            this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox20.Location = new System.Drawing.Point(24, 269);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox20.TabIndex = 15;
+            this.pictureBox20.TabStop = false;
             // 
-            // DexterityLabel
+            // pictureBox10
             // 
-            this.DexterityLabel.AutoSize = true;
-            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityLabel.Location = new System.Drawing.Point(3, 157);
-            this.DexterityLabel.Name = "DexterityLabel";
-            this.DexterityLabel.Size = new System.Drawing.Size(158, 37);
-            this.DexterityLabel.TabIndex = 6;
-            this.DexterityLabel.Text = "Dexterity :";
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(351, 189);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox10.TabIndex = 14;
+            this.pictureBox10.TabStop = false;
             // 
-            // enterStrengthData
+            // pictureBox11
             // 
-            this.enterStrengthData.AutoSize = true;
-            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterStrengthData.Location = new System.Drawing.Point(192, 127);
-            this.enterStrengthData.Name = "enterStrengthData";
-            this.enterStrengthData.Size = new System.Drawing.Size(278, 37);
-            this.enterStrengthData.TabIndex = 5;
-            this.enterStrengthData.Text = "enterStrengthData";
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(270, 189);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox11.TabIndex = 13;
+            this.pictureBox11.TabStop = false;
             // 
-            // StrengthLabel
+            // pictureBox12
             // 
-            this.StrengthLabel.AutoSize = true;
-            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel.Location = new System.Drawing.Point(3, 127);
-            this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(156, 37);
-            this.StrengthLabel.TabIndex = 4;
-            this.StrengthLabel.Text = "Strength :";
+            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(185, 189);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox12.TabIndex = 12;
+            this.pictureBox12.TabStop = false;
             // 
-            // EnterCarryingWeightData
+            // pictureBox13
             // 
-            this.EnterCarryingWeightData.AutoSize = true;
-            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterCarryingWeightData.Location = new System.Drawing.Point(192, 30);
-            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
-            this.EnterCarryingWeightData.Size = new System.Drawing.Size(378, 37);
-            this.EnterCarryingWeightData.TabIndex = 3;
-            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
+            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(104, 189);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox13.TabIndex = 11;
+            this.pictureBox13.TabStop = false;
             // 
-            // CapacityLabel
+            // pictureBox15
             // 
-            this.CapacityLabel.AutoSize = true;
-            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CapacityLabel.Location = new System.Drawing.Point(3, 30);
-            this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(265, 37);
-            this.CapacityLabel.TabIndex = 2;
-            this.CapacityLabel.Text = "Carrying Weight :";
+            this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox15.Location = new System.Drawing.Point(24, 189);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox15.TabIndex = 10;
+            this.pictureBox15.TabStop = false;
             // 
-            // enterExperienceData
+            // pictureBox4
             // 
-            this.enterExperienceData.AutoSize = true;
-            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterExperienceData.Location = new System.Drawing.Point(192, 0);
-            this.enterExperienceData.Name = "enterExperienceData";
-            this.enterExperienceData.Size = new System.Drawing.Size(314, 37);
-            this.enterExperienceData.TabIndex = 1;
-            this.enterExperienceData.Text = "enterExperienceData";
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(351, 109);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
-            // xpToLevelLabel
+            // pictureBox6
             // 
-            this.xpToLevelLabel.AutoSize = true;
-            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xpToLevelLabel.Location = new System.Drawing.Point(3, 0);
-            this.xpToLevelLabel.Name = "xpToLevelLabel";
-            this.xpToLevelLabel.Size = new System.Drawing.Size(368, 37);
-            this.xpToLevelLabel.TabIndex = 0;
-            this.xpToLevelLabel.Text = "Experience to next level :";
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(270, 109);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(185, 109);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(104, 109);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(24, 109);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox9.TabIndex = 5;
+            this.pictureBox9.TabStop = false;
+            // 
+            // ItemInContainerPictureBox5
+            // 
+            this.ItemInContainerPictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox5.BackgroundImage")));
+            this.ItemInContainerPictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemInContainerPictureBox5.Location = new System.Drawing.Point(351, 29);
+            this.ItemInContainerPictureBox5.Name = "ItemInContainerPictureBox5";
+            this.ItemInContainerPictureBox5.Size = new System.Drawing.Size(64, 64);
+            this.ItemInContainerPictureBox5.TabIndex = 4;
+            this.ItemInContainerPictureBox5.TabStop = false;
+            // 
+            // ItemInContainerPictureBox4
+            // 
+            this.ItemInContainerPictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox4.BackgroundImage")));
+            this.ItemInContainerPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemInContainerPictureBox4.Location = new System.Drawing.Point(270, 29);
+            this.ItemInContainerPictureBox4.Name = "ItemInContainerPictureBox4";
+            this.ItemInContainerPictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.ItemInContainerPictureBox4.TabIndex = 3;
+            this.ItemInContainerPictureBox4.TabStop = false;
+            // 
+            // ItemInContainerPictureBox3
+            // 
+            this.ItemInContainerPictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox3.BackgroundImage")));
+            this.ItemInContainerPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemInContainerPictureBox3.Location = new System.Drawing.Point(185, 29);
+            this.ItemInContainerPictureBox3.Name = "ItemInContainerPictureBox3";
+            this.ItemInContainerPictureBox3.Size = new System.Drawing.Size(64, 64);
+            this.ItemInContainerPictureBox3.TabIndex = 2;
+            this.ItemInContainerPictureBox3.TabStop = false;
+            // 
+            // ItemInContainerPictureBox2
+            // 
+            this.ItemInContainerPictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox2.BackgroundImage")));
+            this.ItemInContainerPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemInContainerPictureBox2.Location = new System.Drawing.Point(104, 29);
+            this.ItemInContainerPictureBox2.Name = "ItemInContainerPictureBox2";
+            this.ItemInContainerPictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.ItemInContainerPictureBox2.TabIndex = 1;
+            this.ItemInContainerPictureBox2.TabStop = false;
+            // 
+            // ItemInContainerPictureBox1
+            // 
+            this.ItemInContainerPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox1.BackgroundImage")));
+            this.ItemInContainerPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ItemInContainerPictureBox1.Location = new System.Drawing.Point(24, 29);
+            this.ItemInContainerPictureBox1.Name = "ItemInContainerPictureBox1";
+            this.ItemInContainerPictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.ItemInContainerPictureBox1.TabIndex = 0;
+            this.ItemInContainerPictureBox1.TabStop = false;
             // 
             // pictureBox14
             // 
@@ -1496,6 +1626,317 @@ namespace RPGLab.Networking
             this.GameRenderer.Size = new System.Drawing.Size(1440, 832);
             this.GameRenderer.TabIndex = 155;
             this.GameRenderer.TabStop = false;
+            // 
+            // SkillsPanel
+            // 
+            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
+            this.SkillsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkillsPanel.BackgroundImage")));
+            this.SkillsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
+            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
+            this.SkillsPanel.Controls.Add(this.enterCharismaData);
+            this.SkillsPanel.Controls.Add(this.CharismaLabel);
+            this.SkillsPanel.Controls.Add(this.enterWisdomData);
+            this.SkillsPanel.Controls.Add(this.WisdomLabel);
+            this.SkillsPanel.Controls.Add(this.enterIntellectData);
+            this.SkillsPanel.Controls.Add(this.IntellectLabel);
+            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
+            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
+            this.SkillsPanel.Controls.Add(this.enterDexterityData);
+            this.SkillsPanel.Controls.Add(this.DexterityLabel);
+            this.SkillsPanel.Controls.Add(this.enterStrengthData);
+            this.SkillsPanel.Controls.Add(this.StrengthLabel);
+            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
+            this.SkillsPanel.Controls.Add(this.CapacityLabel);
+            this.SkillsPanel.Controls.Add(this.enterExperienceData);
+            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
+            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
+            this.SkillsPanel.Name = "SkillsPanel";
+            this.SkillsPanel.Size = new System.Drawing.Size(449, 546);
+            this.SkillsPanel.TabIndex = 156;
+            // 
+            // AddSkillButton6
+            // 
+            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
+            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton6.Location = new System.Drawing.Point(341, 277);
+            this.AddSkillButton6.Name = "AddSkillButton6";
+            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton6.TabIndex = 22;
+            this.AddSkillButton6.Text = "Add Stat";
+            this.AddSkillButton6.UseVisualStyleBackColor = false;
+            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
+            // 
+            // AddSkillButton5
+            // 
+            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
+            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton5.Location = new System.Drawing.Point(341, 247);
+            this.AddSkillButton5.Name = "AddSkillButton5";
+            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton5.TabIndex = 21;
+            this.AddSkillButton5.Text = "Add Stat";
+            this.AddSkillButton5.UseVisualStyleBackColor = false;
+            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
+            // 
+            // AddSkillButton4
+            // 
+            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
+            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton4.Location = new System.Drawing.Point(341, 217);
+            this.AddSkillButton4.Name = "AddSkillButton4";
+            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton4.TabIndex = 20;
+            this.AddSkillButton4.Text = "Add Stat";
+            this.AddSkillButton4.UseVisualStyleBackColor = false;
+            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
+            // 
+            // AddSkillButton3
+            // 
+            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
+            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton3.Location = new System.Drawing.Point(341, 187);
+            this.AddSkillButton3.Name = "AddSkillButton3";
+            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton3.TabIndex = 19;
+            this.AddSkillButton3.Text = "Add Stat";
+            this.AddSkillButton3.UseVisualStyleBackColor = false;
+            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
+            // 
+            // AddSkillButton2
+            // 
+            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
+            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton2.Location = new System.Drawing.Point(341, 157);
+            this.AddSkillButton2.Name = "AddSkillButton2";
+            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton2.TabIndex = 18;
+            this.AddSkillButton2.Text = "Add Stat";
+            this.AddSkillButton2.UseVisualStyleBackColor = false;
+            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
+            // 
+            // AddSkillButton1
+            // 
+            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
+            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton1.Location = new System.Drawing.Point(341, 127);
+            this.AddSkillButton1.Name = "AddSkillButton1";
+            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton1.TabIndex = 17;
+            this.AddSkillButton1.Text = "Add Stat";
+            this.AddSkillButton1.UseVisualStyleBackColor = false;
+            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
+            // 
+            // enterSkillPointsData
+            // 
+            this.enterSkillPointsData.AutoSize = true;
+            this.enterSkillPointsData.BackColor = System.Drawing.Color.Transparent;
+            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
+            this.enterSkillPointsData.Name = "enterSkillPointsData";
+            this.enterSkillPointsData.Size = new System.Drawing.Size(304, 37);
+            this.enterSkillPointsData.TabIndex = 16;
+            this.enterSkillPointsData.Text = "enterSkillPointsData";
+            // 
+            // enterCharismaData
+            // 
+            this.enterCharismaData.AutoSize = true;
+            this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
+            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterCharismaData.Location = new System.Drawing.Point(165, 277);
+            this.enterCharismaData.Name = "enterCharismaData";
+            this.enterCharismaData.Size = new System.Drawing.Size(295, 37);
+            this.enterCharismaData.TabIndex = 15;
+            this.enterCharismaData.Text = "enterCharismaData";
+            // 
+            // CharismaLabel
+            // 
+            this.CharismaLabel.AutoSize = true;
+            this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharismaLabel.Location = new System.Drawing.Point(32, 280);
+            this.CharismaLabel.Name = "CharismaLabel";
+            this.CharismaLabel.Size = new System.Drawing.Size(173, 37);
+            this.CharismaLabel.TabIndex = 14;
+            this.CharismaLabel.Text = "Charisma :";
+            // 
+            // enterWisdomData
+            // 
+            this.enterWisdomData.AutoSize = true;
+            this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
+            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterWisdomData.Location = new System.Drawing.Point(165, 247);
+            this.enterWisdomData.Name = "enterWisdomData";
+            this.enterWisdomData.Size = new System.Drawing.Size(274, 37);
+            this.enterWisdomData.TabIndex = 13;
+            this.enterWisdomData.Text = "enterWisdomData";
+            // 
+            // WisdomLabel
+            // 
+            this.WisdomLabel.AutoSize = true;
+            this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WisdomLabel.Location = new System.Drawing.Point(32, 250);
+            this.WisdomLabel.Name = "WisdomLabel";
+            this.WisdomLabel.Size = new System.Drawing.Size(152, 37);
+            this.WisdomLabel.TabIndex = 12;
+            this.WisdomLabel.Text = "Wisdom :";
+            // 
+            // enterIntellectData
+            // 
+            this.enterIntellectData.AutoSize = true;
+            this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
+            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterIntellectData.Location = new System.Drawing.Point(165, 217);
+            this.enterIntellectData.Name = "enterIntellectData";
+            this.enterIntellectData.Size = new System.Drawing.Size(265, 37);
+            this.enterIntellectData.TabIndex = 11;
+            this.enterIntellectData.Text = "enterIntellectData";
+            // 
+            // IntellectLabel
+            // 
+            this.IntellectLabel.AutoSize = true;
+            this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntellectLabel.Location = new System.Drawing.Point(32, 220);
+            this.IntellectLabel.Name = "IntellectLabel";
+            this.IntellectLabel.Size = new System.Drawing.Size(143, 37);
+            this.IntellectLabel.TabIndex = 10;
+            this.IntellectLabel.Text = "Intellect :";
+            // 
+            // enterConstitutionData
+            // 
+            this.enterConstitutionData.AutoSize = true;
+            this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
+            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterConstitutionData.Location = new System.Drawing.Point(165, 187);
+            this.enterConstitutionData.Name = "enterConstitutionData";
+            this.enterConstitutionData.Size = new System.Drawing.Size(327, 37);
+            this.enterConstitutionData.TabIndex = 9;
+            this.enterConstitutionData.Text = "enterConstitutionData";
+            // 
+            // ConstitutionLabel
+            // 
+            this.ConstitutionLabel.AutoSize = true;
+            this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 190);
+            this.ConstitutionLabel.Name = "ConstitutionLabel";
+            this.ConstitutionLabel.Size = new System.Drawing.Size(205, 37);
+            this.ConstitutionLabel.TabIndex = 8;
+            this.ConstitutionLabel.Text = "Constitution :";
+            // 
+            // enterDexterityData
+            // 
+            this.enterDexterityData.AutoSize = true;
+            this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
+            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterDexterityData.Location = new System.Drawing.Point(165, 157);
+            this.enterDexterityData.Name = "enterDexterityData";
+            this.enterDexterityData.Size = new System.Drawing.Size(280, 37);
+            this.enterDexterityData.TabIndex = 7;
+            this.enterDexterityData.Text = "enterDexterityData";
+            // 
+            // DexterityLabel
+            // 
+            this.DexterityLabel.AutoSize = true;
+            this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DexterityLabel.Location = new System.Drawing.Point(32, 160);
+            this.DexterityLabel.Name = "DexterityLabel";
+            this.DexterityLabel.Size = new System.Drawing.Size(158, 37);
+            this.DexterityLabel.TabIndex = 6;
+            this.DexterityLabel.Text = "Dexterity :";
+            // 
+            // enterStrengthData
+            // 
+            this.enterStrengthData.AutoSize = true;
+            this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
+            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterStrengthData.Location = new System.Drawing.Point(165, 127);
+            this.enterStrengthData.Name = "enterStrengthData";
+            this.enterStrengthData.Size = new System.Drawing.Size(278, 37);
+            this.enterStrengthData.TabIndex = 5;
+            this.enterStrengthData.Text = "enterStrengthData";
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StrengthLabel.Location = new System.Drawing.Point(32, 130);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(156, 37);
+            this.StrengthLabel.TabIndex = 4;
+            this.StrengthLabel.Text = "Strength :";
+            // 
+            // EnterCarryingWeightData
+            // 
+            this.EnterCarryingWeightData.AutoSize = true;
+            this.EnterCarryingWeightData.BackColor = System.Drawing.Color.Transparent;
+            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
+            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
+            this.EnterCarryingWeightData.Size = new System.Drawing.Size(378, 37);
+            this.EnterCarryingWeightData.TabIndex = 3;
+            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
+            // 
+            // CapacityLabel
+            // 
+            this.CapacityLabel.AutoSize = true;
+            this.CapacityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
+            this.CapacityLabel.Name = "CapacityLabel";
+            this.CapacityLabel.Size = new System.Drawing.Size(265, 37);
+            this.CapacityLabel.TabIndex = 2;
+            this.CapacityLabel.Text = "Carrying Weight :";
+            // 
+            // enterExperienceData
+            // 
+            this.enterExperienceData.AutoSize = true;
+            this.enterExperienceData.BackColor = System.Drawing.Color.Transparent;
+            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
+            this.enterExperienceData.Name = "enterExperienceData";
+            this.enterExperienceData.Size = new System.Drawing.Size(314, 37);
+            this.enterExperienceData.TabIndex = 1;
+            this.enterExperienceData.Text = "enterExperienceData";
+            // 
+            // xpToLevelLabel
+            // 
+            this.xpToLevelLabel.AutoSize = true;
+            this.xpToLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
+            this.xpToLevelLabel.Name = "xpToLevelLabel";
+            this.xpToLevelLabel.Size = new System.Drawing.Size(368, 37);
+            this.xpToLevelLabel.TabIndex = 0;
+            this.xpToLevelLabel.Text = "Experience to next level :";
             // 
             // MainMapImageList
             // 
@@ -1558,11 +1999,11 @@ namespace RPGLab.Networking
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
             this.Controls.Add(this.CharacterSelectPanel);
             this.Controls.Add(this.CreateCharacterPanel);
-            this.Controls.Add(this.GamePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -1589,10 +2030,42 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).EndInit();
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
-            this.SkillsPanel.ResumeLayout(false);
-            this.SkillsPanel.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.ContainerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).EndInit();
+            this.SkillsPanel.ResumeLayout(false);
+            this.SkillsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1705,5 +2178,38 @@ namespace RPGLab.Networking
         private Button DeleteAccountButton;
         private Label LoadingBarLabel;
         private ProgressBar LoadingStartBar;
+        private FolderBrowserDialog folderBrowserDialog1;
+        public Panel ContainerPanel;
+        private PictureBox pictureBox26;
+        private PictureBox pictureBox27;
+        private PictureBox pictureBox28;
+        private PictureBox pictureBox29;
+        private PictureBox pictureBox30;
+        private PictureBox pictureBox21;
+        private PictureBox pictureBox22;
+        private PictureBox pictureBox23;
+        private PictureBox pictureBox24;
+        private PictureBox pictureBox25;
+        private PictureBox pictureBox16;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox18;
+        private PictureBox pictureBox19;
+        private PictureBox pictureBox20;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
+        private PictureBox pictureBox13;
+        private PictureBox pictureBox15;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
+        private PictureBox ItemInContainerPictureBox5;
+        private PictureBox ItemInContainerPictureBox4;
+        private PictureBox ItemInContainerPictureBox3;
+        private PictureBox ItemInContainerPictureBox2;
+        private PictureBox ItemInContainerPictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
