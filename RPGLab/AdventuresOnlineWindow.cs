@@ -852,7 +852,7 @@ namespace RPGLab.Networking
                 {
                     panel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, AdventuresOnlineWindow.MousePosition.Y - 35);
                 }
-                if (AdventuresOnlineWindow.MousePosition.X > 1454 && AdventuresOnlineWindow.MousePosition.Y > 529)
+                if (AdventuresOnlineWindow.MousePosition.X > 1454  && AdventuresOnlineWindow.MousePosition.Y > 529)
                 {
                     return;
                 }
@@ -865,6 +865,7 @@ namespace RPGLab.Networking
                     panel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, 519);
                 }
             }
+            RelocateOpenInventoryPanels();
         }
 
         private void InventoryMovePanelButton_MouseUp(object sender, MouseEventArgs e)
@@ -881,10 +882,10 @@ namespace RPGLab.Networking
                 panel.Location = new Point(InventoryPanel.Location.X, AdventuresOnlineWindow.MousePosition.Y - 35);
                 panel.BringToFront();
             }
-            OpenSecondInventoryPanel();
+            RelocateOpenInventoryPanels();
             panel = null;
         }
-        void OpenSecondInventoryPanel()
+        void RelocateOpenInventoryPanels()
         {
             InventoryPanel2.Show();
             InventoryPanel2.Location = new Point(InventoryPanel.Location.X, InventoryPanel.Location.Y + InventoryPanel.Height);
@@ -908,6 +909,7 @@ namespace RPGLab.Networking
             if (panel == null) { return; }
             Console.WriteLine($"Mouse Y is {e.Y}");
             panel.Height = e.Y + 313;
+            RelocateOpenInventoryPanels();
         }
         private void InventorySizePanelButton_MouseUp(object sender, MouseEventArgs e)
         {
@@ -916,6 +918,7 @@ namespace RPGLab.Networking
             panel.Height = e.Y + 313;
             ResizePanel = false;
             panel = null;
+            RelocateOpenInventoryPanels();
         }
 
         #endregion

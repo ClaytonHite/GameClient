@@ -199,6 +199,8 @@ namespace RPGLab.Networking
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.CreateCharacterPanel.SuspendLayout();
@@ -1280,6 +1282,8 @@ namespace RPGLab.Networking
             this.InventoryPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPanel2.BackgroundImage")));
             this.InventoryPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.InventoryPanel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.InventoryPanel2.Controls.Add(this.button4);
+            this.InventoryPanel2.Controls.Add(this.button3);
             this.InventoryPanel2.Controls.Add(this.InventoryPictureBox40);
             this.InventoryPanel2.Controls.Add(this.InventoryPictureBox39);
             this.InventoryPanel2.Controls.Add(this.InventoryPictureBox38);
@@ -2378,6 +2382,38 @@ namespace RPGLab.Networking
             this.monsterImageList.Images.SetKeyName(1, "1.png");
             this.monsterImageList.Images.SetKeyName(2, "2.png");
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 29);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "+";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseDown);
+            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseMove);
+            this.button3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseUp);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(0, 301);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(445, 8);
+            this.button4.TabIndex = 22;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseDown);
+            this.button4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseMove);
+            this.button4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseUp);
+            // 
             // AdventuresOnlineWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -2644,5 +2680,7 @@ namespace RPGLab.Networking
         private PictureBox InventoryPictureBox21;
         private Button InventoryMovePanelButton;
         private Button InventorySizePanelButton;
+        private Button button4;
+        private Button button3;
     }
 }
