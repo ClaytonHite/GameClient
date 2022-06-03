@@ -112,36 +112,35 @@ namespace RPGLab.Networking
             this.GameChatBox = new System.Windows.Forms.ListBox();
             this.GameChatTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.InventoryPanel2 = new System.Windows.Forms.Panel();
+            this.InventoryPictureBox40 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox39 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox38 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox37 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox36 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox35 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox34 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox33 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox32 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox31 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox30 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox25 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox29 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox28 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox24 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox27 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox23 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox26 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox22 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.ExperienceProgressBar = new System.Windows.Forms.ProgressBar();
             this.ManaProgressBar = new System.Windows.Forms.ProgressBar();
             this.HealthProgressBar = new System.Windows.Forms.ProgressBar();
             this.GameRenderer = new System.Windows.Forms.PictureBox();
-            this.SkillsPanel = new System.Windows.Forms.Panel();
-            this.AddSkillButton6 = new System.Windows.Forms.Button();
-            this.AddSkillButton5 = new System.Windows.Forms.Button();
-            this.AddSkillButton4 = new System.Windows.Forms.Button();
-            this.AddSkillButton3 = new System.Windows.Forms.Button();
-            this.AddSkillButton2 = new System.Windows.Forms.Button();
-            this.AddSkillButton1 = new System.Windows.Forms.Button();
-            this.enterSkillPointsData = new System.Windows.Forms.Label();
-            this.enterCharismaData = new System.Windows.Forms.Label();
-            this.CharismaLabel = new System.Windows.Forms.Label();
-            this.enterWisdomData = new System.Windows.Forms.Label();
-            this.WisdomLabel = new System.Windows.Forms.Label();
-            this.enterIntellectData = new System.Windows.Forms.Label();
-            this.IntellectLabel = new System.Windows.Forms.Label();
-            this.enterConstitutionData = new System.Windows.Forms.Label();
-            this.ConstitutionLabel = new System.Windows.Forms.Label();
-            this.enterDexterityData = new System.Windows.Forms.Label();
-            this.DexterityLabel = new System.Windows.Forms.Label();
-            this.enterStrengthData = new System.Windows.Forms.Label();
-            this.StrengthLabel = new System.Windows.Forms.Label();
-            this.EnterCarryingWeightData = new System.Windows.Forms.Label();
-            this.CapacityLabel = new System.Windows.Forms.Label();
-            this.enterExperienceData = new System.Windows.Forms.Label();
-            this.xpToLevelLabel = new System.Windows.Forms.Label();
             this.InventoryPanel = new System.Windows.Forms.Panel();
+            this.InventorySizePanelButton = new System.Windows.Forms.Button();
+            this.InventoryMovePanelButton = new System.Windows.Forms.Button();
             this.InventoryPictureBox20 = new System.Windows.Forms.PictureBox();
             this.InventoryPictureBox19 = new System.Windows.Forms.PictureBox();
             this.InventoryPictureBox18 = new System.Windows.Forms.PictureBox();
@@ -173,6 +172,30 @@ namespace RPGLab.Networking
             this.MainWeaponSlot = new System.Windows.Forms.PictureBox();
             this.HeadSlot = new System.Windows.Forms.PictureBox();
             this.AmuletSlot = new System.Windows.Forms.PictureBox();
+            this.SkillsPanel = new System.Windows.Forms.Panel();
+            this.AddSkillButton6 = new System.Windows.Forms.Button();
+            this.AddSkillButton5 = new System.Windows.Forms.Button();
+            this.AddSkillButton4 = new System.Windows.Forms.Button();
+            this.AddSkillButton3 = new System.Windows.Forms.Button();
+            this.AddSkillButton2 = new System.Windows.Forms.Button();
+            this.AddSkillButton1 = new System.Windows.Forms.Button();
+            this.enterSkillPointsData = new System.Windows.Forms.Label();
+            this.enterCharismaData = new System.Windows.Forms.Label();
+            this.CharismaLabel = new System.Windows.Forms.Label();
+            this.enterWisdomData = new System.Windows.Forms.Label();
+            this.WisdomLabel = new System.Windows.Forms.Label();
+            this.enterIntellectData = new System.Windows.Forms.Label();
+            this.IntellectLabel = new System.Windows.Forms.Label();
+            this.enterConstitutionData = new System.Windows.Forms.Label();
+            this.ConstitutionLabel = new System.Windows.Forms.Label();
+            this.enterDexterityData = new System.Windows.Forms.Label();
+            this.DexterityLabel = new System.Windows.Forms.Label();
+            this.enterStrengthData = new System.Windows.Forms.Label();
+            this.StrengthLabel = new System.Windows.Forms.Label();
+            this.EnterCarryingWeightData = new System.Windows.Forms.Label();
+            this.CapacityLabel = new System.Windows.Forms.Label();
+            this.enterExperienceData = new System.Windows.Forms.Label();
+            this.xpToLevelLabel = new System.Windows.Forms.Label();
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -188,9 +211,29 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).BeginInit();
             this.GamePanel.SuspendLayout();
+            this.InventoryPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).BeginInit();
-            this.SkillsPanel.SuspendLayout();
             this.InventoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).BeginInit();
@@ -223,6 +266,7 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).BeginInit();
+            this.SkillsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -330,7 +374,7 @@ namespace RPGLab.Networking
             this.UsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.UsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(119, 26);
+            this.UsernameLabel.Size = new System.Drawing.Size(228, 46);
             this.UsernameLabel.TabIndex = 4;
             this.UsernameLabel.Tag = "LoginAccessoriesVisible";
             this.UsernameLabel.Text = "Username :";
@@ -344,7 +388,7 @@ namespace RPGLab.Networking
             this.PasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.PasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(120, 26);
+            this.PasswordLabel.Size = new System.Drawing.Size(229, 46);
             this.PasswordLabel.TabIndex = 3;
             this.PasswordLabel.Tag = "LoginAccessoriesVisible";
             this.PasswordLabel.Text = "Password : ";
@@ -366,7 +410,7 @@ namespace RPGLab.Networking
             this.Password.MinimumSize = new System.Drawing.Size(200, 30);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(200, 30);
+            this.Password.Size = new System.Drawing.Size(200, 51);
             this.Password.TabIndex = 1;
             this.Password.Tag = "LoginAccessoriesVisible";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -377,7 +421,7 @@ namespace RPGLab.Networking
             this.Username.Location = new System.Drawing.Point(844, 466);
             this.Username.MinimumSize = new System.Drawing.Size(200, 30);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(200, 30);
+            this.Username.Size = new System.Drawing.Size(200, 51);
             this.Username.TabIndex = 0;
             this.Username.Tag = "LoginAccessoriesVisible";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -418,7 +462,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRejectionLabel.Location = new System.Drawing.Point(744, 838);
             this.CreateCharacterRejectionLabel.MinimumSize = new System.Drawing.Size(400, 30);
             this.CreateCharacterRejectionLabel.Name = "CreateCharacterRejectionLabel";
-            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 30);
+            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 44);
             this.CreateCharacterRejectionLabel.TabIndex = 18;
             this.CreateCharacterRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -477,7 +521,7 @@ namespace RPGLab.Networking
             this.CreateCharacterAvatarLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterAvatarLabel.Location = new System.Drawing.Point(654, 640);
             this.CreateCharacterAvatarLabel.Name = "CreateCharacterAvatarLabel";
-            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(148, 26);
+            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(281, 46);
             this.CreateCharacterAvatarLabel.TabIndex = 13;
             this.CreateCharacterAvatarLabel.Text = "Avatar :           ";
             // 
@@ -524,7 +568,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClass.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterClass.Name = "CreateCharacterClass";
             this.CreateCharacterClass.ReadOnly = true;
-            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterClass.TabIndex = 9;
             this.CreateCharacterClass.Text = "Fighter";
             this.CreateCharacterClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -536,7 +580,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRace.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterRace.Name = "CreateCharacterRace";
             this.CreateCharacterRace.ReadOnly = true;
-            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterRace.TabIndex = 8;
             this.CreateCharacterRace.Text = "Human";
             this.CreateCharacterRace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -550,7 +594,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClassLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterClassLabel.Location = new System.Drawing.Point(654, 571);
             this.CreateCharacterClassLabel.Name = "CreateCharacterClassLabel";
-            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(146, 26);
+            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(276, 46);
             this.CreateCharacterClassLabel.TabIndex = 7;
             this.CreateCharacterClassLabel.Text = "Class :            ";
             // 
@@ -593,7 +637,7 @@ namespace RPGLab.Networking
             this.CreateCharacterPlayerNameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterPlayerNameLabel.Location = new System.Drawing.Point(654, 459);
             this.CreateCharacterPlayerNameLabel.Name = "CreateCharacterPlayerNameLabel";
-            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(143, 26);
+            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(275, 46);
             this.CreateCharacterPlayerNameLabel.TabIndex = 4;
             this.CreateCharacterPlayerNameLabel.Text = "Player Name :";
             // 
@@ -606,7 +650,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRaceLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterRaceLabel.Location = new System.Drawing.Point(653, 515);
             this.CreateCharacterRaceLabel.Name = "CreateCharacterRaceLabel";
-            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(144, 26);
+            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(268, 46);
             this.CreateCharacterRaceLabel.TabIndex = 3;
             this.CreateCharacterRaceLabel.Text = "Race :            ";
             // 
@@ -626,7 +670,7 @@ namespace RPGLab.Networking
             this.CreateCharacterName.Location = new System.Drawing.Point(848, 456);
             this.CreateCharacterName.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterName.Name = "CreateCharacterName";
-            this.CreateCharacterName.Size = new System.Drawing.Size(200, 30);
+            this.CreateCharacterName.Size = new System.Drawing.Size(200, 51);
             this.CreateCharacterName.TabIndex = 0;
             this.CreateCharacterName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -685,7 +729,7 @@ namespace RPGLab.Networking
             this.CharacterSelectDropdownBox.FormattingEnabled = true;
             this.CharacterSelectDropdownBox.Location = new System.Drawing.Point(848, 567);
             this.CharacterSelectDropdownBox.Name = "CharacterSelectDropdownBox";
-            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 32);
+            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 52);
             this.CharacterSelectDropdownBox.TabIndex = 14;
             this.CharacterSelectDropdownBox.SelectedValueChanged += new System.EventHandler(this.showSelectedDropdown_Click);
             // 
@@ -763,7 +807,7 @@ namespace RPGLab.Networking
             this.CharacterSelectCharacterInfo.Location = new System.Drawing.Point(832, 518);
             this.CharacterSelectCharacterInfo.MinimumSize = new System.Drawing.Size(230, 26);
             this.CharacterSelectCharacterInfo.Name = "CharacterSelectCharacterInfo";
-            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 26);
+            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 46);
             this.CharacterSelectCharacterInfo.TabIndex = 4;
             this.CharacterSelectCharacterInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -804,7 +848,7 @@ namespace RPGLab.Networking
             this.CreateAccountRejectionLabel.Location = new System.Drawing.Point(844, 700);
             this.CreateAccountRejectionLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountRejectionLabel.Name = "CreateAccountRejectionLabel";
-            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 44);
             this.CreateAccountRejectionLabel.TabIndex = 8;
             this.CreateAccountRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -818,7 +862,7 @@ namespace RPGLab.Networking
             this.CreateAccountLabel.Location = new System.Drawing.Point(844, 419);
             this.CreateAccountLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountLabel.Name = "CreateAccountLabel";
-            this.CreateAccountLabel.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountLabel.Size = new System.Drawing.Size(296, 46);
             this.CreateAccountLabel.TabIndex = 7;
             this.CreateAccountLabel.Text = "Create Account";
             this.CreateAccountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -862,7 +906,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountUsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.CreateAccountUsernameLabel.Name = "CreateAccountUsernameLabel";
-            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(119, 26);
+            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(228, 46);
             this.CreateAccountUsernameLabel.TabIndex = 4;
             this.CreateAccountUsernameLabel.Text = "Username :";
             // 
@@ -875,7 +919,7 @@ namespace RPGLab.Networking
             this.CreateAccountPasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountPasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.CreateAccountPasswordLabel.Name = "CreateAccountPasswordLabel";
-            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(120, 26);
+            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(229, 46);
             this.CreateAccountPasswordLabel.TabIndex = 3;
             this.CreateAccountPasswordLabel.Text = "Password : ";
             // 
@@ -896,7 +940,7 @@ namespace RPGLab.Networking
             this.CreateAccountPassword.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountPassword.Name = "CreateAccountPassword";
             this.CreateAccountPassword.PasswordChar = '*';
-            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 51);
             this.CreateAccountPassword.TabIndex = 1;
             this.CreateAccountPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -906,7 +950,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsername.Location = new System.Drawing.Point(844, 466);
             this.CreateAccountUsername.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountUsername.Name = "CreateAccountUsername";
-            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 30);
+            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 51);
             this.CreateAccountUsername.TabIndex = 0;
             this.CreateAccountUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1024,7 +1068,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerNameLabel.Location = new System.Drawing.Point(1518, -2);
             this.GamePanelPlayerNameLabel.Name = "GamePanelPlayerNameLabel";
-            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(148, 31);
+            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(286, 63);
             this.GamePanelPlayerNameLabel.TabIndex = 0;
             this.GamePanelPlayerNameLabel.Text = "Caelaenor";
             // 
@@ -1034,7 +1078,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerLevelRaceClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerLevelRaceClassLabel.Location = new System.Drawing.Point(1518, 39);
             this.GamePanelPlayerLevelRaceClassLabel.Name = "GamePanelPlayerLevelRaceClassLabel";
-            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(354, 25);
+            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(652, 48);
             this.GamePanelPlayerLevelRaceClassLabel.TabIndex = 0;
             this.GamePanelPlayerLevelRaceClassLabel.Text = "Level 999 Dragonborn Barbarian";
             // 
@@ -1044,7 +1088,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerHealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthLabel.Location = new System.Drawing.Point(1444, 86);
             this.GamePanelPlayerHealthLabel.Name = "GamePanelPlayerHealthLabel";
-            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(94, 25);
+            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(172, 48);
             this.GamePanelPlayerHealthLabel.TabIndex = 0;
             this.GamePanelPlayerHealthLabel.Text = "Health :";
             // 
@@ -1054,7 +1098,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerManaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaLabel.Location = new System.Drawing.Point(1444, 128);
             this.GamePanelPlayerManaLabel.Name = "GamePanelPlayerManaLabel";
-            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(84, 25);
+            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(153, 48);
             this.GamePanelPlayerManaLabel.TabIndex = 0;
             this.GamePanelPlayerManaLabel.Text = "Mana :";
             // 
@@ -1064,7 +1108,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerExperienceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceLabel.Location = new System.Drawing.Point(1444, 168);
             this.GamePanelPlayerExperienceLabel.Name = "GamePanelPlayerExperienceLabel";
-            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(144, 25);
+            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(264, 48);
             this.GamePanelPlayerExperienceLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceLabel.Text = "Experience :";
             // 
@@ -1074,7 +1118,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerHealthAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthAmountLabel.Location = new System.Drawing.Point(1783, 86);
             this.GamePanelPlayerHealthAmountLabel.Name = "GamePanelPlayerHealthAmountLabel";
-            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(64, 20);
+            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(120, 37);
             this.GamePanelPlayerHealthAmountLabel.TabIndex = 0;
             this.GamePanelPlayerHealthAmountLabel.Text = "50/100";
             // 
@@ -1084,7 +1128,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerManaAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaAmountLabel.Location = new System.Drawing.Point(1783, 128);
             this.GamePanelPlayerManaAmountLabel.Name = "GamePanelPlayerManaAmountLabel";
-            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(64, 20);
+            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(120, 37);
             this.GamePanelPlayerManaAmountLabel.TabIndex = 0;
             this.GamePanelPlayerManaAmountLabel.Text = "50/100";
             // 
@@ -1094,7 +1138,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerExperienceAmountPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceAmountPercentLabel.Location = new System.Drawing.Point(1783, 168);
             this.GamePanelPlayerExperienceAmountPercentLabel.Name = "GamePanelPlayerExperienceAmountPercentLabel";
-            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(34, 20);
+            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(65, 37);
             this.GamePanelPlayerExperienceAmountPercentLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceAmountPercentLabel.Text = "0%";
             // 
@@ -1176,11 +1220,11 @@ namespace RPGLab.Networking
             this.GameChatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GameChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameChatBox.FormattingEnabled = true;
-            this.GameChatBox.ItemHeight = 24;
+            this.GameChatBox.ItemHeight = 44;
             this.GameChatBox.Location = new System.Drawing.Point(0, 843);
             this.GameChatBox.Name = "GameChatBox";
             this.GameChatBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.GameChatBox.Size = new System.Drawing.Size(1440, 124);
+            this.GameChatBox.Size = new System.Drawing.Size(1440, 92);
             this.GameChatBox.TabIndex = 0;
             this.GameChatBox.TabStop = false;
             this.GameChatBox.UseTabStops = false;
@@ -1190,13 +1234,14 @@ namespace RPGLab.Networking
             this.GameChatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameChatTextBox.Location = new System.Drawing.Point(0, 971);
             this.GameChatTextBox.Name = "GameChatTextBox";
-            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 26);
+            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 44);
             this.GameChatTextBox.TabIndex = 0;
             this.GameChatTextBox.TabStop = false;
             // 
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Transparent;
+            this.GamePanel.Controls.Add(this.InventoryPanel2);
             this.GamePanel.Controls.Add(this.pictureBox14);
             this.GamePanel.Controls.Add(this.GameChatTextBox);
             this.GamePanel.Controls.Add(this.GameChatBox);
@@ -1217,15 +1262,271 @@ namespace RPGLab.Networking
             this.GamePanel.Controls.Add(this.GamePanelPlayerNameLabel);
             this.GamePanel.Controls.Add(this.GamePanelPlayerAvatar);
             this.GamePanel.Controls.Add(this.GameRenderer);
-            this.GamePanel.Controls.Add(this.SkillsPanel);
             this.GamePanel.Controls.Add(this.InventoryPanel);
             this.GamePanel.Controls.Add(this.EquipmentPanel);
+            this.GamePanel.Controls.Add(this.SkillsPanel);
             this.GamePanel.Location = new System.Drawing.Point(9, 12);
             this.GamePanel.Margin = new System.Windows.Forms.Padding(0);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(1893, 1017);
             this.GamePanel.TabIndex = 0;
             this.GamePanel.Visible = false;
+            // 
+            // InventoryPanel2
+            // 
+            this.InventoryPanel2.AutoScroll = true;
+            this.InventoryPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.InventoryPanel2.BackColor = System.Drawing.Color.DarkGray;
+            this.InventoryPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPanel2.BackgroundImage")));
+            this.InventoryPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPanel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox40);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox39);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox38);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox37);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox36);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox35);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox34);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox33);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox32);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox31);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox30);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox25);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox29);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox28);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox24);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox27);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox23);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox26);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox22);
+            this.InventoryPanel2.Controls.Add(this.InventoryPictureBox21);
+            this.InventoryPanel2.Location = new System.Drawing.Point(1444, 599);
+            this.InventoryPanel2.MaximumSize = new System.Drawing.Size(449, 313);
+            this.InventoryPanel2.MinimumSize = new System.Drawing.Size(449, 90);
+            this.InventoryPanel2.Name = "InventoryPanel2";
+            this.InventoryPanel2.Size = new System.Drawing.Size(449, 313);
+            this.InventoryPanel2.TabIndex = 159;
+            this.InventoryPanel2.Visible = false;
+            // 
+            // InventoryPictureBox40
+            // 
+            this.InventoryPictureBox40.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox40.BackgroundImage")));
+            this.InventoryPictureBox40.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox40.Location = new System.Drawing.Point(345, 233);
+            this.InventoryPictureBox40.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox40.Name = "InventoryPictureBox40";
+            this.InventoryPictureBox40.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox40.TabIndex = 19;
+            this.InventoryPictureBox40.TabStop = false;
+            // 
+            // InventoryPictureBox39
+            // 
+            this.InventoryPictureBox39.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox39.BackgroundImage")));
+            this.InventoryPictureBox39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox39.Location = new System.Drawing.Point(266, 233);
+            this.InventoryPictureBox39.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox39.Name = "InventoryPictureBox39";
+            this.InventoryPictureBox39.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox39.TabIndex = 18;
+            this.InventoryPictureBox39.TabStop = false;
+            // 
+            // InventoryPictureBox38
+            // 
+            this.InventoryPictureBox38.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox38.BackgroundImage")));
+            this.InventoryPictureBox38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox38.Location = new System.Drawing.Point(189, 233);
+            this.InventoryPictureBox38.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox38.Name = "InventoryPictureBox38";
+            this.InventoryPictureBox38.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox38.TabIndex = 17;
+            this.InventoryPictureBox38.TabStop = false;
+            // 
+            // InventoryPictureBox37
+            // 
+            this.InventoryPictureBox37.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox37.BackgroundImage")));
+            this.InventoryPictureBox37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox37.Location = new System.Drawing.Point(112, 233);
+            this.InventoryPictureBox37.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox37.Name = "InventoryPictureBox37";
+            this.InventoryPictureBox37.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox37.TabIndex = 16;
+            this.InventoryPictureBox37.TabStop = false;
+            // 
+            // InventoryPictureBox36
+            // 
+            this.InventoryPictureBox36.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox36.BackgroundImage")));
+            this.InventoryPictureBox36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox36.Location = new System.Drawing.Point(36, 233);
+            this.InventoryPictureBox36.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox36.Name = "InventoryPictureBox36";
+            this.InventoryPictureBox36.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox36.TabIndex = 15;
+            this.InventoryPictureBox36.TabStop = false;
+            // 
+            // InventoryPictureBox35
+            // 
+            this.InventoryPictureBox35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox35.BackgroundImage")));
+            this.InventoryPictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox35.Location = new System.Drawing.Point(345, 161);
+            this.InventoryPictureBox35.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox35.Name = "InventoryPictureBox35";
+            this.InventoryPictureBox35.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox35.TabIndex = 14;
+            this.InventoryPictureBox35.TabStop = false;
+            // 
+            // InventoryPictureBox34
+            // 
+            this.InventoryPictureBox34.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox34.BackgroundImage")));
+            this.InventoryPictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox34.Location = new System.Drawing.Point(266, 161);
+            this.InventoryPictureBox34.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox34.Name = "InventoryPictureBox34";
+            this.InventoryPictureBox34.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox34.TabIndex = 13;
+            this.InventoryPictureBox34.TabStop = false;
+            // 
+            // InventoryPictureBox33
+            // 
+            this.InventoryPictureBox33.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox33.BackgroundImage")));
+            this.InventoryPictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox33.Location = new System.Drawing.Point(189, 161);
+            this.InventoryPictureBox33.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox33.Name = "InventoryPictureBox33";
+            this.InventoryPictureBox33.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox33.TabIndex = 12;
+            this.InventoryPictureBox33.TabStop = false;
+            // 
+            // InventoryPictureBox32
+            // 
+            this.InventoryPictureBox32.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox32.BackgroundImage")));
+            this.InventoryPictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox32.Location = new System.Drawing.Point(112, 161);
+            this.InventoryPictureBox32.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox32.Name = "InventoryPictureBox32";
+            this.InventoryPictureBox32.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox32.TabIndex = 11;
+            this.InventoryPictureBox32.TabStop = false;
+            // 
+            // InventoryPictureBox31
+            // 
+            this.InventoryPictureBox31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox31.BackgroundImage")));
+            this.InventoryPictureBox31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox31.Location = new System.Drawing.Point(36, 161);
+            this.InventoryPictureBox31.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox31.Name = "InventoryPictureBox31";
+            this.InventoryPictureBox31.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox31.TabIndex = 10;
+            this.InventoryPictureBox31.TabStop = false;
+            // 
+            // InventoryPictureBox30
+            // 
+            this.InventoryPictureBox30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox30.BackgroundImage")));
+            this.InventoryPictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox30.Location = new System.Drawing.Point(345, 89);
+            this.InventoryPictureBox30.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox30.Name = "InventoryPictureBox30";
+            this.InventoryPictureBox30.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox30.TabIndex = 9;
+            this.InventoryPictureBox30.TabStop = false;
+            // 
+            // InventoryPictureBox25
+            // 
+            this.InventoryPictureBox25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox25.BackgroundImage")));
+            this.InventoryPictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox25.Location = new System.Drawing.Point(345, 16);
+            this.InventoryPictureBox25.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox25.Name = "InventoryPictureBox25";
+            this.InventoryPictureBox25.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox25.TabIndex = 4;
+            this.InventoryPictureBox25.TabStop = false;
+            // 
+            // InventoryPictureBox29
+            // 
+            this.InventoryPictureBox29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox29.BackgroundImage")));
+            this.InventoryPictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox29.Location = new System.Drawing.Point(266, 89);
+            this.InventoryPictureBox29.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox29.Name = "InventoryPictureBox29";
+            this.InventoryPictureBox29.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox29.TabIndex = 8;
+            this.InventoryPictureBox29.TabStop = false;
+            // 
+            // InventoryPictureBox28
+            // 
+            this.InventoryPictureBox28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox28.BackgroundImage")));
+            this.InventoryPictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox28.Location = new System.Drawing.Point(189, 89);
+            this.InventoryPictureBox28.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox28.Name = "InventoryPictureBox28";
+            this.InventoryPictureBox28.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox28.TabIndex = 7;
+            this.InventoryPictureBox28.TabStop = false;
+            // 
+            // InventoryPictureBox24
+            // 
+            this.InventoryPictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox24.BackgroundImage")));
+            this.InventoryPictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox24.Location = new System.Drawing.Point(266, 16);
+            this.InventoryPictureBox24.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox24.Name = "InventoryPictureBox24";
+            this.InventoryPictureBox24.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox24.TabIndex = 3;
+            this.InventoryPictureBox24.TabStop = false;
+            // 
+            // InventoryPictureBox27
+            // 
+            this.InventoryPictureBox27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox27.BackgroundImage")));
+            this.InventoryPictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox27.Location = new System.Drawing.Point(112, 89);
+            this.InventoryPictureBox27.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox27.Name = "InventoryPictureBox27";
+            this.InventoryPictureBox27.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox27.TabIndex = 6;
+            this.InventoryPictureBox27.TabStop = false;
+            // 
+            // InventoryPictureBox23
+            // 
+            this.InventoryPictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox23.BackgroundImage")));
+            this.InventoryPictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox23.Location = new System.Drawing.Point(189, 16);
+            this.InventoryPictureBox23.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox23.Name = "InventoryPictureBox23";
+            this.InventoryPictureBox23.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox23.TabIndex = 2;
+            this.InventoryPictureBox23.TabStop = false;
+            // 
+            // InventoryPictureBox26
+            // 
+            this.InventoryPictureBox26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox26.BackgroundImage")));
+            this.InventoryPictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox26.Location = new System.Drawing.Point(36, 89);
+            this.InventoryPictureBox26.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox26.Name = "InventoryPictureBox26";
+            this.InventoryPictureBox26.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox26.TabIndex = 5;
+            this.InventoryPictureBox26.TabStop = false;
+            // 
+            // InventoryPictureBox22
+            // 
+            this.InventoryPictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox22.BackgroundImage")));
+            this.InventoryPictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox22.Location = new System.Drawing.Point(112, 16);
+            this.InventoryPictureBox22.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox22.Name = "InventoryPictureBox22";
+            this.InventoryPictureBox22.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox22.TabIndex = 1;
+            this.InventoryPictureBox22.TabStop = false;
+            // 
+            // InventoryPictureBox21
+            // 
+            this.InventoryPictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox21.BackgroundImage")));
+            this.InventoryPictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox21.Location = new System.Drawing.Point(36, 16);
+            this.InventoryPictureBox21.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox21.Name = "InventoryPictureBox21";
+            this.InventoryPictureBox21.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox21.TabIndex = 0;
+            this.InventoryPictureBox21.TabStop = false;
             // 
             // pictureBox14
             // 
@@ -1278,325 +1579,16 @@ namespace RPGLab.Networking
             this.GameRenderer.TabIndex = 155;
             this.GameRenderer.TabStop = false;
             // 
-            // SkillsPanel
-            // 
-            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
-            this.SkillsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkillsPanel.BackgroundImage")));
-            this.SkillsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
-            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
-            this.SkillsPanel.Controls.Add(this.enterCharismaData);
-            this.SkillsPanel.Controls.Add(this.CharismaLabel);
-            this.SkillsPanel.Controls.Add(this.enterWisdomData);
-            this.SkillsPanel.Controls.Add(this.WisdomLabel);
-            this.SkillsPanel.Controls.Add(this.enterIntellectData);
-            this.SkillsPanel.Controls.Add(this.IntellectLabel);
-            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
-            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
-            this.SkillsPanel.Controls.Add(this.enterDexterityData);
-            this.SkillsPanel.Controls.Add(this.DexterityLabel);
-            this.SkillsPanel.Controls.Add(this.enterStrengthData);
-            this.SkillsPanel.Controls.Add(this.StrengthLabel);
-            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
-            this.SkillsPanel.Controls.Add(this.CapacityLabel);
-            this.SkillsPanel.Controls.Add(this.enterExperienceData);
-            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
-            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
-            this.SkillsPanel.Name = "SkillsPanel";
-            this.SkillsPanel.Size = new System.Drawing.Size(449, 313);
-            this.SkillsPanel.TabIndex = 156;
-            this.SkillsPanel.Visible = false;
-            // 
-            // AddSkillButton6
-            // 
-            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
-            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton6.Location = new System.Drawing.Point(341, 273);
-            this.AddSkillButton6.Name = "AddSkillButton6";
-            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton6.TabIndex = 22;
-            this.AddSkillButton6.Text = "Add Stat";
-            this.AddSkillButton6.UseVisualStyleBackColor = false;
-            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
-            // 
-            // AddSkillButton5
-            // 
-            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
-            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton5.Location = new System.Drawing.Point(341, 243);
-            this.AddSkillButton5.Name = "AddSkillButton5";
-            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton5.TabIndex = 21;
-            this.AddSkillButton5.Text = "Add Stat";
-            this.AddSkillButton5.UseVisualStyleBackColor = false;
-            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
-            // 
-            // AddSkillButton4
-            // 
-            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
-            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton4.Location = new System.Drawing.Point(341, 213);
-            this.AddSkillButton4.Name = "AddSkillButton4";
-            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton4.TabIndex = 20;
-            this.AddSkillButton4.Text = "Add Stat";
-            this.AddSkillButton4.UseVisualStyleBackColor = false;
-            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
-            // 
-            // AddSkillButton3
-            // 
-            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
-            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton3.Location = new System.Drawing.Point(341, 183);
-            this.AddSkillButton3.Name = "AddSkillButton3";
-            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton3.TabIndex = 19;
-            this.AddSkillButton3.Text = "Add Stat";
-            this.AddSkillButton3.UseVisualStyleBackColor = false;
-            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
-            // 
-            // AddSkillButton2
-            // 
-            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
-            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton2.Location = new System.Drawing.Point(341, 153);
-            this.AddSkillButton2.Name = "AddSkillButton2";
-            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton2.TabIndex = 18;
-            this.AddSkillButton2.Text = "Add Stat";
-            this.AddSkillButton2.UseVisualStyleBackColor = false;
-            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
-            // 
-            // AddSkillButton1
-            // 
-            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
-            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton1.Location = new System.Drawing.Point(341, 123);
-            this.AddSkillButton1.Name = "AddSkillButton1";
-            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton1.TabIndex = 17;
-            this.AddSkillButton1.Text = "Add Stat";
-            this.AddSkillButton1.UseVisualStyleBackColor = false;
-            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
-            // 
-            // enterSkillPointsData
-            // 
-            this.enterSkillPointsData.AutoSize = true;
-            this.enterSkillPointsData.BackColor = System.Drawing.Color.Transparent;
-            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
-            this.enterSkillPointsData.Name = "enterSkillPointsData";
-            this.enterSkillPointsData.Size = new System.Drawing.Size(153, 20);
-            this.enterSkillPointsData.TabIndex = 16;
-            this.enterSkillPointsData.Text = "enterSkillPointsData";
-            // 
-            // enterCharismaData
-            // 
-            this.enterCharismaData.AutoSize = true;
-            this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
-            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterCharismaData.Location = new System.Drawing.Point(165, 273);
-            this.enterCharismaData.Name = "enterCharismaData";
-            this.enterCharismaData.Size = new System.Drawing.Size(148, 20);
-            this.enterCharismaData.TabIndex = 15;
-            this.enterCharismaData.Text = "enterCharismaData";
-            // 
-            // CharismaLabel
-            // 
-            this.CharismaLabel.AutoSize = true;
-            this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaLabel.Location = new System.Drawing.Point(32, 276);
-            this.CharismaLabel.Name = "CharismaLabel";
-            this.CharismaLabel.Size = new System.Drawing.Size(84, 20);
-            this.CharismaLabel.TabIndex = 14;
-            this.CharismaLabel.Text = "Charisma :";
-            // 
-            // enterWisdomData
-            // 
-            this.enterWisdomData.AutoSize = true;
-            this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
-            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterWisdomData.Location = new System.Drawing.Point(165, 243);
-            this.enterWisdomData.Name = "enterWisdomData";
-            this.enterWisdomData.Size = new System.Drawing.Size(138, 20);
-            this.enterWisdomData.TabIndex = 13;
-            this.enterWisdomData.Text = "enterWisdomData";
-            // 
-            // WisdomLabel
-            // 
-            this.WisdomLabel.AutoSize = true;
-            this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomLabel.Location = new System.Drawing.Point(32, 246);
-            this.WisdomLabel.Name = "WisdomLabel";
-            this.WisdomLabel.Size = new System.Drawing.Size(74, 20);
-            this.WisdomLabel.TabIndex = 12;
-            this.WisdomLabel.Text = "Wisdom :";
-            // 
-            // enterIntellectData
-            // 
-            this.enterIntellectData.AutoSize = true;
-            this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
-            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterIntellectData.Location = new System.Drawing.Point(165, 213);
-            this.enterIntellectData.Name = "enterIntellectData";
-            this.enterIntellectData.Size = new System.Drawing.Size(137, 20);
-            this.enterIntellectData.TabIndex = 11;
-            this.enterIntellectData.Text = "enterIntellectData";
-            // 
-            // IntellectLabel
-            // 
-            this.IntellectLabel.AutoSize = true;
-            this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
-            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntellectLabel.Location = new System.Drawing.Point(32, 216);
-            this.IntellectLabel.Name = "IntellectLabel";
-            this.IntellectLabel.Size = new System.Drawing.Size(73, 20);
-            this.IntellectLabel.TabIndex = 10;
-            this.IntellectLabel.Text = "Intellect :";
-            // 
-            // enterConstitutionData
-            // 
-            this.enterConstitutionData.AutoSize = true;
-            this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
-            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterConstitutionData.Location = new System.Drawing.Point(165, 183);
-            this.enterConstitutionData.Name = "enterConstitutionData";
-            this.enterConstitutionData.Size = new System.Drawing.Size(166, 20);
-            this.enterConstitutionData.TabIndex = 9;
-            this.enterConstitutionData.Text = "enterConstitutionData";
-            // 
-            // ConstitutionLabel
-            // 
-            this.ConstitutionLabel.AutoSize = true;
-            this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 186);
-            this.ConstitutionLabel.Name = "ConstitutionLabel";
-            this.ConstitutionLabel.Size = new System.Drawing.Size(102, 20);
-            this.ConstitutionLabel.TabIndex = 8;
-            this.ConstitutionLabel.Text = "Constitution :";
-            // 
-            // enterDexterityData
-            // 
-            this.enterDexterityData.AutoSize = true;
-            this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
-            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterDexterityData.Location = new System.Drawing.Point(165, 153);
-            this.enterDexterityData.Name = "enterDexterityData";
-            this.enterDexterityData.Size = new System.Drawing.Size(143, 20);
-            this.enterDexterityData.TabIndex = 7;
-            this.enterDexterityData.Text = "enterDexterityData";
-            // 
-            // DexterityLabel
-            // 
-            this.DexterityLabel.AutoSize = true;
-            this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityLabel.Location = new System.Drawing.Point(32, 156);
-            this.DexterityLabel.Name = "DexterityLabel";
-            this.DexterityLabel.Size = new System.Drawing.Size(79, 20);
-            this.DexterityLabel.TabIndex = 6;
-            this.DexterityLabel.Text = "Dexterity :";
-            // 
-            // enterStrengthData
-            // 
-            this.enterStrengthData.AutoSize = true;
-            this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
-            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterStrengthData.Location = new System.Drawing.Point(165, 123);
-            this.enterStrengthData.Name = "enterStrengthData";
-            this.enterStrengthData.Size = new System.Drawing.Size(143, 20);
-            this.enterStrengthData.TabIndex = 5;
-            this.enterStrengthData.Text = "enterStrengthData";
-            // 
-            // StrengthLabel
-            // 
-            this.StrengthLabel.AutoSize = true;
-            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel.Location = new System.Drawing.Point(32, 126);
-            this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(79, 20);
-            this.StrengthLabel.TabIndex = 4;
-            this.StrengthLabel.Text = "Strength :";
-            // 
-            // EnterCarryingWeightData
-            // 
-            this.EnterCarryingWeightData.AutoSize = true;
-            this.EnterCarryingWeightData.BackColor = System.Drawing.Color.Transparent;
-            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
-            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
-            this.EnterCarryingWeightData.Size = new System.Drawing.Size(189, 20);
-            this.EnterCarryingWeightData.TabIndex = 3;
-            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
-            // 
-            // CapacityLabel
-            // 
-            this.CapacityLabel.AutoSize = true;
-            this.CapacityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
-            this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(129, 20);
-            this.CapacityLabel.TabIndex = 2;
-            this.CapacityLabel.Text = "Carrying Weight :";
-            // 
-            // enterExperienceData
-            // 
-            this.enterExperienceData.AutoSize = true;
-            this.enterExperienceData.BackColor = System.Drawing.Color.Transparent;
-            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
-            this.enterExperienceData.Name = "enterExperienceData";
-            this.enterExperienceData.Size = new System.Drawing.Size(160, 20);
-            this.enterExperienceData.TabIndex = 1;
-            this.enterExperienceData.Text = "enterExperienceData";
-            // 
-            // xpToLevelLabel
-            // 
-            this.xpToLevelLabel.AutoSize = true;
-            this.xpToLevelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
-            this.xpToLevelLabel.Name = "xpToLevelLabel";
-            this.xpToLevelLabel.Size = new System.Drawing.Size(183, 20);
-            this.xpToLevelLabel.TabIndex = 0;
-            this.xpToLevelLabel.Text = "Experience to next level :";
-            // 
             // InventoryPanel
             // 
+            this.InventoryPanel.AutoScroll = true;
             this.InventoryPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.InventoryPanel.BackColor = System.Drawing.Color.DarkGray;
             this.InventoryPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPanel.BackgroundImage")));
             this.InventoryPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.InventoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.InventoryPanel.Controls.Add(this.InventorySizePanelButton);
+            this.InventoryPanel.Controls.Add(this.InventoryMovePanelButton);
             this.InventoryPanel.Controls.Add(this.InventoryPictureBox20);
             this.InventoryPanel.Controls.Add(this.InventoryPictureBox19);
             this.InventoryPanel.Controls.Add(this.InventoryPictureBox18);
@@ -1619,14 +1611,43 @@ namespace RPGLab.Networking
             this.InventoryPanel.Controls.Add(this.InventoryPictureBox1);
             this.InventoryPanel.Location = new System.Drawing.Point(1444, 286);
             this.InventoryPanel.MaximumSize = new System.Drawing.Size(449, 313);
-            this.InventoryPanel.MinimumSize = new System.Drawing.Size(449, 313);
+            this.InventoryPanel.MinimumSize = new System.Drawing.Size(449, 90);
             this.InventoryPanel.Name = "InventoryPanel";
             this.InventoryPanel.Size = new System.Drawing.Size(449, 313);
             this.InventoryPanel.TabIndex = 158;
             this.InventoryPanel.Visible = false;
-            this.InventoryPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseDown);
-            this.InventoryPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseMove);
-            this.InventoryPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseUp);
+            // 
+            // InventorySizePanelButton
+            // 
+            this.InventorySizePanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.InventorySizePanelButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.InventorySizePanelButton.FlatAppearance.BorderSize = 0;
+            this.InventorySizePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InventorySizePanelButton.Location = new System.Drawing.Point(0, 301);
+            this.InventorySizePanelButton.Name = "InventorySizePanelButton";
+            this.InventorySizePanelButton.Size = new System.Drawing.Size(445, 8);
+            this.InventorySizePanelButton.TabIndex = 21;
+            this.InventorySizePanelButton.UseVisualStyleBackColor = false;
+            this.InventorySizePanelButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseDown);
+            this.InventorySizePanelButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseMove);
+            this.InventorySizePanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventorySizePanelButton_MouseUp);
+            // 
+            // InventoryMovePanelButton
+            // 
+            this.InventoryMovePanelButton.BackColor = System.Drawing.Color.Transparent;
+            this.InventoryMovePanelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.InventoryMovePanelButton.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.InventoryMovePanelButton.FlatAppearance.BorderSize = 0;
+            this.InventoryMovePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InventoryMovePanelButton.Location = new System.Drawing.Point(0, 0);
+            this.InventoryMovePanelButton.Name = "InventoryMovePanelButton";
+            this.InventoryMovePanelButton.Size = new System.Drawing.Size(26, 29);
+            this.InventoryMovePanelButton.TabIndex = 20;
+            this.InventoryMovePanelButton.Text = "+";
+            this.InventoryMovePanelButton.UseVisualStyleBackColor = false;
+            this.InventoryMovePanelButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseDown);
+            this.InventoryMovePanelButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseMove);
+            this.InventoryMovePanelButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventoryMovePanelButton_MouseUp);
             // 
             // InventoryPictureBox20
             // 
@@ -1994,6 +2015,318 @@ namespace RPGLab.Networking
             this.AmuletSlot.TabIndex = 1;
             this.AmuletSlot.TabStop = false;
             // 
+            // SkillsPanel
+            // 
+            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
+            this.SkillsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkillsPanel.BackgroundImage")));
+            this.SkillsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
+            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
+            this.SkillsPanel.Controls.Add(this.enterCharismaData);
+            this.SkillsPanel.Controls.Add(this.CharismaLabel);
+            this.SkillsPanel.Controls.Add(this.enterWisdomData);
+            this.SkillsPanel.Controls.Add(this.WisdomLabel);
+            this.SkillsPanel.Controls.Add(this.enterIntellectData);
+            this.SkillsPanel.Controls.Add(this.IntellectLabel);
+            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
+            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
+            this.SkillsPanel.Controls.Add(this.enterDexterityData);
+            this.SkillsPanel.Controls.Add(this.DexterityLabel);
+            this.SkillsPanel.Controls.Add(this.enterStrengthData);
+            this.SkillsPanel.Controls.Add(this.StrengthLabel);
+            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
+            this.SkillsPanel.Controls.Add(this.CapacityLabel);
+            this.SkillsPanel.Controls.Add(this.enterExperienceData);
+            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
+            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
+            this.SkillsPanel.Name = "SkillsPanel";
+            this.SkillsPanel.Size = new System.Drawing.Size(449, 313);
+            this.SkillsPanel.TabIndex = 156;
+            this.SkillsPanel.Visible = false;
+            // 
+            // AddSkillButton6
+            // 
+            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
+            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton6.Location = new System.Drawing.Point(341, 273);
+            this.AddSkillButton6.Name = "AddSkillButton6";
+            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton6.TabIndex = 22;
+            this.AddSkillButton6.Text = "Add Stat";
+            this.AddSkillButton6.UseVisualStyleBackColor = false;
+            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
+            // 
+            // AddSkillButton5
+            // 
+            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
+            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton5.Location = new System.Drawing.Point(341, 243);
+            this.AddSkillButton5.Name = "AddSkillButton5";
+            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton5.TabIndex = 21;
+            this.AddSkillButton5.Text = "Add Stat";
+            this.AddSkillButton5.UseVisualStyleBackColor = false;
+            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
+            // 
+            // AddSkillButton4
+            // 
+            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
+            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton4.Location = new System.Drawing.Point(341, 213);
+            this.AddSkillButton4.Name = "AddSkillButton4";
+            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton4.TabIndex = 20;
+            this.AddSkillButton4.Text = "Add Stat";
+            this.AddSkillButton4.UseVisualStyleBackColor = false;
+            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
+            // 
+            // AddSkillButton3
+            // 
+            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
+            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton3.Location = new System.Drawing.Point(341, 183);
+            this.AddSkillButton3.Name = "AddSkillButton3";
+            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton3.TabIndex = 19;
+            this.AddSkillButton3.Text = "Add Stat";
+            this.AddSkillButton3.UseVisualStyleBackColor = false;
+            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
+            // 
+            // AddSkillButton2
+            // 
+            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
+            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton2.Location = new System.Drawing.Point(341, 153);
+            this.AddSkillButton2.Name = "AddSkillButton2";
+            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton2.TabIndex = 18;
+            this.AddSkillButton2.Text = "Add Stat";
+            this.AddSkillButton2.UseVisualStyleBackColor = false;
+            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
+            // 
+            // AddSkillButton1
+            // 
+            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
+            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton1.Location = new System.Drawing.Point(341, 123);
+            this.AddSkillButton1.Name = "AddSkillButton1";
+            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton1.TabIndex = 17;
+            this.AddSkillButton1.Text = "Add Stat";
+            this.AddSkillButton1.UseVisualStyleBackColor = false;
+            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
+            // 
+            // enterSkillPointsData
+            // 
+            this.enterSkillPointsData.AutoSize = true;
+            this.enterSkillPointsData.BackColor = System.Drawing.Color.Transparent;
+            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
+            this.enterSkillPointsData.Name = "enterSkillPointsData";
+            this.enterSkillPointsData.Size = new System.Drawing.Size(304, 37);
+            this.enterSkillPointsData.TabIndex = 16;
+            this.enterSkillPointsData.Text = "enterSkillPointsData";
+            // 
+            // enterCharismaData
+            // 
+            this.enterCharismaData.AutoSize = true;
+            this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
+            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterCharismaData.Location = new System.Drawing.Point(165, 273);
+            this.enterCharismaData.Name = "enterCharismaData";
+            this.enterCharismaData.Size = new System.Drawing.Size(295, 37);
+            this.enterCharismaData.TabIndex = 15;
+            this.enterCharismaData.Text = "enterCharismaData";
+            // 
+            // CharismaLabel
+            // 
+            this.CharismaLabel.AutoSize = true;
+            this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharismaLabel.Location = new System.Drawing.Point(32, 276);
+            this.CharismaLabel.Name = "CharismaLabel";
+            this.CharismaLabel.Size = new System.Drawing.Size(173, 37);
+            this.CharismaLabel.TabIndex = 14;
+            this.CharismaLabel.Text = "Charisma :";
+            // 
+            // enterWisdomData
+            // 
+            this.enterWisdomData.AutoSize = true;
+            this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
+            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterWisdomData.Location = new System.Drawing.Point(165, 243);
+            this.enterWisdomData.Name = "enterWisdomData";
+            this.enterWisdomData.Size = new System.Drawing.Size(274, 37);
+            this.enterWisdomData.TabIndex = 13;
+            this.enterWisdomData.Text = "enterWisdomData";
+            // 
+            // WisdomLabel
+            // 
+            this.WisdomLabel.AutoSize = true;
+            this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WisdomLabel.Location = new System.Drawing.Point(32, 246);
+            this.WisdomLabel.Name = "WisdomLabel";
+            this.WisdomLabel.Size = new System.Drawing.Size(152, 37);
+            this.WisdomLabel.TabIndex = 12;
+            this.WisdomLabel.Text = "Wisdom :";
+            // 
+            // enterIntellectData
+            // 
+            this.enterIntellectData.AutoSize = true;
+            this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
+            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterIntellectData.Location = new System.Drawing.Point(165, 213);
+            this.enterIntellectData.Name = "enterIntellectData";
+            this.enterIntellectData.Size = new System.Drawing.Size(265, 37);
+            this.enterIntellectData.TabIndex = 11;
+            this.enterIntellectData.Text = "enterIntellectData";
+            // 
+            // IntellectLabel
+            // 
+            this.IntellectLabel.AutoSize = true;
+            this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntellectLabel.Location = new System.Drawing.Point(32, 216);
+            this.IntellectLabel.Name = "IntellectLabel";
+            this.IntellectLabel.Size = new System.Drawing.Size(143, 37);
+            this.IntellectLabel.TabIndex = 10;
+            this.IntellectLabel.Text = "Intellect :";
+            // 
+            // enterConstitutionData
+            // 
+            this.enterConstitutionData.AutoSize = true;
+            this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
+            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterConstitutionData.Location = new System.Drawing.Point(165, 183);
+            this.enterConstitutionData.Name = "enterConstitutionData";
+            this.enterConstitutionData.Size = new System.Drawing.Size(327, 37);
+            this.enterConstitutionData.TabIndex = 9;
+            this.enterConstitutionData.Text = "enterConstitutionData";
+            // 
+            // ConstitutionLabel
+            // 
+            this.ConstitutionLabel.AutoSize = true;
+            this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 186);
+            this.ConstitutionLabel.Name = "ConstitutionLabel";
+            this.ConstitutionLabel.Size = new System.Drawing.Size(205, 37);
+            this.ConstitutionLabel.TabIndex = 8;
+            this.ConstitutionLabel.Text = "Constitution :";
+            // 
+            // enterDexterityData
+            // 
+            this.enterDexterityData.AutoSize = true;
+            this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
+            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterDexterityData.Location = new System.Drawing.Point(165, 153);
+            this.enterDexterityData.Name = "enterDexterityData";
+            this.enterDexterityData.Size = new System.Drawing.Size(280, 37);
+            this.enterDexterityData.TabIndex = 7;
+            this.enterDexterityData.Text = "enterDexterityData";
+            // 
+            // DexterityLabel
+            // 
+            this.DexterityLabel.AutoSize = true;
+            this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DexterityLabel.Location = new System.Drawing.Point(32, 156);
+            this.DexterityLabel.Name = "DexterityLabel";
+            this.DexterityLabel.Size = new System.Drawing.Size(158, 37);
+            this.DexterityLabel.TabIndex = 6;
+            this.DexterityLabel.Text = "Dexterity :";
+            // 
+            // enterStrengthData
+            // 
+            this.enterStrengthData.AutoSize = true;
+            this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
+            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterStrengthData.Location = new System.Drawing.Point(165, 123);
+            this.enterStrengthData.Name = "enterStrengthData";
+            this.enterStrengthData.Size = new System.Drawing.Size(278, 37);
+            this.enterStrengthData.TabIndex = 5;
+            this.enterStrengthData.Text = "enterStrengthData";
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StrengthLabel.Location = new System.Drawing.Point(32, 126);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(156, 37);
+            this.StrengthLabel.TabIndex = 4;
+            this.StrengthLabel.Text = "Strength :";
+            // 
+            // EnterCarryingWeightData
+            // 
+            this.EnterCarryingWeightData.AutoSize = true;
+            this.EnterCarryingWeightData.BackColor = System.Drawing.Color.Transparent;
+            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
+            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
+            this.EnterCarryingWeightData.Size = new System.Drawing.Size(378, 37);
+            this.EnterCarryingWeightData.TabIndex = 3;
+            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
+            // 
+            // CapacityLabel
+            // 
+            this.CapacityLabel.AutoSize = true;
+            this.CapacityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
+            this.CapacityLabel.Name = "CapacityLabel";
+            this.CapacityLabel.Size = new System.Drawing.Size(265, 37);
+            this.CapacityLabel.TabIndex = 2;
+            this.CapacityLabel.Text = "Carrying Weight :";
+            // 
+            // enterExperienceData
+            // 
+            this.enterExperienceData.AutoSize = true;
+            this.enterExperienceData.BackColor = System.Drawing.Color.Transparent;
+            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
+            this.enterExperienceData.Name = "enterExperienceData";
+            this.enterExperienceData.Size = new System.Drawing.Size(314, 37);
+            this.enterExperienceData.TabIndex = 1;
+            this.enterExperienceData.Text = "enterExperienceData";
+            // 
+            // xpToLevelLabel
+            // 
+            this.xpToLevelLabel.AutoSize = true;
+            this.xpToLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
+            this.xpToLevelLabel.Name = "xpToLevelLabel";
+            this.xpToLevelLabel.Size = new System.Drawing.Size(368, 37);
+            this.xpToLevelLabel.TabIndex = 0;
+            this.xpToLevelLabel.Text = "Experience to next level :";
+            // 
             // MainMapImageList
             // 
             this.MainMapImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("MainMapImageList.ImageStream")));
@@ -2086,10 +2419,29 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).EndInit();
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
+            this.InventoryPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).EndInit();
-            this.SkillsPanel.ResumeLayout(false);
-            this.SkillsPanel.PerformLayout();
             this.InventoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).EndInit();
@@ -2122,6 +2474,8 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).EndInit();
+            this.SkillsPanel.ResumeLayout(false);
+            this.SkillsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2267,5 +2621,28 @@ namespace RPGLab.Networking
         private PictureBox InventoryPictureBox6;
         private PictureBox InventoryPictureBox2;
         private PictureBox InventoryPictureBox1;
+        private Panel InventoryPanel2;
+        private PictureBox InventoryPictureBox40;
+        private PictureBox InventoryPictureBox39;
+        private PictureBox InventoryPictureBox38;
+        private PictureBox InventoryPictureBox37;
+        private PictureBox InventoryPictureBox36;
+        private PictureBox InventoryPictureBox35;
+        private PictureBox InventoryPictureBox34;
+        private PictureBox InventoryPictureBox33;
+        private PictureBox InventoryPictureBox32;
+        private PictureBox InventoryPictureBox31;
+        private PictureBox InventoryPictureBox30;
+        private PictureBox InventoryPictureBox25;
+        private PictureBox InventoryPictureBox29;
+        private PictureBox InventoryPictureBox28;
+        private PictureBox InventoryPictureBox24;
+        private PictureBox InventoryPictureBox27;
+        private PictureBox InventoryPictureBox23;
+        private PictureBox InventoryPictureBox26;
+        private PictureBox InventoryPictureBox22;
+        private PictureBox InventoryPictureBox21;
+        private Button InventoryMovePanelButton;
+        private Button InventorySizePanelButton;
     }
 }

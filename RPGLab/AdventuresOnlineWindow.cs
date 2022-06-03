@@ -26,7 +26,10 @@ namespace RPGLab.Networking
         static List<Image> ImageNumber = new List<Image>();
         static int counter;
         static string periodCount;
-        object movingObject;
+        Button button = null;
+        Panel panel = null;
+        bool ResizePanel = false;
+        bool MovePanel = false;
         int firstXPos;
         int firstYPos;
         public AdventuresOnlineWindow()
@@ -49,6 +52,7 @@ namespace RPGLab.Networking
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, GamePanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, SkillsPanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, InventoryPanel, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, InventoryPanel2, new object[] { true });
         }
         public void UpdateForm()
         {
@@ -825,54 +829,93 @@ namespace RPGLab.Networking
             }
 
         }
-
-        private void InventoryPanel_MouseDown(object sender, MouseEventArgs e)
+        private void InventoryMovePanelButton_MouseDown(object sender, MouseEventArgs e)
         {
-            movingObject = sender;
+            MovePanel = true;
+            button = sender as Button;
+            if (button == null)
+                return; //Some error/exception
+
+            panel = button.Parent as Panel;
+            if (panel == null)
+            {
+                //Parent container is not panel
+            }
         }
 
-        private void InventoryPanel_MouseUp(object sender, MouseEventArgs e)
+        private void InventoryMovePanelButton_MouseMove(object sender, MouseEventArgs e)
         {
-            movingObject = null;
-            if (AdventuresOnlineWindow.MousePosition.X < 1454)
-            {
-                InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, InventoryPanel.Location.Y);
-                InventoryPanel.BringToFront();
-            }
-            if (AdventuresOnlineWindow.MousePosition.Y < 529)
-            {
-                InventoryPanel.Location = new Point(InventoryPanel.Location.X,AdventuresOnlineWindow.MousePosition.Y - 35);
-                InventoryPanel.BringToFront();
-            }
-
-        }
-
-        private void InventoryPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (movingObject != null)
+            if (!MovePanel) { return; }
+            if (panel != null)
             {
                 if (AdventuresOnlineWindow.MousePosition.X < 1454 && AdventuresOnlineWindow.MousePosition.Y < 740)
                 {
-                    InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, AdventuresOnlineWindow.MousePosition.Y - 35);
-
+                    panel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, AdventuresOnlineWindow.MousePosition.Y - 35);
                 }
-                if(AdventuresOnlineWindow.MousePosition.X > 1454 && AdventuresOnlineWindow.MousePosition.Y > 529)
+                if (AdventuresOnlineWindow.MousePosition.X > 1454 && AdventuresOnlineWindow.MousePosition.Y > 529)
                 {
                     return;
                 }
                 if (AdventuresOnlineWindow.MousePosition.X > 1454)
                 {
-                    InventoryPanel.Location = new Point(1444, AdventuresOnlineWindow.MousePosition.Y - 35);
+                    panel.Location = new Point(1444, AdventuresOnlineWindow.MousePosition.Y - 35);
                 }
                 if (AdventuresOnlineWindow.MousePosition.Y > 529)
                 {
-                    InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, 519);
+                    panel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, 519);
                 }
             }
         }
+
+        private void InventoryMovePanelButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (!MovePanel) { return; }
+            MovePanel = false;
+            if (AdventuresOnlineWindow.MousePosition.X < 1454)
+            {
+                panel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, InventoryPanel.Location.Y);
+                panel.BringToFront();
+            }
+            if (AdventuresOnlineWindow.MousePosition.Y < 529)
+            {
+                panel.Location = new Point(InventoryPanel.Location.X, AdventuresOnlineWindow.MousePosition.Y - 35);
+                panel.BringToFront();
+            }
+            OpenSecondInventoryPanel();
+            panel = null;
+        }
         void OpenSecondInventoryPanel()
         {
+            InventoryPanel2.Show();
+            InventoryPanel2.Location = new Point(InventoryPanel.Location.X, InventoryPanel.Location.Y + InventoryPanel.Height);
+        }
+        private void InventorySizePanelButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            ResizePanel = true;
+            button = sender as Button;
+            if (button == null)
+                return; //Some error/exception
 
+            panel = button.Parent as Panel;
+            if (panel == null)
+            {
+                //Parent container is not panel
+            }
+        }
+        private void InventorySizePanelButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!ResizePanel) { return; }
+            if (panel == null) { return; }
+            Console.WriteLine($"Mouse Y is {e.Y}");
+            panel.Height = e.Y + 313;
+        }
+        private void InventorySizePanelButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (!ResizePanel) { return; }
+            if (panel == null) { return; }
+            panel.Height = e.Y + 313;
+            ResizePanel = false;
+            panel = null;
         }
 
         #endregion
