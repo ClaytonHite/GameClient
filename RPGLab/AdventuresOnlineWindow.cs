@@ -870,6 +870,10 @@ namespace RPGLab.Networking
                 }
             }
         }
+        void OpenSecondInventoryPanel()
+        {
+
+        }
 
         #endregion
 

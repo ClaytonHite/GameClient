@@ -117,6 +117,30 @@ namespace RPGLab.Networking
             this.ManaProgressBar = new System.Windows.Forms.ProgressBar();
             this.HealthProgressBar = new System.Windows.Forms.ProgressBar();
             this.GameRenderer = new System.Windows.Forms.PictureBox();
+            this.SkillsPanel = new System.Windows.Forms.Panel();
+            this.AddSkillButton6 = new System.Windows.Forms.Button();
+            this.AddSkillButton5 = new System.Windows.Forms.Button();
+            this.AddSkillButton4 = new System.Windows.Forms.Button();
+            this.AddSkillButton3 = new System.Windows.Forms.Button();
+            this.AddSkillButton2 = new System.Windows.Forms.Button();
+            this.AddSkillButton1 = new System.Windows.Forms.Button();
+            this.enterSkillPointsData = new System.Windows.Forms.Label();
+            this.enterCharismaData = new System.Windows.Forms.Label();
+            this.CharismaLabel = new System.Windows.Forms.Label();
+            this.enterWisdomData = new System.Windows.Forms.Label();
+            this.WisdomLabel = new System.Windows.Forms.Label();
+            this.enterIntellectData = new System.Windows.Forms.Label();
+            this.IntellectLabel = new System.Windows.Forms.Label();
+            this.enterConstitutionData = new System.Windows.Forms.Label();
+            this.ConstitutionLabel = new System.Windows.Forms.Label();
+            this.enterDexterityData = new System.Windows.Forms.Label();
+            this.DexterityLabel = new System.Windows.Forms.Label();
+            this.enterStrengthData = new System.Windows.Forms.Label();
+            this.StrengthLabel = new System.Windows.Forms.Label();
+            this.EnterCarryingWeightData = new System.Windows.Forms.Label();
+            this.CapacityLabel = new System.Windows.Forms.Label();
+            this.enterExperienceData = new System.Windows.Forms.Label();
+            this.xpToLevelLabel = new System.Windows.Forms.Label();
             this.InventoryPanel = new System.Windows.Forms.Panel();
             this.InventoryPictureBox20 = new System.Windows.Forms.PictureBox();
             this.InventoryPictureBox19 = new System.Windows.Forms.PictureBox();
@@ -149,30 +173,6 @@ namespace RPGLab.Networking
             this.MainWeaponSlot = new System.Windows.Forms.PictureBox();
             this.HeadSlot = new System.Windows.Forms.PictureBox();
             this.AmuletSlot = new System.Windows.Forms.PictureBox();
-            this.SkillsPanel = new System.Windows.Forms.Panel();
-            this.AddSkillButton6 = new System.Windows.Forms.Button();
-            this.AddSkillButton5 = new System.Windows.Forms.Button();
-            this.AddSkillButton4 = new System.Windows.Forms.Button();
-            this.AddSkillButton3 = new System.Windows.Forms.Button();
-            this.AddSkillButton2 = new System.Windows.Forms.Button();
-            this.AddSkillButton1 = new System.Windows.Forms.Button();
-            this.enterSkillPointsData = new System.Windows.Forms.Label();
-            this.enterCharismaData = new System.Windows.Forms.Label();
-            this.CharismaLabel = new System.Windows.Forms.Label();
-            this.enterWisdomData = new System.Windows.Forms.Label();
-            this.WisdomLabel = new System.Windows.Forms.Label();
-            this.enterIntellectData = new System.Windows.Forms.Label();
-            this.IntellectLabel = new System.Windows.Forms.Label();
-            this.enterConstitutionData = new System.Windows.Forms.Label();
-            this.ConstitutionLabel = new System.Windows.Forms.Label();
-            this.enterDexterityData = new System.Windows.Forms.Label();
-            this.DexterityLabel = new System.Windows.Forms.Label();
-            this.enterStrengthData = new System.Windows.Forms.Label();
-            this.StrengthLabel = new System.Windows.Forms.Label();
-            this.EnterCarryingWeightData = new System.Windows.Forms.Label();
-            this.CapacityLabel = new System.Windows.Forms.Label();
-            this.enterExperienceData = new System.Windows.Forms.Label();
-            this.xpToLevelLabel = new System.Windows.Forms.Label();
             this.MainMapImageList = new System.Windows.Forms.ImageList(this.components);
             this.monsterImageList = new System.Windows.Forms.ImageList(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -190,6 +190,7 @@ namespace RPGLab.Networking
             this.GamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).BeginInit();
+            this.SkillsPanel.SuspendLayout();
             this.InventoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).BeginInit();
@@ -222,7 +223,6 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).BeginInit();
-            this.SkillsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -1278,6 +1278,318 @@ namespace RPGLab.Networking
             this.GameRenderer.TabIndex = 155;
             this.GameRenderer.TabStop = false;
             // 
+            // SkillsPanel
+            // 
+            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
+            this.SkillsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkillsPanel.BackgroundImage")));
+            this.SkillsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
+            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
+            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
+            this.SkillsPanel.Controls.Add(this.enterCharismaData);
+            this.SkillsPanel.Controls.Add(this.CharismaLabel);
+            this.SkillsPanel.Controls.Add(this.enterWisdomData);
+            this.SkillsPanel.Controls.Add(this.WisdomLabel);
+            this.SkillsPanel.Controls.Add(this.enterIntellectData);
+            this.SkillsPanel.Controls.Add(this.IntellectLabel);
+            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
+            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
+            this.SkillsPanel.Controls.Add(this.enterDexterityData);
+            this.SkillsPanel.Controls.Add(this.DexterityLabel);
+            this.SkillsPanel.Controls.Add(this.enterStrengthData);
+            this.SkillsPanel.Controls.Add(this.StrengthLabel);
+            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
+            this.SkillsPanel.Controls.Add(this.CapacityLabel);
+            this.SkillsPanel.Controls.Add(this.enterExperienceData);
+            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
+            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
+            this.SkillsPanel.Name = "SkillsPanel";
+            this.SkillsPanel.Size = new System.Drawing.Size(449, 313);
+            this.SkillsPanel.TabIndex = 156;
+            this.SkillsPanel.Visible = false;
+            // 
+            // AddSkillButton6
+            // 
+            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
+            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton6.Location = new System.Drawing.Point(341, 273);
+            this.AddSkillButton6.Name = "AddSkillButton6";
+            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton6.TabIndex = 22;
+            this.AddSkillButton6.Text = "Add Stat";
+            this.AddSkillButton6.UseVisualStyleBackColor = false;
+            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
+            // 
+            // AddSkillButton5
+            // 
+            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
+            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton5.Location = new System.Drawing.Point(341, 243);
+            this.AddSkillButton5.Name = "AddSkillButton5";
+            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton5.TabIndex = 21;
+            this.AddSkillButton5.Text = "Add Stat";
+            this.AddSkillButton5.UseVisualStyleBackColor = false;
+            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
+            // 
+            // AddSkillButton4
+            // 
+            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
+            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton4.Location = new System.Drawing.Point(341, 213);
+            this.AddSkillButton4.Name = "AddSkillButton4";
+            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton4.TabIndex = 20;
+            this.AddSkillButton4.Text = "Add Stat";
+            this.AddSkillButton4.UseVisualStyleBackColor = false;
+            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
+            // 
+            // AddSkillButton3
+            // 
+            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
+            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton3.Location = new System.Drawing.Point(341, 183);
+            this.AddSkillButton3.Name = "AddSkillButton3";
+            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton3.TabIndex = 19;
+            this.AddSkillButton3.Text = "Add Stat";
+            this.AddSkillButton3.UseVisualStyleBackColor = false;
+            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
+            // 
+            // AddSkillButton2
+            // 
+            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
+            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton2.Location = new System.Drawing.Point(341, 153);
+            this.AddSkillButton2.Name = "AddSkillButton2";
+            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton2.TabIndex = 18;
+            this.AddSkillButton2.Text = "Add Stat";
+            this.AddSkillButton2.UseVisualStyleBackColor = false;
+            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
+            // 
+            // AddSkillButton1
+            // 
+            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
+            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
+            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSkillButton1.Location = new System.Drawing.Point(341, 123);
+            this.AddSkillButton1.Name = "AddSkillButton1";
+            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
+            this.AddSkillButton1.TabIndex = 17;
+            this.AddSkillButton1.Text = "Add Stat";
+            this.AddSkillButton1.UseVisualStyleBackColor = false;
+            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
+            // 
+            // enterSkillPointsData
+            // 
+            this.enterSkillPointsData.AutoSize = true;
+            this.enterSkillPointsData.BackColor = System.Drawing.Color.Transparent;
+            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
+            this.enterSkillPointsData.Name = "enterSkillPointsData";
+            this.enterSkillPointsData.Size = new System.Drawing.Size(153, 20);
+            this.enterSkillPointsData.TabIndex = 16;
+            this.enterSkillPointsData.Text = "enterSkillPointsData";
+            // 
+            // enterCharismaData
+            // 
+            this.enterCharismaData.AutoSize = true;
+            this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
+            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterCharismaData.Location = new System.Drawing.Point(165, 273);
+            this.enterCharismaData.Name = "enterCharismaData";
+            this.enterCharismaData.Size = new System.Drawing.Size(148, 20);
+            this.enterCharismaData.TabIndex = 15;
+            this.enterCharismaData.Text = "enterCharismaData";
+            // 
+            // CharismaLabel
+            // 
+            this.CharismaLabel.AutoSize = true;
+            this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharismaLabel.Location = new System.Drawing.Point(32, 276);
+            this.CharismaLabel.Name = "CharismaLabel";
+            this.CharismaLabel.Size = new System.Drawing.Size(84, 20);
+            this.CharismaLabel.TabIndex = 14;
+            this.CharismaLabel.Text = "Charisma :";
+            // 
+            // enterWisdomData
+            // 
+            this.enterWisdomData.AutoSize = true;
+            this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
+            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterWisdomData.Location = new System.Drawing.Point(165, 243);
+            this.enterWisdomData.Name = "enterWisdomData";
+            this.enterWisdomData.Size = new System.Drawing.Size(138, 20);
+            this.enterWisdomData.TabIndex = 13;
+            this.enterWisdomData.Text = "enterWisdomData";
+            // 
+            // WisdomLabel
+            // 
+            this.WisdomLabel.AutoSize = true;
+            this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WisdomLabel.Location = new System.Drawing.Point(32, 246);
+            this.WisdomLabel.Name = "WisdomLabel";
+            this.WisdomLabel.Size = new System.Drawing.Size(74, 20);
+            this.WisdomLabel.TabIndex = 12;
+            this.WisdomLabel.Text = "Wisdom :";
+            // 
+            // enterIntellectData
+            // 
+            this.enterIntellectData.AutoSize = true;
+            this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
+            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterIntellectData.Location = new System.Drawing.Point(165, 213);
+            this.enterIntellectData.Name = "enterIntellectData";
+            this.enterIntellectData.Size = new System.Drawing.Size(137, 20);
+            this.enterIntellectData.TabIndex = 11;
+            this.enterIntellectData.Text = "enterIntellectData";
+            // 
+            // IntellectLabel
+            // 
+            this.IntellectLabel.AutoSize = true;
+            this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntellectLabel.Location = new System.Drawing.Point(32, 216);
+            this.IntellectLabel.Name = "IntellectLabel";
+            this.IntellectLabel.Size = new System.Drawing.Size(73, 20);
+            this.IntellectLabel.TabIndex = 10;
+            this.IntellectLabel.Text = "Intellect :";
+            // 
+            // enterConstitutionData
+            // 
+            this.enterConstitutionData.AutoSize = true;
+            this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
+            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterConstitutionData.Location = new System.Drawing.Point(165, 183);
+            this.enterConstitutionData.Name = "enterConstitutionData";
+            this.enterConstitutionData.Size = new System.Drawing.Size(166, 20);
+            this.enterConstitutionData.TabIndex = 9;
+            this.enterConstitutionData.Text = "enterConstitutionData";
+            // 
+            // ConstitutionLabel
+            // 
+            this.ConstitutionLabel.AutoSize = true;
+            this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 186);
+            this.ConstitutionLabel.Name = "ConstitutionLabel";
+            this.ConstitutionLabel.Size = new System.Drawing.Size(102, 20);
+            this.ConstitutionLabel.TabIndex = 8;
+            this.ConstitutionLabel.Text = "Constitution :";
+            // 
+            // enterDexterityData
+            // 
+            this.enterDexterityData.AutoSize = true;
+            this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
+            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterDexterityData.Location = new System.Drawing.Point(165, 153);
+            this.enterDexterityData.Name = "enterDexterityData";
+            this.enterDexterityData.Size = new System.Drawing.Size(143, 20);
+            this.enterDexterityData.TabIndex = 7;
+            this.enterDexterityData.Text = "enterDexterityData";
+            // 
+            // DexterityLabel
+            // 
+            this.DexterityLabel.AutoSize = true;
+            this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DexterityLabel.Location = new System.Drawing.Point(32, 156);
+            this.DexterityLabel.Name = "DexterityLabel";
+            this.DexterityLabel.Size = new System.Drawing.Size(79, 20);
+            this.DexterityLabel.TabIndex = 6;
+            this.DexterityLabel.Text = "Dexterity :";
+            // 
+            // enterStrengthData
+            // 
+            this.enterStrengthData.AutoSize = true;
+            this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
+            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterStrengthData.Location = new System.Drawing.Point(165, 123);
+            this.enterStrengthData.Name = "enterStrengthData";
+            this.enterStrengthData.Size = new System.Drawing.Size(143, 20);
+            this.enterStrengthData.TabIndex = 5;
+            this.enterStrengthData.Text = "enterStrengthData";
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StrengthLabel.Location = new System.Drawing.Point(32, 126);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(79, 20);
+            this.StrengthLabel.TabIndex = 4;
+            this.StrengthLabel.Text = "Strength :";
+            // 
+            // EnterCarryingWeightData
+            // 
+            this.EnterCarryingWeightData.AutoSize = true;
+            this.EnterCarryingWeightData.BackColor = System.Drawing.Color.Transparent;
+            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
+            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
+            this.EnterCarryingWeightData.Size = new System.Drawing.Size(189, 20);
+            this.EnterCarryingWeightData.TabIndex = 3;
+            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
+            // 
+            // CapacityLabel
+            // 
+            this.CapacityLabel.AutoSize = true;
+            this.CapacityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
+            this.CapacityLabel.Name = "CapacityLabel";
+            this.CapacityLabel.Size = new System.Drawing.Size(129, 20);
+            this.CapacityLabel.TabIndex = 2;
+            this.CapacityLabel.Text = "Carrying Weight :";
+            // 
+            // enterExperienceData
+            // 
+            this.enterExperienceData.AutoSize = true;
+            this.enterExperienceData.BackColor = System.Drawing.Color.Transparent;
+            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
+            this.enterExperienceData.Name = "enterExperienceData";
+            this.enterExperienceData.Size = new System.Drawing.Size(160, 20);
+            this.enterExperienceData.TabIndex = 1;
+            this.enterExperienceData.Text = "enterExperienceData";
+            // 
+            // xpToLevelLabel
+            // 
+            this.xpToLevelLabel.AutoSize = true;
+            this.xpToLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
+            this.xpToLevelLabel.Name = "xpToLevelLabel";
+            this.xpToLevelLabel.Size = new System.Drawing.Size(183, 20);
+            this.xpToLevelLabel.TabIndex = 0;
+            this.xpToLevelLabel.Text = "Experience to next level :";
+            // 
             // InventoryPanel
             // 
             this.InventoryPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -1682,318 +1994,6 @@ namespace RPGLab.Networking
             this.AmuletSlot.TabIndex = 1;
             this.AmuletSlot.TabStop = false;
             // 
-            // SkillsPanel
-            // 
-            this.SkillsPanel.BackColor = System.Drawing.Color.Black;
-            this.SkillsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SkillsPanel.BackgroundImage")));
-            this.SkillsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SkillsPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SkillsPanel.Controls.Add(this.AddSkillButton6);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton5);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton4);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton3);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton2);
-            this.SkillsPanel.Controls.Add(this.AddSkillButton1);
-            this.SkillsPanel.Controls.Add(this.enterSkillPointsData);
-            this.SkillsPanel.Controls.Add(this.enterCharismaData);
-            this.SkillsPanel.Controls.Add(this.CharismaLabel);
-            this.SkillsPanel.Controls.Add(this.enterWisdomData);
-            this.SkillsPanel.Controls.Add(this.WisdomLabel);
-            this.SkillsPanel.Controls.Add(this.enterIntellectData);
-            this.SkillsPanel.Controls.Add(this.IntellectLabel);
-            this.SkillsPanel.Controls.Add(this.enterConstitutionData);
-            this.SkillsPanel.Controls.Add(this.ConstitutionLabel);
-            this.SkillsPanel.Controls.Add(this.enterDexterityData);
-            this.SkillsPanel.Controls.Add(this.DexterityLabel);
-            this.SkillsPanel.Controls.Add(this.enterStrengthData);
-            this.SkillsPanel.Controls.Add(this.StrengthLabel);
-            this.SkillsPanel.Controls.Add(this.EnterCarryingWeightData);
-            this.SkillsPanel.Controls.Add(this.CapacityLabel);
-            this.SkillsPanel.Controls.Add(this.enterExperienceData);
-            this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
-            this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
-            this.SkillsPanel.Name = "SkillsPanel";
-            this.SkillsPanel.Size = new System.Drawing.Size(449, 313);
-            this.SkillsPanel.TabIndex = 156;
-            this.SkillsPanel.Visible = false;
-            // 
-            // AddSkillButton6
-            // 
-            this.AddSkillButton6.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton6.BackgroundImage")));
-            this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton6.Location = new System.Drawing.Point(341, 273);
-            this.AddSkillButton6.Name = "AddSkillButton6";
-            this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton6.TabIndex = 22;
-            this.AddSkillButton6.Text = "Add Stat";
-            this.AddSkillButton6.UseVisualStyleBackColor = false;
-            this.AddSkillButton6.Click += new System.EventHandler(this.AddSkillButton6_Click);
-            // 
-            // AddSkillButton5
-            // 
-            this.AddSkillButton5.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton5.BackgroundImage")));
-            this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton5.Location = new System.Drawing.Point(341, 243);
-            this.AddSkillButton5.Name = "AddSkillButton5";
-            this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton5.TabIndex = 21;
-            this.AddSkillButton5.Text = "Add Stat";
-            this.AddSkillButton5.UseVisualStyleBackColor = false;
-            this.AddSkillButton5.Click += new System.EventHandler(this.AddSkillButton5_Click);
-            // 
-            // AddSkillButton4
-            // 
-            this.AddSkillButton4.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton4.BackgroundImage")));
-            this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton4.Location = new System.Drawing.Point(341, 213);
-            this.AddSkillButton4.Name = "AddSkillButton4";
-            this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton4.TabIndex = 20;
-            this.AddSkillButton4.Text = "Add Stat";
-            this.AddSkillButton4.UseVisualStyleBackColor = false;
-            this.AddSkillButton4.Click += new System.EventHandler(this.AddSkillButton4_Click);
-            // 
-            // AddSkillButton3
-            // 
-            this.AddSkillButton3.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton3.BackgroundImage")));
-            this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton3.Location = new System.Drawing.Point(341, 183);
-            this.AddSkillButton3.Name = "AddSkillButton3";
-            this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton3.TabIndex = 19;
-            this.AddSkillButton3.Text = "Add Stat";
-            this.AddSkillButton3.UseVisualStyleBackColor = false;
-            this.AddSkillButton3.Click += new System.EventHandler(this.AddSkillButton3_Click);
-            // 
-            // AddSkillButton2
-            // 
-            this.AddSkillButton2.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton2.BackgroundImage")));
-            this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton2.Location = new System.Drawing.Point(341, 153);
-            this.AddSkillButton2.Name = "AddSkillButton2";
-            this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton2.TabIndex = 18;
-            this.AddSkillButton2.Text = "Add Stat";
-            this.AddSkillButton2.UseVisualStyleBackColor = false;
-            this.AddSkillButton2.Click += new System.EventHandler(this.AddSkillButton2_Click);
-            // 
-            // AddSkillButton1
-            // 
-            this.AddSkillButton1.BackColor = System.Drawing.Color.Transparent;
-            this.AddSkillButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddSkillButton1.BackgroundImage")));
-            this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton1.Location = new System.Drawing.Point(341, 123);
-            this.AddSkillButton1.Name = "AddSkillButton1";
-            this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
-            this.AddSkillButton1.TabIndex = 17;
-            this.AddSkillButton1.Text = "Add Stat";
-            this.AddSkillButton1.UseVisualStyleBackColor = false;
-            this.AddSkillButton1.Click += new System.EventHandler(this.AddSkillButton1_Click);
-            // 
-            // enterSkillPointsData
-            // 
-            this.enterSkillPointsData.AutoSize = true;
-            this.enterSkillPointsData.BackColor = System.Drawing.Color.Transparent;
-            this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
-            this.enterSkillPointsData.Name = "enterSkillPointsData";
-            this.enterSkillPointsData.Size = new System.Drawing.Size(153, 20);
-            this.enterSkillPointsData.TabIndex = 16;
-            this.enterSkillPointsData.Text = "enterSkillPointsData";
-            // 
-            // enterCharismaData
-            // 
-            this.enterCharismaData.AutoSize = true;
-            this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
-            this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterCharismaData.Location = new System.Drawing.Point(165, 273);
-            this.enterCharismaData.Name = "enterCharismaData";
-            this.enterCharismaData.Size = new System.Drawing.Size(148, 20);
-            this.enterCharismaData.TabIndex = 15;
-            this.enterCharismaData.Text = "enterCharismaData";
-            // 
-            // CharismaLabel
-            // 
-            this.CharismaLabel.AutoSize = true;
-            this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaLabel.Location = new System.Drawing.Point(32, 276);
-            this.CharismaLabel.Name = "CharismaLabel";
-            this.CharismaLabel.Size = new System.Drawing.Size(84, 20);
-            this.CharismaLabel.TabIndex = 14;
-            this.CharismaLabel.Text = "Charisma :";
-            // 
-            // enterWisdomData
-            // 
-            this.enterWisdomData.AutoSize = true;
-            this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
-            this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterWisdomData.Location = new System.Drawing.Point(165, 243);
-            this.enterWisdomData.Name = "enterWisdomData";
-            this.enterWisdomData.Size = new System.Drawing.Size(138, 20);
-            this.enterWisdomData.TabIndex = 13;
-            this.enterWisdomData.Text = "enterWisdomData";
-            // 
-            // WisdomLabel
-            // 
-            this.WisdomLabel.AutoSize = true;
-            this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomLabel.Location = new System.Drawing.Point(32, 246);
-            this.WisdomLabel.Name = "WisdomLabel";
-            this.WisdomLabel.Size = new System.Drawing.Size(74, 20);
-            this.WisdomLabel.TabIndex = 12;
-            this.WisdomLabel.Text = "Wisdom :";
-            // 
-            // enterIntellectData
-            // 
-            this.enterIntellectData.AutoSize = true;
-            this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
-            this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterIntellectData.Location = new System.Drawing.Point(165, 213);
-            this.enterIntellectData.Name = "enterIntellectData";
-            this.enterIntellectData.Size = new System.Drawing.Size(137, 20);
-            this.enterIntellectData.TabIndex = 11;
-            this.enterIntellectData.Text = "enterIntellectData";
-            // 
-            // IntellectLabel
-            // 
-            this.IntellectLabel.AutoSize = true;
-            this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
-            this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntellectLabel.Location = new System.Drawing.Point(32, 216);
-            this.IntellectLabel.Name = "IntellectLabel";
-            this.IntellectLabel.Size = new System.Drawing.Size(73, 20);
-            this.IntellectLabel.TabIndex = 10;
-            this.IntellectLabel.Text = "Intellect :";
-            // 
-            // enterConstitutionData
-            // 
-            this.enterConstitutionData.AutoSize = true;
-            this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
-            this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterConstitutionData.Location = new System.Drawing.Point(165, 183);
-            this.enterConstitutionData.Name = "enterConstitutionData";
-            this.enterConstitutionData.Size = new System.Drawing.Size(166, 20);
-            this.enterConstitutionData.TabIndex = 9;
-            this.enterConstitutionData.Text = "enterConstitutionData";
-            // 
-            // ConstitutionLabel
-            // 
-            this.ConstitutionLabel.AutoSize = true;
-            this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 186);
-            this.ConstitutionLabel.Name = "ConstitutionLabel";
-            this.ConstitutionLabel.Size = new System.Drawing.Size(102, 20);
-            this.ConstitutionLabel.TabIndex = 8;
-            this.ConstitutionLabel.Text = "Constitution :";
-            // 
-            // enterDexterityData
-            // 
-            this.enterDexterityData.AutoSize = true;
-            this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
-            this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterDexterityData.Location = new System.Drawing.Point(165, 153);
-            this.enterDexterityData.Name = "enterDexterityData";
-            this.enterDexterityData.Size = new System.Drawing.Size(143, 20);
-            this.enterDexterityData.TabIndex = 7;
-            this.enterDexterityData.Text = "enterDexterityData";
-            // 
-            // DexterityLabel
-            // 
-            this.DexterityLabel.AutoSize = true;
-            this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityLabel.Location = new System.Drawing.Point(32, 156);
-            this.DexterityLabel.Name = "DexterityLabel";
-            this.DexterityLabel.Size = new System.Drawing.Size(79, 20);
-            this.DexterityLabel.TabIndex = 6;
-            this.DexterityLabel.Text = "Dexterity :";
-            // 
-            // enterStrengthData
-            // 
-            this.enterStrengthData.AutoSize = true;
-            this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
-            this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterStrengthData.Location = new System.Drawing.Point(165, 123);
-            this.enterStrengthData.Name = "enterStrengthData";
-            this.enterStrengthData.Size = new System.Drawing.Size(143, 20);
-            this.enterStrengthData.TabIndex = 5;
-            this.enterStrengthData.Text = "enterStrengthData";
-            // 
-            // StrengthLabel
-            // 
-            this.StrengthLabel.AutoSize = true;
-            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel.Location = new System.Drawing.Point(32, 126);
-            this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(79, 20);
-            this.StrengthLabel.TabIndex = 4;
-            this.StrengthLabel.Text = "Strength :";
-            // 
-            // EnterCarryingWeightData
-            // 
-            this.EnterCarryingWeightData.AutoSize = true;
-            this.EnterCarryingWeightData.BackColor = System.Drawing.Color.Transparent;
-            this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
-            this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
-            this.EnterCarryingWeightData.Size = new System.Drawing.Size(189, 20);
-            this.EnterCarryingWeightData.TabIndex = 3;
-            this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
-            // 
-            // CapacityLabel
-            // 
-            this.CapacityLabel.AutoSize = true;
-            this.CapacityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
-            this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(129, 20);
-            this.CapacityLabel.TabIndex = 2;
-            this.CapacityLabel.Text = "Carrying Weight :";
-            // 
-            // enterExperienceData
-            // 
-            this.enterExperienceData.AutoSize = true;
-            this.enterExperienceData.BackColor = System.Drawing.Color.Transparent;
-            this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
-            this.enterExperienceData.Name = "enterExperienceData";
-            this.enterExperienceData.Size = new System.Drawing.Size(160, 20);
-            this.enterExperienceData.TabIndex = 1;
-            this.enterExperienceData.Text = "enterExperienceData";
-            // 
-            // xpToLevelLabel
-            // 
-            this.xpToLevelLabel.AutoSize = true;
-            this.xpToLevelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
-            this.xpToLevelLabel.Name = "xpToLevelLabel";
-            this.xpToLevelLabel.Size = new System.Drawing.Size(183, 20);
-            this.xpToLevelLabel.TabIndex = 0;
-            this.xpToLevelLabel.Text = "Experience to next level :";
-            // 
             // MainMapImageList
             // 
             this.MainMapImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("MainMapImageList.ImageStream")));
@@ -2088,6 +2088,8 @@ namespace RPGLab.Networking
             this.GamePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).EndInit();
+            this.SkillsPanel.ResumeLayout(false);
+            this.SkillsPanel.PerformLayout();
             this.InventoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).EndInit();
@@ -2120,8 +2122,6 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).EndInit();
-            this.SkillsPanel.ResumeLayout(false);
-            this.SkillsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
