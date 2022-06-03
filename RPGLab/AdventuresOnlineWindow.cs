@@ -26,17 +26,14 @@ namespace RPGLab.Networking
         static List<Image> ImageNumber = new List<Image>();
         static int counter;
         static string periodCount;
+        object movingObject;
+        int firstXPos;
+        int firstYPos;
         public AdventuresOnlineWindow()
         {
             InitializeComponent();
             InitializeStartMenu();
-            CharacterSelectPanel.Hide();
-            CreateAccountPanel.Hide();
-            CreateCharacterPanel.Hide();
             LoginPanel.Show();
-            GamePanel.Hide();
-            SkillsPanel.Visible = false;
-            SkillsPanel.Hide();
             GameRenderer.Paint += Renderer;
             TileMap.LoadMapSprites(MainMapImageList);
             loginWindow = this;
@@ -51,7 +48,7 @@ namespace RPGLab.Networking
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, CreateAccountPanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, GamePanel, new object[] { true });
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, SkillsPanel, new object[] { true });
-            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, ContainerPanel, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, InventoryPanel, new object[] { true });
         }
         public void UpdateForm()
         {
@@ -767,6 +764,7 @@ namespace RPGLab.Networking
                 EnterCarryingWeightData.Text = Convert.ToString(players[Client.instance.myId].playerCarryingWeight);
                 SkillsPanel.Visible = true;
                 SkillsPanel.Show();
+                SkillsPanel.BringToFront();
                 GamePanel.Focus();
             }
             else if (SkillsPanel.Visible == true)
@@ -809,28 +807,87 @@ namespace RPGLab.Networking
             Application.Exit();
             Environment.Exit(0);
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {//InventoryButtonClick
-            if (ContainerPanel.Visible == false)
+        #region InventoryPanels
+        private void MainInventoryButton_Click(object sender, EventArgs e)
+        {
+            if (InventoryPanel.Visible == false)
             {
-                SkillsPanel.Visible = false;
-                SkillsPanel.Hide();
-                ContainerPanel.Visible = true;
-                ContainerPanel.Show();
+                InventoryPanel.Visible = true;
+                InventoryPanel.Show();
+                InventoryPanel.BringToFront();
                 GamePanel.Focus();
             }
-            else if (ContainerPanel.Visible == true)
+            else if (InventoryPanel.Visible == true)
             {
-                ContainerPanel.Visible = false;
-                ContainerPanel.Hide();
+                InventoryPanel.Visible = false;
+                InventoryPanel.Hide();
                 GamePanel.Focus();
+            }
+
+        }
+
+        private void InventoryPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            movingObject = sender;
+        }
+
+        private void InventoryPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            movingObject = null;
+            if (AdventuresOnlineWindow.MousePosition.X < 1454)
+            {
+                InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, InventoryPanel.Location.Y);
+                InventoryPanel.BringToFront();
+            }
+            if (AdventuresOnlineWindow.MousePosition.Y < 529)
+            {
+                InventoryPanel.Location = new Point(InventoryPanel.Location.X,AdventuresOnlineWindow.MousePosition.Y - 35);
+                InventoryPanel.BringToFront();
+            }
+
+        }
+
+        private void InventoryPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (movingObject != null)
+            {
+                if (AdventuresOnlineWindow.MousePosition.X < 1454 && AdventuresOnlineWindow.MousePosition.Y < 740)
+                {
+                    InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, AdventuresOnlineWindow.MousePosition.Y - 35);
+
+                }
+                if(AdventuresOnlineWindow.MousePosition.X > 1454 && AdventuresOnlineWindow.MousePosition.Y > 529)
+                {
+                    return;
+                }
+                if (AdventuresOnlineWindow.MousePosition.X > 1454)
+                {
+                    InventoryPanel.Location = new Point(1444, AdventuresOnlineWindow.MousePosition.Y - 35);
+                }
+                if (AdventuresOnlineWindow.MousePosition.Y > 529)
+                {
+                    InventoryPanel.Location = new Point(AdventuresOnlineWindow.MousePosition.X - 10, 519);
+                }
             }
         }
 
-        private void ContainerPanel_Resize(object sender, EventArgs e)
-        {
+        #endregion
 
+        private void EquipmentButton_Click(object sender, EventArgs e)
+        {
+            if (EquipmentPanel.Visible == false)
+            {
+                EquipmentPanel.Visible = true;
+                EquipmentPanel.Show();
+                EquipmentPanel.BringToFront();
+                GamePanel.Focus();
+            }
+            else if (EquipmentPanel.Visible == true)
+            {
+                EquipmentPanel.Visible = false;
+                EquipmentPanel.Hide();
+                GamePanel.Focus();
+            }
         }
     }
 }

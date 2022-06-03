@@ -106,49 +106,49 @@ namespace RPGLab.Networking
             this.GamePanelPlayerManaAmountLabel = new System.Windows.Forms.Label();
             this.GamePanelPlayerExperienceAmountPercentLabel = new System.Windows.Forms.Label();
             this.GamePanelPlayerSkillsButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.MainInventoryButton = new System.Windows.Forms.Button();
+            this.EquipmentButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.GameChatBox = new System.Windows.Forms.ListBox();
             this.GameChatTextBox = new System.Windows.Forms.TextBox();
             this.GamePanel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ContainerPanel = new System.Windows.Forms.Panel();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.ItemInContainerPictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ItemInContainerPictureBox4 = new System.Windows.Forms.PictureBox();
-            this.ItemInContainerPictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ItemInContainerPictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ItemInContainerPictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.ExperienceProgressBar = new System.Windows.Forms.ProgressBar();
             this.ManaProgressBar = new System.Windows.Forms.ProgressBar();
             this.HealthProgressBar = new System.Windows.Forms.ProgressBar();
             this.GameRenderer = new System.Windows.Forms.PictureBox();
+            this.InventoryPanel = new System.Windows.Forms.Panel();
+            this.InventoryPictureBox20 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox19 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox18 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox17 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox16 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox15 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox14 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox13 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox12 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox11 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox10 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox5 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox9 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox8 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox4 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox7 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox3 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox6 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox2 = new System.Windows.Forms.PictureBox();
+            this.InventoryPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EquipmentPanel = new System.Windows.Forms.Panel();
+            this.FeetSlot = new System.Windows.Forms.PictureBox();
+            this.AmmoSlot = new System.Windows.Forms.PictureBox();
+            this.LegsSlot = new System.Windows.Forms.PictureBox();
+            this.RingSlot = new System.Windows.Forms.PictureBox();
+            this.OffHandSlot = new System.Windows.Forms.PictureBox();
+            this.ChestSlot = new System.Windows.Forms.PictureBox();
+            this.BackpackSlot = new System.Windows.Forms.PictureBox();
+            this.MainWeaponSlot = new System.Windows.Forms.PictureBox();
+            this.HeadSlot = new System.Windows.Forms.PictureBox();
+            this.AmuletSlot = new System.Windows.Forms.PictureBox();
             this.SkillsPanel = new System.Windows.Forms.Panel();
             this.AddSkillButton6 = new System.Windows.Forms.Button();
             this.AddSkillButton5 = new System.Windows.Forms.Button();
@@ -188,40 +188,40 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).BeginInit();
             this.GamePanel.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.ContainerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).BeginInit();
+            this.InventoryPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox1)).BeginInit();
+            this.EquipmentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FeetSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmmoSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegsSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RingSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OffHandSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChestSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackpackSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).BeginInit();
             this.SkillsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -330,7 +330,7 @@ namespace RPGLab.Networking
             this.UsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.UsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(228, 46);
+            this.UsernameLabel.Size = new System.Drawing.Size(119, 26);
             this.UsernameLabel.TabIndex = 4;
             this.UsernameLabel.Tag = "LoginAccessoriesVisible";
             this.UsernameLabel.Text = "Username :";
@@ -344,7 +344,7 @@ namespace RPGLab.Networking
             this.PasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.PasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(229, 46);
+            this.PasswordLabel.Size = new System.Drawing.Size(120, 26);
             this.PasswordLabel.TabIndex = 3;
             this.PasswordLabel.Tag = "LoginAccessoriesVisible";
             this.PasswordLabel.Text = "Password : ";
@@ -366,7 +366,7 @@ namespace RPGLab.Networking
             this.Password.MinimumSize = new System.Drawing.Size(200, 30);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(200, 51);
+            this.Password.Size = new System.Drawing.Size(200, 30);
             this.Password.TabIndex = 1;
             this.Password.Tag = "LoginAccessoriesVisible";
             this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -377,7 +377,7 @@ namespace RPGLab.Networking
             this.Username.Location = new System.Drawing.Point(844, 466);
             this.Username.MinimumSize = new System.Drawing.Size(200, 30);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(200, 51);
+            this.Username.Size = new System.Drawing.Size(200, 30);
             this.Username.TabIndex = 0;
             this.Username.Tag = "LoginAccessoriesVisible";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -407,6 +407,7 @@ namespace RPGLab.Networking
             this.CreateCharacterPanel.Name = "CreateCharacterPanel";
             this.CreateCharacterPanel.Size = new System.Drawing.Size(1880, 1017);
             this.CreateCharacterPanel.TabIndex = 7;
+            this.CreateCharacterPanel.Visible = false;
             // 
             // CreateCharacterRejectionLabel
             // 
@@ -417,7 +418,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRejectionLabel.Location = new System.Drawing.Point(744, 838);
             this.CreateCharacterRejectionLabel.MinimumSize = new System.Drawing.Size(400, 30);
             this.CreateCharacterRejectionLabel.Name = "CreateCharacterRejectionLabel";
-            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 44);
+            this.CreateCharacterRejectionLabel.Size = new System.Drawing.Size(400, 30);
             this.CreateCharacterRejectionLabel.TabIndex = 18;
             this.CreateCharacterRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -476,7 +477,7 @@ namespace RPGLab.Networking
             this.CreateCharacterAvatarLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterAvatarLabel.Location = new System.Drawing.Point(654, 640);
             this.CreateCharacterAvatarLabel.Name = "CreateCharacterAvatarLabel";
-            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(281, 46);
+            this.CreateCharacterAvatarLabel.Size = new System.Drawing.Size(148, 26);
             this.CreateCharacterAvatarLabel.TabIndex = 13;
             this.CreateCharacterAvatarLabel.Text = "Avatar :           ";
             // 
@@ -523,7 +524,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClass.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterClass.Name = "CreateCharacterClass";
             this.CreateCharacterClass.ReadOnly = true;
-            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 51);
+            this.CreateCharacterClass.Size = new System.Drawing.Size(200, 30);
             this.CreateCharacterClass.TabIndex = 9;
             this.CreateCharacterClass.Text = "Fighter";
             this.CreateCharacterClass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -535,7 +536,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRace.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterRace.Name = "CreateCharacterRace";
             this.CreateCharacterRace.ReadOnly = true;
-            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 51);
+            this.CreateCharacterRace.Size = new System.Drawing.Size(200, 30);
             this.CreateCharacterRace.TabIndex = 8;
             this.CreateCharacterRace.Text = "Human";
             this.CreateCharacterRace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -549,7 +550,7 @@ namespace RPGLab.Networking
             this.CreateCharacterClassLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterClassLabel.Location = new System.Drawing.Point(654, 571);
             this.CreateCharacterClassLabel.Name = "CreateCharacterClassLabel";
-            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(276, 46);
+            this.CreateCharacterClassLabel.Size = new System.Drawing.Size(146, 26);
             this.CreateCharacterClassLabel.TabIndex = 7;
             this.CreateCharacterClassLabel.Text = "Class :            ";
             // 
@@ -592,7 +593,7 @@ namespace RPGLab.Networking
             this.CreateCharacterPlayerNameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterPlayerNameLabel.Location = new System.Drawing.Point(654, 459);
             this.CreateCharacterPlayerNameLabel.Name = "CreateCharacterPlayerNameLabel";
-            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(275, 46);
+            this.CreateCharacterPlayerNameLabel.Size = new System.Drawing.Size(143, 26);
             this.CreateCharacterPlayerNameLabel.TabIndex = 4;
             this.CreateCharacterPlayerNameLabel.Text = "Player Name :";
             // 
@@ -605,7 +606,7 @@ namespace RPGLab.Networking
             this.CreateCharacterRaceLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateCharacterRaceLabel.Location = new System.Drawing.Point(653, 515);
             this.CreateCharacterRaceLabel.Name = "CreateCharacterRaceLabel";
-            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(268, 46);
+            this.CreateCharacterRaceLabel.Size = new System.Drawing.Size(144, 26);
             this.CreateCharacterRaceLabel.TabIndex = 3;
             this.CreateCharacterRaceLabel.Text = "Race :            ";
             // 
@@ -625,7 +626,7 @@ namespace RPGLab.Networking
             this.CreateCharacterName.Location = new System.Drawing.Point(848, 456);
             this.CreateCharacterName.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateCharacterName.Name = "CreateCharacterName";
-            this.CreateCharacterName.Size = new System.Drawing.Size(200, 51);
+            this.CreateCharacterName.Size = new System.Drawing.Size(200, 30);
             this.CreateCharacterName.TabIndex = 0;
             this.CreateCharacterName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -646,6 +647,7 @@ namespace RPGLab.Networking
             this.CharacterSelectPanel.Name = "CharacterSelectPanel";
             this.CharacterSelectPanel.Size = new System.Drawing.Size(1880, 1017);
             this.CharacterSelectPanel.TabIndex = 14;
+            this.CharacterSelectPanel.Visible = false;
             // 
             // DeleteCharacterButton
             // 
@@ -683,7 +685,7 @@ namespace RPGLab.Networking
             this.CharacterSelectDropdownBox.FormattingEnabled = true;
             this.CharacterSelectDropdownBox.Location = new System.Drawing.Point(848, 567);
             this.CharacterSelectDropdownBox.Name = "CharacterSelectDropdownBox";
-            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 52);
+            this.CharacterSelectDropdownBox.Size = new System.Drawing.Size(200, 32);
             this.CharacterSelectDropdownBox.TabIndex = 14;
             this.CharacterSelectDropdownBox.SelectedValueChanged += new System.EventHandler(this.showSelectedDropdown_Click);
             // 
@@ -761,7 +763,7 @@ namespace RPGLab.Networking
             this.CharacterSelectCharacterInfo.Location = new System.Drawing.Point(832, 518);
             this.CharacterSelectCharacterInfo.MinimumSize = new System.Drawing.Size(230, 26);
             this.CharacterSelectCharacterInfo.Name = "CharacterSelectCharacterInfo";
-            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 46);
+            this.CharacterSelectCharacterInfo.Size = new System.Drawing.Size(230, 26);
             this.CharacterSelectCharacterInfo.TabIndex = 4;
             this.CharacterSelectCharacterInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -791,6 +793,7 @@ namespace RPGLab.Networking
             this.CreateAccountPanel.Name = "CreateAccountPanel";
             this.CreateAccountPanel.Size = new System.Drawing.Size(1880, 1017);
             this.CreateAccountPanel.TabIndex = 7;
+            this.CreateAccountPanel.Visible = false;
             // 
             // CreateAccountRejectionLabel
             // 
@@ -801,7 +804,7 @@ namespace RPGLab.Networking
             this.CreateAccountRejectionLabel.Location = new System.Drawing.Point(844, 700);
             this.CreateAccountRejectionLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountRejectionLabel.Name = "CreateAccountRejectionLabel";
-            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 44);
+            this.CreateAccountRejectionLabel.Size = new System.Drawing.Size(200, 30);
             this.CreateAccountRejectionLabel.TabIndex = 8;
             this.CreateAccountRejectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -815,7 +818,7 @@ namespace RPGLab.Networking
             this.CreateAccountLabel.Location = new System.Drawing.Point(844, 419);
             this.CreateAccountLabel.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountLabel.Name = "CreateAccountLabel";
-            this.CreateAccountLabel.Size = new System.Drawing.Size(296, 46);
+            this.CreateAccountLabel.Size = new System.Drawing.Size(200, 30);
             this.CreateAccountLabel.TabIndex = 7;
             this.CreateAccountLabel.Text = "Create Account";
             this.CreateAccountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -859,7 +862,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountUsernameLabel.Location = new System.Drawing.Point(699, 469);
             this.CreateAccountUsernameLabel.Name = "CreateAccountUsernameLabel";
-            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(228, 46);
+            this.CreateAccountUsernameLabel.Size = new System.Drawing.Size(119, 26);
             this.CreateAccountUsernameLabel.TabIndex = 4;
             this.CreateAccountUsernameLabel.Text = "Username :";
             // 
@@ -872,7 +875,7 @@ namespace RPGLab.Networking
             this.CreateAccountPasswordLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateAccountPasswordLabel.Location = new System.Drawing.Point(699, 525);
             this.CreateAccountPasswordLabel.Name = "CreateAccountPasswordLabel";
-            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(229, 46);
+            this.CreateAccountPasswordLabel.Size = new System.Drawing.Size(120, 26);
             this.CreateAccountPasswordLabel.TabIndex = 3;
             this.CreateAccountPasswordLabel.Text = "Password : ";
             // 
@@ -893,7 +896,7 @@ namespace RPGLab.Networking
             this.CreateAccountPassword.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountPassword.Name = "CreateAccountPassword";
             this.CreateAccountPassword.PasswordChar = '*';
-            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 51);
+            this.CreateAccountPassword.Size = new System.Drawing.Size(200, 30);
             this.CreateAccountPassword.TabIndex = 1;
             this.CreateAccountPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -903,7 +906,7 @@ namespace RPGLab.Networking
             this.CreateAccountUsername.Location = new System.Drawing.Point(844, 466);
             this.CreateAccountUsername.MinimumSize = new System.Drawing.Size(200, 30);
             this.CreateAccountUsername.Name = "CreateAccountUsername";
-            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 51);
+            this.CreateAccountUsername.Size = new System.Drawing.Size(200, 30);
             this.CreateAccountUsername.TabIndex = 0;
             this.CreateAccountUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1021,7 +1024,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerNameLabel.Location = new System.Drawing.Point(1518, -2);
             this.GamePanelPlayerNameLabel.Name = "GamePanelPlayerNameLabel";
-            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(286, 63);
+            this.GamePanelPlayerNameLabel.Size = new System.Drawing.Size(148, 31);
             this.GamePanelPlayerNameLabel.TabIndex = 0;
             this.GamePanelPlayerNameLabel.Text = "Caelaenor";
             // 
@@ -1031,7 +1034,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerLevelRaceClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerLevelRaceClassLabel.Location = new System.Drawing.Point(1518, 39);
             this.GamePanelPlayerLevelRaceClassLabel.Name = "GamePanelPlayerLevelRaceClassLabel";
-            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(652, 48);
+            this.GamePanelPlayerLevelRaceClassLabel.Size = new System.Drawing.Size(354, 25);
             this.GamePanelPlayerLevelRaceClassLabel.TabIndex = 0;
             this.GamePanelPlayerLevelRaceClassLabel.Text = "Level 999 Dragonborn Barbarian";
             // 
@@ -1041,7 +1044,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerHealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthLabel.Location = new System.Drawing.Point(1444, 86);
             this.GamePanelPlayerHealthLabel.Name = "GamePanelPlayerHealthLabel";
-            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(172, 48);
+            this.GamePanelPlayerHealthLabel.Size = new System.Drawing.Size(94, 25);
             this.GamePanelPlayerHealthLabel.TabIndex = 0;
             this.GamePanelPlayerHealthLabel.Text = "Health :";
             // 
@@ -1051,7 +1054,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerManaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaLabel.Location = new System.Drawing.Point(1444, 128);
             this.GamePanelPlayerManaLabel.Name = "GamePanelPlayerManaLabel";
-            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(153, 48);
+            this.GamePanelPlayerManaLabel.Size = new System.Drawing.Size(84, 25);
             this.GamePanelPlayerManaLabel.TabIndex = 0;
             this.GamePanelPlayerManaLabel.Text = "Mana :";
             // 
@@ -1061,7 +1064,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerExperienceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceLabel.Location = new System.Drawing.Point(1444, 168);
             this.GamePanelPlayerExperienceLabel.Name = "GamePanelPlayerExperienceLabel";
-            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(264, 48);
+            this.GamePanelPlayerExperienceLabel.Size = new System.Drawing.Size(144, 25);
             this.GamePanelPlayerExperienceLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceLabel.Text = "Experience :";
             // 
@@ -1071,7 +1074,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerHealthAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerHealthAmountLabel.Location = new System.Drawing.Point(1783, 86);
             this.GamePanelPlayerHealthAmountLabel.Name = "GamePanelPlayerHealthAmountLabel";
-            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(120, 37);
+            this.GamePanelPlayerHealthAmountLabel.Size = new System.Drawing.Size(64, 20);
             this.GamePanelPlayerHealthAmountLabel.TabIndex = 0;
             this.GamePanelPlayerHealthAmountLabel.Text = "50/100";
             // 
@@ -1081,7 +1084,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerManaAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerManaAmountLabel.Location = new System.Drawing.Point(1783, 128);
             this.GamePanelPlayerManaAmountLabel.Name = "GamePanelPlayerManaAmountLabel";
-            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(120, 37);
+            this.GamePanelPlayerManaAmountLabel.Size = new System.Drawing.Size(64, 20);
             this.GamePanelPlayerManaAmountLabel.TabIndex = 0;
             this.GamePanelPlayerManaAmountLabel.Text = "50/100";
             // 
@@ -1091,7 +1094,7 @@ namespace RPGLab.Networking
             this.GamePanelPlayerExperienceAmountPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GamePanelPlayerExperienceAmountPercentLabel.Location = new System.Drawing.Point(1783, 168);
             this.GamePanelPlayerExperienceAmountPercentLabel.Name = "GamePanelPlayerExperienceAmountPercentLabel";
-            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(65, 37);
+            this.GamePanelPlayerExperienceAmountPercentLabel.Size = new System.Drawing.Size(34, 20);
             this.GamePanelPlayerExperienceAmountPercentLabel.TabIndex = 0;
             this.GamePanelPlayerExperienceAmountPercentLabel.Text = "0%";
             // 
@@ -1113,40 +1116,41 @@ namespace RPGLab.Networking
             this.GamePanelPlayerSkillsButton.UseVisualStyleBackColor = true;
             this.GamePanelPlayerSkillsButton.Click += new System.EventHandler(this.GamePanelPlayerSkillsButton_Click);
             // 
-            // button3
+            // MainInventoryButton
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.CausesValidation = false;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1542, 247);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 32);
-            this.button3.TabIndex = 0;
-            this.button3.TabStop = false;
-            this.button3.Text = "Inventory";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.MainInventoryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainInventoryButton.BackgroundImage")));
+            this.MainInventoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainInventoryButton.CausesValidation = false;
+            this.MainInventoryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.MainInventoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MainInventoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MainInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainInventoryButton.Location = new System.Drawing.Point(1542, 247);
+            this.MainInventoryButton.Name = "MainInventoryButton";
+            this.MainInventoryButton.Size = new System.Drawing.Size(99, 32);
+            this.MainInventoryButton.TabIndex = 0;
+            this.MainInventoryButton.TabStop = false;
+            this.MainInventoryButton.Text = "Inventory";
+            this.MainInventoryButton.UseVisualStyleBackColor = true;
+            this.MainInventoryButton.Click += new System.EventHandler(this.MainInventoryButton_Click);
             // 
-            // button4
+            // EquipmentButton
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.CausesValidation = false;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1647, 247);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 32);
-            this.button4.TabIndex = 0;
-            this.button4.TabStop = false;
-            this.button4.Text = "Equipment";
-            this.button4.UseVisualStyleBackColor = true;
+            this.EquipmentButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EquipmentButton.BackgroundImage")));
+            this.EquipmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EquipmentButton.CausesValidation = false;
+            this.EquipmentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.EquipmentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EquipmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EquipmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquipmentButton.Location = new System.Drawing.Point(1647, 247);
+            this.EquipmentButton.Name = "EquipmentButton";
+            this.EquipmentButton.Size = new System.Drawing.Size(104, 32);
+            this.EquipmentButton.TabIndex = 0;
+            this.EquipmentButton.TabStop = false;
+            this.EquipmentButton.Text = "Equipment";
+            this.EquipmentButton.UseVisualStyleBackColor = true;
+            this.EquipmentButton.Click += new System.EventHandler(this.EquipmentButton_Click);
             // 
             // button5
             // 
@@ -1172,11 +1176,11 @@ namespace RPGLab.Networking
             this.GameChatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GameChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GameChatBox.FormattingEnabled = true;
-            this.GameChatBox.ItemHeight = 44;
+            this.GameChatBox.ItemHeight = 24;
             this.GameChatBox.Location = new System.Drawing.Point(0, 843);
             this.GameChatBox.Name = "GameChatBox";
             this.GameChatBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.GameChatBox.Size = new System.Drawing.Size(1440, 92);
+            this.GameChatBox.Size = new System.Drawing.Size(1440, 124);
             this.GameChatBox.TabIndex = 0;
             this.GameChatBox.TabStop = false;
             this.GameChatBox.UseTabStops = false;
@@ -1184,22 +1188,21 @@ namespace RPGLab.Networking
             // GameChatTextBox
             // 
             this.GameChatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GameChatTextBox.Location = new System.Drawing.Point(0, 973);
+            this.GameChatTextBox.Location = new System.Drawing.Point(0, 971);
             this.GameChatTextBox.Name = "GameChatTextBox";
-            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 44);
+            this.GameChatTextBox.Size = new System.Drawing.Size(1440, 26);
             this.GameChatTextBox.TabIndex = 0;
             this.GameChatTextBox.TabStop = false;
             // 
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Transparent;
-            this.GamePanel.Controls.Add(this.flowLayoutPanel1);
             this.GamePanel.Controls.Add(this.pictureBox14);
             this.GamePanel.Controls.Add(this.GameChatTextBox);
             this.GamePanel.Controls.Add(this.GameChatBox);
             this.GamePanel.Controls.Add(this.button5);
-            this.GamePanel.Controls.Add(this.button4);
-            this.GamePanel.Controls.Add(this.button3);
+            this.GamePanel.Controls.Add(this.EquipmentButton);
+            this.GamePanel.Controls.Add(this.MainInventoryButton);
             this.GamePanel.Controls.Add(this.GamePanelPlayerSkillsButton);
             this.GamePanel.Controls.Add(this.GamePanelPlayerExperienceAmountPercentLabel);
             this.GamePanel.Controls.Add(this.GamePanelPlayerManaAmountLabel);
@@ -1215,366 +1218,14 @@ namespace RPGLab.Networking
             this.GamePanel.Controls.Add(this.GamePanelPlayerAvatar);
             this.GamePanel.Controls.Add(this.GameRenderer);
             this.GamePanel.Controls.Add(this.SkillsPanel);
+            this.GamePanel.Controls.Add(this.InventoryPanel);
+            this.GamePanel.Controls.Add(this.EquipmentPanel);
             this.GamePanel.Location = new System.Drawing.Point(9, 12);
             this.GamePanel.Margin = new System.Windows.Forms.Padding(0);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(1893, 1017);
             this.GamePanel.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.ContainerPanel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(755, 209);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(461, 546);
-            this.flowLayoutPanel1.TabIndex = 30;
-            // 
-            // ContainerPanel
-            // 
-            this.ContainerPanel.AutoScroll = true;
-            this.ContainerPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ContainerPanel.BackColor = System.Drawing.Color.Black;
-            this.ContainerPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContainerPanel.BackgroundImage")));
-            this.ContainerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContainerPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ContainerPanel.Controls.Add(this.pictureBox26);
-            this.ContainerPanel.Controls.Add(this.pictureBox27);
-            this.ContainerPanel.Controls.Add(this.pictureBox28);
-            this.ContainerPanel.Controls.Add(this.pictureBox29);
-            this.ContainerPanel.Controls.Add(this.pictureBox30);
-            this.ContainerPanel.Controls.Add(this.pictureBox21);
-            this.ContainerPanel.Controls.Add(this.pictureBox22);
-            this.ContainerPanel.Controls.Add(this.pictureBox23);
-            this.ContainerPanel.Controls.Add(this.pictureBox24);
-            this.ContainerPanel.Controls.Add(this.pictureBox25);
-            this.ContainerPanel.Controls.Add(this.pictureBox16);
-            this.ContainerPanel.Controls.Add(this.pictureBox17);
-            this.ContainerPanel.Controls.Add(this.pictureBox18);
-            this.ContainerPanel.Controls.Add(this.pictureBox19);
-            this.ContainerPanel.Controls.Add(this.pictureBox20);
-            this.ContainerPanel.Controls.Add(this.pictureBox10);
-            this.ContainerPanel.Controls.Add(this.pictureBox11);
-            this.ContainerPanel.Controls.Add(this.pictureBox12);
-            this.ContainerPanel.Controls.Add(this.pictureBox13);
-            this.ContainerPanel.Controls.Add(this.pictureBox15);
-            this.ContainerPanel.Controls.Add(this.pictureBox4);
-            this.ContainerPanel.Controls.Add(this.pictureBox6);
-            this.ContainerPanel.Controls.Add(this.pictureBox7);
-            this.ContainerPanel.Controls.Add(this.pictureBox8);
-            this.ContainerPanel.Controls.Add(this.pictureBox9);
-            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox5);
-            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox4);
-            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox3);
-            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox2);
-            this.ContainerPanel.Controls.Add(this.ItemInContainerPictureBox1);
-            this.flowLayoutPanel1.SetFlowBreak(this.ContainerPanel, true);
-            this.ContainerPanel.Location = new System.Drawing.Point(3, 3);
-            this.ContainerPanel.MaximumSize = new System.Drawing.Size(456, 525);
-            this.ContainerPanel.MinimumSize = new System.Drawing.Size(456, 106);
-            this.ContainerPanel.Name = "ContainerPanel";
-            this.ContainerPanel.Size = new System.Drawing.Size(456, 525);
-            this.ContainerPanel.TabIndex = 157;
-            this.ContainerPanel.Resize += new System.EventHandler(this.ContainerPanel_Resize);
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox26.BackgroundImage")));
-            this.pictureBox26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox26.Location = new System.Drawing.Point(351, 429);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox26.TabIndex = 29;
-            this.pictureBox26.TabStop = false;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox27.BackgroundImage")));
-            this.pictureBox27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox27.Location = new System.Drawing.Point(270, 429);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox27.TabIndex = 28;
-            this.pictureBox27.TabStop = false;
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox28.BackgroundImage")));
-            this.pictureBox28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox28.Location = new System.Drawing.Point(185, 429);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox28.TabIndex = 27;
-            this.pictureBox28.TabStop = false;
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox29.BackgroundImage")));
-            this.pictureBox29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox29.Location = new System.Drawing.Point(104, 429);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox29.TabIndex = 26;
-            this.pictureBox29.TabStop = false;
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox30.BackgroundImage")));
-            this.pictureBox30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox30.Location = new System.Drawing.Point(24, 429);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox30.TabIndex = 25;
-            this.pictureBox30.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox21.BackgroundImage")));
-            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox21.Location = new System.Drawing.Point(351, 349);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox21.TabIndex = 24;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
-            this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox22.Location = new System.Drawing.Point(270, 349);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox22.TabIndex = 23;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.BackgroundImage")));
-            this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox23.Location = new System.Drawing.Point(185, 349);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox23.TabIndex = 22;
-            this.pictureBox23.TabStop = false;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox24.BackgroundImage")));
-            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox24.Location = new System.Drawing.Point(104, 349);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox24.TabIndex = 21;
-            this.pictureBox24.TabStop = false;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox25.BackgroundImage")));
-            this.pictureBox25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox25.Location = new System.Drawing.Point(24, 349);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox25.TabIndex = 20;
-            this.pictureBox25.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox16.Location = new System.Drawing.Point(351, 269);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox16.TabIndex = 19;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
-            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox17.Location = new System.Drawing.Point(270, 269);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox17.TabIndex = 18;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
-            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.Location = new System.Drawing.Point(185, 269);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox18.TabIndex = 17;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox19.BackgroundImage")));
-            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox19.Location = new System.Drawing.Point(104, 269);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox19.TabIndex = 16;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
-            this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox20.Location = new System.Drawing.Point(24, 269);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox20.TabIndex = 15;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(351, 189);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox10.TabIndex = 14;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(270, 189);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox11.TabIndex = 13;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(185, 189);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox12.TabIndex = 12;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(104, 189);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox13.TabIndex = 11;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
-            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox15.Location = new System.Drawing.Point(24, 189);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox15.TabIndex = 10;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(351, 109);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(270, 109);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(185, 109);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(104, 109);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox8.TabIndex = 6;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(24, 109);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox9.TabIndex = 5;
-            this.pictureBox9.TabStop = false;
-            // 
-            // ItemInContainerPictureBox5
-            // 
-            this.ItemInContainerPictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox5.BackgroundImage")));
-            this.ItemInContainerPictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ItemInContainerPictureBox5.Location = new System.Drawing.Point(351, 29);
-            this.ItemInContainerPictureBox5.Name = "ItemInContainerPictureBox5";
-            this.ItemInContainerPictureBox5.Size = new System.Drawing.Size(64, 64);
-            this.ItemInContainerPictureBox5.TabIndex = 4;
-            this.ItemInContainerPictureBox5.TabStop = false;
-            // 
-            // ItemInContainerPictureBox4
-            // 
-            this.ItemInContainerPictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox4.BackgroundImage")));
-            this.ItemInContainerPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ItemInContainerPictureBox4.Location = new System.Drawing.Point(270, 29);
-            this.ItemInContainerPictureBox4.Name = "ItemInContainerPictureBox4";
-            this.ItemInContainerPictureBox4.Size = new System.Drawing.Size(64, 64);
-            this.ItemInContainerPictureBox4.TabIndex = 3;
-            this.ItemInContainerPictureBox4.TabStop = false;
-            // 
-            // ItemInContainerPictureBox3
-            // 
-            this.ItemInContainerPictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox3.BackgroundImage")));
-            this.ItemInContainerPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ItemInContainerPictureBox3.Location = new System.Drawing.Point(185, 29);
-            this.ItemInContainerPictureBox3.Name = "ItemInContainerPictureBox3";
-            this.ItemInContainerPictureBox3.Size = new System.Drawing.Size(64, 64);
-            this.ItemInContainerPictureBox3.TabIndex = 2;
-            this.ItemInContainerPictureBox3.TabStop = false;
-            // 
-            // ItemInContainerPictureBox2
-            // 
-            this.ItemInContainerPictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox2.BackgroundImage")));
-            this.ItemInContainerPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ItemInContainerPictureBox2.Location = new System.Drawing.Point(104, 29);
-            this.ItemInContainerPictureBox2.Name = "ItemInContainerPictureBox2";
-            this.ItemInContainerPictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.ItemInContainerPictureBox2.TabIndex = 1;
-            this.ItemInContainerPictureBox2.TabStop = false;
-            // 
-            // ItemInContainerPictureBox1
-            // 
-            this.ItemInContainerPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ItemInContainerPictureBox1.BackgroundImage")));
-            this.ItemInContainerPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ItemInContainerPictureBox1.Location = new System.Drawing.Point(24, 29);
-            this.ItemInContainerPictureBox1.Name = "ItemInContainerPictureBox1";
-            this.ItemInContainerPictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.ItemInContainerPictureBox1.TabIndex = 0;
-            this.ItemInContainerPictureBox1.TabStop = false;
+            this.GamePanel.Visible = false;
             // 
             // pictureBox14
             // 
@@ -1627,6 +1278,410 @@ namespace RPGLab.Networking
             this.GameRenderer.TabIndex = 155;
             this.GameRenderer.TabStop = false;
             // 
+            // InventoryPanel
+            // 
+            this.InventoryPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.InventoryPanel.BackColor = System.Drawing.Color.DarkGray;
+            this.InventoryPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPanel.BackgroundImage")));
+            this.InventoryPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox20);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox19);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox18);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox17);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox16);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox15);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox14);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox13);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox12);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox11);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox10);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox5);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox9);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox8);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox4);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox7);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox3);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox6);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox2);
+            this.InventoryPanel.Controls.Add(this.InventoryPictureBox1);
+            this.InventoryPanel.Location = new System.Drawing.Point(1444, 286);
+            this.InventoryPanel.MaximumSize = new System.Drawing.Size(449, 313);
+            this.InventoryPanel.MinimumSize = new System.Drawing.Size(449, 313);
+            this.InventoryPanel.Name = "InventoryPanel";
+            this.InventoryPanel.Size = new System.Drawing.Size(449, 313);
+            this.InventoryPanel.TabIndex = 158;
+            this.InventoryPanel.Visible = false;
+            this.InventoryPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseDown);
+            this.InventoryPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseMove);
+            this.InventoryPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseUp);
+            // 
+            // InventoryPictureBox20
+            // 
+            this.InventoryPictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox20.BackgroundImage")));
+            this.InventoryPictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox20.Location = new System.Drawing.Point(345, 233);
+            this.InventoryPictureBox20.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox20.Name = "InventoryPictureBox20";
+            this.InventoryPictureBox20.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox20.TabIndex = 19;
+            this.InventoryPictureBox20.TabStop = false;
+            // 
+            // InventoryPictureBox19
+            // 
+            this.InventoryPictureBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox19.BackgroundImage")));
+            this.InventoryPictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox19.Location = new System.Drawing.Point(266, 233);
+            this.InventoryPictureBox19.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox19.Name = "InventoryPictureBox19";
+            this.InventoryPictureBox19.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox19.TabIndex = 18;
+            this.InventoryPictureBox19.TabStop = false;
+            // 
+            // InventoryPictureBox18
+            // 
+            this.InventoryPictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox18.BackgroundImage")));
+            this.InventoryPictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox18.Location = new System.Drawing.Point(189, 233);
+            this.InventoryPictureBox18.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox18.Name = "InventoryPictureBox18";
+            this.InventoryPictureBox18.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox18.TabIndex = 17;
+            this.InventoryPictureBox18.TabStop = false;
+            // 
+            // InventoryPictureBox17
+            // 
+            this.InventoryPictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox17.BackgroundImage")));
+            this.InventoryPictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox17.Location = new System.Drawing.Point(112, 233);
+            this.InventoryPictureBox17.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox17.Name = "InventoryPictureBox17";
+            this.InventoryPictureBox17.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox17.TabIndex = 16;
+            this.InventoryPictureBox17.TabStop = false;
+            // 
+            // InventoryPictureBox16
+            // 
+            this.InventoryPictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox16.BackgroundImage")));
+            this.InventoryPictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox16.Location = new System.Drawing.Point(36, 233);
+            this.InventoryPictureBox16.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox16.Name = "InventoryPictureBox16";
+            this.InventoryPictureBox16.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox16.TabIndex = 15;
+            this.InventoryPictureBox16.TabStop = false;
+            // 
+            // InventoryPictureBox15
+            // 
+            this.InventoryPictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox15.BackgroundImage")));
+            this.InventoryPictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox15.Location = new System.Drawing.Point(345, 161);
+            this.InventoryPictureBox15.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox15.Name = "InventoryPictureBox15";
+            this.InventoryPictureBox15.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox15.TabIndex = 14;
+            this.InventoryPictureBox15.TabStop = false;
+            // 
+            // InventoryPictureBox14
+            // 
+            this.InventoryPictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox14.BackgroundImage")));
+            this.InventoryPictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox14.Location = new System.Drawing.Point(266, 161);
+            this.InventoryPictureBox14.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox14.Name = "InventoryPictureBox14";
+            this.InventoryPictureBox14.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox14.TabIndex = 13;
+            this.InventoryPictureBox14.TabStop = false;
+            // 
+            // InventoryPictureBox13
+            // 
+            this.InventoryPictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox13.BackgroundImage")));
+            this.InventoryPictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox13.Location = new System.Drawing.Point(189, 161);
+            this.InventoryPictureBox13.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox13.Name = "InventoryPictureBox13";
+            this.InventoryPictureBox13.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox13.TabIndex = 12;
+            this.InventoryPictureBox13.TabStop = false;
+            // 
+            // InventoryPictureBox12
+            // 
+            this.InventoryPictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox12.BackgroundImage")));
+            this.InventoryPictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox12.Location = new System.Drawing.Point(112, 161);
+            this.InventoryPictureBox12.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox12.Name = "InventoryPictureBox12";
+            this.InventoryPictureBox12.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox12.TabIndex = 11;
+            this.InventoryPictureBox12.TabStop = false;
+            // 
+            // InventoryPictureBox11
+            // 
+            this.InventoryPictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox11.BackgroundImage")));
+            this.InventoryPictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox11.Location = new System.Drawing.Point(36, 161);
+            this.InventoryPictureBox11.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox11.Name = "InventoryPictureBox11";
+            this.InventoryPictureBox11.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox11.TabIndex = 10;
+            this.InventoryPictureBox11.TabStop = false;
+            // 
+            // InventoryPictureBox10
+            // 
+            this.InventoryPictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox10.BackgroundImage")));
+            this.InventoryPictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox10.Location = new System.Drawing.Point(345, 89);
+            this.InventoryPictureBox10.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox10.Name = "InventoryPictureBox10";
+            this.InventoryPictureBox10.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox10.TabIndex = 9;
+            this.InventoryPictureBox10.TabStop = false;
+            // 
+            // InventoryPictureBox5
+            // 
+            this.InventoryPictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox5.BackgroundImage")));
+            this.InventoryPictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox5.Location = new System.Drawing.Point(345, 16);
+            this.InventoryPictureBox5.Margin = new System.Windows.Forms.Padding(16);
+            this.InventoryPictureBox5.Name = "InventoryPictureBox5";
+            this.InventoryPictureBox5.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox5.TabIndex = 4;
+            this.InventoryPictureBox5.TabStop = false;
+            // 
+            // InventoryPictureBox9
+            // 
+            this.InventoryPictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox9.BackgroundImage")));
+            this.InventoryPictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox9.Location = new System.Drawing.Point(266, 89);
+            this.InventoryPictureBox9.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox9.Name = "InventoryPictureBox9";
+            this.InventoryPictureBox9.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox9.TabIndex = 8;
+            this.InventoryPictureBox9.TabStop = false;
+            // 
+            // InventoryPictureBox8
+            // 
+            this.InventoryPictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox8.BackgroundImage")));
+            this.InventoryPictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox8.Location = new System.Drawing.Point(189, 89);
+            this.InventoryPictureBox8.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox8.Name = "InventoryPictureBox8";
+            this.InventoryPictureBox8.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox8.TabIndex = 7;
+            this.InventoryPictureBox8.TabStop = false;
+            // 
+            // InventoryPictureBox4
+            // 
+            this.InventoryPictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox4.BackgroundImage")));
+            this.InventoryPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox4.Location = new System.Drawing.Point(266, 16);
+            this.InventoryPictureBox4.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox4.Name = "InventoryPictureBox4";
+            this.InventoryPictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox4.TabIndex = 3;
+            this.InventoryPictureBox4.TabStop = false;
+            // 
+            // InventoryPictureBox7
+            // 
+            this.InventoryPictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox7.BackgroundImage")));
+            this.InventoryPictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox7.Location = new System.Drawing.Point(112, 89);
+            this.InventoryPictureBox7.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox7.Name = "InventoryPictureBox7";
+            this.InventoryPictureBox7.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox7.TabIndex = 6;
+            this.InventoryPictureBox7.TabStop = false;
+            // 
+            // InventoryPictureBox3
+            // 
+            this.InventoryPictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox3.BackgroundImage")));
+            this.InventoryPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox3.Location = new System.Drawing.Point(189, 16);
+            this.InventoryPictureBox3.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox3.Name = "InventoryPictureBox3";
+            this.InventoryPictureBox3.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox3.TabIndex = 2;
+            this.InventoryPictureBox3.TabStop = false;
+            // 
+            // InventoryPictureBox6
+            // 
+            this.InventoryPictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox6.BackgroundImage")));
+            this.InventoryPictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox6.Location = new System.Drawing.Point(36, 89);
+            this.InventoryPictureBox6.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox6.Name = "InventoryPictureBox6";
+            this.InventoryPictureBox6.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox6.TabIndex = 5;
+            this.InventoryPictureBox6.TabStop = false;
+            // 
+            // InventoryPictureBox2
+            // 
+            this.InventoryPictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox2.BackgroundImage")));
+            this.InventoryPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox2.Location = new System.Drawing.Point(112, 16);
+            this.InventoryPictureBox2.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox2.Name = "InventoryPictureBox2";
+            this.InventoryPictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox2.TabIndex = 1;
+            this.InventoryPictureBox2.TabStop = false;
+            // 
+            // InventoryPictureBox1
+            // 
+            this.InventoryPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryPictureBox1.BackgroundImage")));
+            this.InventoryPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryPictureBox1.Location = new System.Drawing.Point(36, 16);
+            this.InventoryPictureBox1.Margin = new System.Windows.Forms.Padding(20);
+            this.InventoryPictureBox1.Name = "InventoryPictureBox1";
+            this.InventoryPictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.InventoryPictureBox1.TabIndex = 0;
+            this.InventoryPictureBox1.TabStop = false;
+            // 
+            // EquipmentPanel
+            // 
+            this.EquipmentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EquipmentPanel.BackColor = System.Drawing.Color.DarkGray;
+            this.EquipmentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EquipmentPanel.BackgroundImage")));
+            this.EquipmentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EquipmentPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.EquipmentPanel.Controls.Add(this.FeetSlot);
+            this.EquipmentPanel.Controls.Add(this.AmmoSlot);
+            this.EquipmentPanel.Controls.Add(this.LegsSlot);
+            this.EquipmentPanel.Controls.Add(this.RingSlot);
+            this.EquipmentPanel.Controls.Add(this.OffHandSlot);
+            this.EquipmentPanel.Controls.Add(this.ChestSlot);
+            this.EquipmentPanel.Controls.Add(this.BackpackSlot);
+            this.EquipmentPanel.Controls.Add(this.MainWeaponSlot);
+            this.EquipmentPanel.Controls.Add(this.HeadSlot);
+            this.EquipmentPanel.Controls.Add(this.AmuletSlot);
+            this.EquipmentPanel.Location = new System.Drawing.Point(1444, 286);
+            this.EquipmentPanel.MaximumSize = new System.Drawing.Size(449, 313);
+            this.EquipmentPanel.MinimumSize = new System.Drawing.Size(449, 313);
+            this.EquipmentPanel.Name = "EquipmentPanel";
+            this.EquipmentPanel.Size = new System.Drawing.Size(449, 313);
+            this.EquipmentPanel.TabIndex = 157;
+            this.EquipmentPanel.Visible = false;
+            // 
+            // FeetSlot
+            // 
+            this.FeetSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FeetSlot.BackgroundImage")));
+            this.FeetSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FeetSlot.Image = ((System.Drawing.Image)(resources.GetObject("FeetSlot.Image")));
+            this.FeetSlot.Location = new System.Drawing.Point(189, 230);
+            this.FeetSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.FeetSlot.Name = "FeetSlot";
+            this.FeetSlot.Size = new System.Drawing.Size(64, 64);
+            this.FeetSlot.TabIndex = 17;
+            this.FeetSlot.TabStop = false;
+            // 
+            // AmmoSlot
+            // 
+            this.AmmoSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AmmoSlot.BackgroundImage")));
+            this.AmmoSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AmmoSlot.Image = ((System.Drawing.Image)(resources.GetObject("AmmoSlot.Image")));
+            this.AmmoSlot.Location = new System.Drawing.Point(262, 194);
+            this.AmmoSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.AmmoSlot.Name = "AmmoSlot";
+            this.AmmoSlot.Size = new System.Drawing.Size(64, 64);
+            this.AmmoSlot.TabIndex = 13;
+            this.AmmoSlot.TabStop = false;
+            // 
+            // LegsSlot
+            // 
+            this.LegsSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LegsSlot.BackgroundImage")));
+            this.LegsSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LegsSlot.Image = ((System.Drawing.Image)(resources.GetObject("LegsSlot.Image")));
+            this.LegsSlot.Location = new System.Drawing.Point(189, 158);
+            this.LegsSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.LegsSlot.Name = "LegsSlot";
+            this.LegsSlot.Size = new System.Drawing.Size(64, 64);
+            this.LegsSlot.TabIndex = 12;
+            this.LegsSlot.TabStop = false;
+            // 
+            // RingSlot
+            // 
+            this.RingSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RingSlot.BackgroundImage")));
+            this.RingSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RingSlot.Image = ((System.Drawing.Image)(resources.GetObject("RingSlot.Image")));
+            this.RingSlot.Location = new System.Drawing.Point(115, 194);
+            this.RingSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.RingSlot.Name = "RingSlot";
+            this.RingSlot.Size = new System.Drawing.Size(64, 64);
+            this.RingSlot.TabIndex = 11;
+            this.RingSlot.TabStop = false;
+            // 
+            // OffHandSlot
+            // 
+            this.OffHandSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OffHandSlot.BackgroundImage")));
+            this.OffHandSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OffHandSlot.Image = ((System.Drawing.Image)(resources.GetObject("OffHandSlot.Image")));
+            this.OffHandSlot.Location = new System.Drawing.Point(262, 122);
+            this.OffHandSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.OffHandSlot.Name = "OffHandSlot";
+            this.OffHandSlot.Size = new System.Drawing.Size(64, 64);
+            this.OffHandSlot.TabIndex = 8;
+            this.OffHandSlot.TabStop = false;
+            // 
+            // ChestSlot
+            // 
+            this.ChestSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChestSlot.BackgroundImage")));
+            this.ChestSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ChestSlot.Image = ((System.Drawing.Image)(resources.GetObject("ChestSlot.Image")));
+            this.ChestSlot.Location = new System.Drawing.Point(189, 86);
+            this.ChestSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.ChestSlot.Name = "ChestSlot";
+            this.ChestSlot.Size = new System.Drawing.Size(64, 64);
+            this.ChestSlot.TabIndex = 7;
+            this.ChestSlot.TabStop = false;
+            // 
+            // BackpackSlot
+            // 
+            this.BackpackSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackpackSlot.BackgroundImage")));
+            this.BackpackSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackpackSlot.Image = ((System.Drawing.Image)(resources.GetObject("BackpackSlot.Image")));
+            this.BackpackSlot.Location = new System.Drawing.Point(262, 49);
+            this.BackpackSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.BackpackSlot.Name = "BackpackSlot";
+            this.BackpackSlot.Size = new System.Drawing.Size(64, 64);
+            this.BackpackSlot.TabIndex = 3;
+            this.BackpackSlot.TabStop = false;
+            // 
+            // MainWeaponSlot
+            // 
+            this.MainWeaponSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainWeaponSlot.BackgroundImage")));
+            this.MainWeaponSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainWeaponSlot.Image = ((System.Drawing.Image)(resources.GetObject("MainWeaponSlot.Image")));
+            this.MainWeaponSlot.InitialImage = ((System.Drawing.Image)(resources.GetObject("MainWeaponSlot.InitialImage")));
+            this.MainWeaponSlot.Location = new System.Drawing.Point(115, 122);
+            this.MainWeaponSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.MainWeaponSlot.Name = "MainWeaponSlot";
+            this.MainWeaponSlot.Size = new System.Drawing.Size(64, 64);
+            this.MainWeaponSlot.TabIndex = 6;
+            this.MainWeaponSlot.TabStop = false;
+            // 
+            // HeadSlot
+            // 
+            this.HeadSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HeadSlot.BackgroundImage")));
+            this.HeadSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HeadSlot.Image = ((System.Drawing.Image)(resources.GetObject("HeadSlot.Image")));
+            this.HeadSlot.Location = new System.Drawing.Point(189, 13);
+            this.HeadSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.HeadSlot.Name = "HeadSlot";
+            this.HeadSlot.Size = new System.Drawing.Size(64, 64);
+            this.HeadSlot.TabIndex = 2;
+            this.HeadSlot.TabStop = false;
+            // 
+            // AmuletSlot
+            // 
+            this.AmuletSlot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AmuletSlot.BackgroundImage")));
+            this.AmuletSlot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AmuletSlot.Image = ((System.Drawing.Image)(resources.GetObject("AmuletSlot.Image")));
+            this.AmuletSlot.Location = new System.Drawing.Point(115, 49);
+            this.AmuletSlot.Margin = new System.Windows.Forms.Padding(20);
+            this.AmuletSlot.Name = "AmuletSlot";
+            this.AmuletSlot.Size = new System.Drawing.Size(64, 64);
+            this.AmuletSlot.TabIndex = 1;
+            this.AmuletSlot.TabStop = false;
+            // 
             // SkillsPanel
             // 
             this.SkillsPanel.BackColor = System.Drawing.Color.Black;
@@ -1658,8 +1713,9 @@ namespace RPGLab.Networking
             this.SkillsPanel.Controls.Add(this.xpToLevelLabel);
             this.SkillsPanel.Location = new System.Drawing.Point(1444, 286);
             this.SkillsPanel.Name = "SkillsPanel";
-            this.SkillsPanel.Size = new System.Drawing.Size(449, 546);
+            this.SkillsPanel.Size = new System.Drawing.Size(449, 313);
             this.SkillsPanel.TabIndex = 156;
+            this.SkillsPanel.Visible = false;
             // 
             // AddSkillButton6
             // 
@@ -1668,7 +1724,7 @@ namespace RPGLab.Networking
             this.AddSkillButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton6.Location = new System.Drawing.Point(341, 277);
+            this.AddSkillButton6.Location = new System.Drawing.Point(341, 273);
             this.AddSkillButton6.Name = "AddSkillButton6";
             this.AddSkillButton6.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton6.TabIndex = 22;
@@ -1683,7 +1739,7 @@ namespace RPGLab.Networking
             this.AddSkillButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton5.Location = new System.Drawing.Point(341, 247);
+            this.AddSkillButton5.Location = new System.Drawing.Point(341, 243);
             this.AddSkillButton5.Name = "AddSkillButton5";
             this.AddSkillButton5.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton5.TabIndex = 21;
@@ -1698,7 +1754,7 @@ namespace RPGLab.Networking
             this.AddSkillButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton4.Location = new System.Drawing.Point(341, 217);
+            this.AddSkillButton4.Location = new System.Drawing.Point(341, 213);
             this.AddSkillButton4.Name = "AddSkillButton4";
             this.AddSkillButton4.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton4.TabIndex = 20;
@@ -1713,7 +1769,7 @@ namespace RPGLab.Networking
             this.AddSkillButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton3.Location = new System.Drawing.Point(341, 187);
+            this.AddSkillButton3.Location = new System.Drawing.Point(341, 183);
             this.AddSkillButton3.Name = "AddSkillButton3";
             this.AddSkillButton3.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton3.TabIndex = 19;
@@ -1728,7 +1784,7 @@ namespace RPGLab.Networking
             this.AddSkillButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton2.Location = new System.Drawing.Point(341, 157);
+            this.AddSkillButton2.Location = new System.Drawing.Point(341, 153);
             this.AddSkillButton2.Name = "AddSkillButton2";
             this.AddSkillButton2.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton2.TabIndex = 18;
@@ -1743,7 +1799,7 @@ namespace RPGLab.Networking
             this.AddSkillButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddSkillButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSkillButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSkillButton1.Location = new System.Drawing.Point(341, 127);
+            this.AddSkillButton1.Location = new System.Drawing.Point(341, 123);
             this.AddSkillButton1.Name = "AddSkillButton1";
             this.AddSkillButton1.Size = new System.Drawing.Size(75, 23);
             this.AddSkillButton1.TabIndex = 17;
@@ -1758,7 +1814,7 @@ namespace RPGLab.Networking
             this.enterSkillPointsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterSkillPointsData.Location = new System.Drawing.Point(142, 92);
             this.enterSkillPointsData.Name = "enterSkillPointsData";
-            this.enterSkillPointsData.Size = new System.Drawing.Size(304, 37);
+            this.enterSkillPointsData.Size = new System.Drawing.Size(153, 20);
             this.enterSkillPointsData.TabIndex = 16;
             this.enterSkillPointsData.Text = "enterSkillPointsData";
             // 
@@ -1767,9 +1823,9 @@ namespace RPGLab.Networking
             this.enterCharismaData.AutoSize = true;
             this.enterCharismaData.BackColor = System.Drawing.Color.Transparent;
             this.enterCharismaData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterCharismaData.Location = new System.Drawing.Point(165, 277);
+            this.enterCharismaData.Location = new System.Drawing.Point(165, 273);
             this.enterCharismaData.Name = "enterCharismaData";
-            this.enterCharismaData.Size = new System.Drawing.Size(295, 37);
+            this.enterCharismaData.Size = new System.Drawing.Size(148, 20);
             this.enterCharismaData.TabIndex = 15;
             this.enterCharismaData.Text = "enterCharismaData";
             // 
@@ -1778,9 +1834,9 @@ namespace RPGLab.Networking
             this.CharismaLabel.AutoSize = true;
             this.CharismaLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaLabel.Location = new System.Drawing.Point(32, 280);
+            this.CharismaLabel.Location = new System.Drawing.Point(32, 276);
             this.CharismaLabel.Name = "CharismaLabel";
-            this.CharismaLabel.Size = new System.Drawing.Size(173, 37);
+            this.CharismaLabel.Size = new System.Drawing.Size(84, 20);
             this.CharismaLabel.TabIndex = 14;
             this.CharismaLabel.Text = "Charisma :";
             // 
@@ -1789,9 +1845,9 @@ namespace RPGLab.Networking
             this.enterWisdomData.AutoSize = true;
             this.enterWisdomData.BackColor = System.Drawing.Color.Transparent;
             this.enterWisdomData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterWisdomData.Location = new System.Drawing.Point(165, 247);
+            this.enterWisdomData.Location = new System.Drawing.Point(165, 243);
             this.enterWisdomData.Name = "enterWisdomData";
-            this.enterWisdomData.Size = new System.Drawing.Size(274, 37);
+            this.enterWisdomData.Size = new System.Drawing.Size(138, 20);
             this.enterWisdomData.TabIndex = 13;
             this.enterWisdomData.Text = "enterWisdomData";
             // 
@@ -1800,9 +1856,9 @@ namespace RPGLab.Networking
             this.WisdomLabel.AutoSize = true;
             this.WisdomLabel.BackColor = System.Drawing.Color.Transparent;
             this.WisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomLabel.Location = new System.Drawing.Point(32, 250);
+            this.WisdomLabel.Location = new System.Drawing.Point(32, 246);
             this.WisdomLabel.Name = "WisdomLabel";
-            this.WisdomLabel.Size = new System.Drawing.Size(152, 37);
+            this.WisdomLabel.Size = new System.Drawing.Size(74, 20);
             this.WisdomLabel.TabIndex = 12;
             this.WisdomLabel.Text = "Wisdom :";
             // 
@@ -1811,9 +1867,9 @@ namespace RPGLab.Networking
             this.enterIntellectData.AutoSize = true;
             this.enterIntellectData.BackColor = System.Drawing.Color.Transparent;
             this.enterIntellectData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterIntellectData.Location = new System.Drawing.Point(165, 217);
+            this.enterIntellectData.Location = new System.Drawing.Point(165, 213);
             this.enterIntellectData.Name = "enterIntellectData";
-            this.enterIntellectData.Size = new System.Drawing.Size(265, 37);
+            this.enterIntellectData.Size = new System.Drawing.Size(137, 20);
             this.enterIntellectData.TabIndex = 11;
             this.enterIntellectData.Text = "enterIntellectData";
             // 
@@ -1822,9 +1878,9 @@ namespace RPGLab.Networking
             this.IntellectLabel.AutoSize = true;
             this.IntellectLabel.BackColor = System.Drawing.Color.Transparent;
             this.IntellectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntellectLabel.Location = new System.Drawing.Point(32, 220);
+            this.IntellectLabel.Location = new System.Drawing.Point(32, 216);
             this.IntellectLabel.Name = "IntellectLabel";
-            this.IntellectLabel.Size = new System.Drawing.Size(143, 37);
+            this.IntellectLabel.Size = new System.Drawing.Size(73, 20);
             this.IntellectLabel.TabIndex = 10;
             this.IntellectLabel.Text = "Intellect :";
             // 
@@ -1833,9 +1889,9 @@ namespace RPGLab.Networking
             this.enterConstitutionData.AutoSize = true;
             this.enterConstitutionData.BackColor = System.Drawing.Color.Transparent;
             this.enterConstitutionData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterConstitutionData.Location = new System.Drawing.Point(165, 187);
+            this.enterConstitutionData.Location = new System.Drawing.Point(165, 183);
             this.enterConstitutionData.Name = "enterConstitutionData";
-            this.enterConstitutionData.Size = new System.Drawing.Size(327, 37);
+            this.enterConstitutionData.Size = new System.Drawing.Size(166, 20);
             this.enterConstitutionData.TabIndex = 9;
             this.enterConstitutionData.Text = "enterConstitutionData";
             // 
@@ -1844,9 +1900,9 @@ namespace RPGLab.Networking
             this.ConstitutionLabel.AutoSize = true;
             this.ConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
             this.ConstitutionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 190);
+            this.ConstitutionLabel.Location = new System.Drawing.Point(32, 186);
             this.ConstitutionLabel.Name = "ConstitutionLabel";
-            this.ConstitutionLabel.Size = new System.Drawing.Size(205, 37);
+            this.ConstitutionLabel.Size = new System.Drawing.Size(102, 20);
             this.ConstitutionLabel.TabIndex = 8;
             this.ConstitutionLabel.Text = "Constitution :";
             // 
@@ -1855,9 +1911,9 @@ namespace RPGLab.Networking
             this.enterDexterityData.AutoSize = true;
             this.enterDexterityData.BackColor = System.Drawing.Color.Transparent;
             this.enterDexterityData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterDexterityData.Location = new System.Drawing.Point(165, 157);
+            this.enterDexterityData.Location = new System.Drawing.Point(165, 153);
             this.enterDexterityData.Name = "enterDexterityData";
-            this.enterDexterityData.Size = new System.Drawing.Size(280, 37);
+            this.enterDexterityData.Size = new System.Drawing.Size(143, 20);
             this.enterDexterityData.TabIndex = 7;
             this.enterDexterityData.Text = "enterDexterityData";
             // 
@@ -1866,9 +1922,9 @@ namespace RPGLab.Networking
             this.DexterityLabel.AutoSize = true;
             this.DexterityLabel.BackColor = System.Drawing.Color.Transparent;
             this.DexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityLabel.Location = new System.Drawing.Point(32, 160);
+            this.DexterityLabel.Location = new System.Drawing.Point(32, 156);
             this.DexterityLabel.Name = "DexterityLabel";
-            this.DexterityLabel.Size = new System.Drawing.Size(158, 37);
+            this.DexterityLabel.Size = new System.Drawing.Size(79, 20);
             this.DexterityLabel.TabIndex = 6;
             this.DexterityLabel.Text = "Dexterity :";
             // 
@@ -1877,9 +1933,9 @@ namespace RPGLab.Networking
             this.enterStrengthData.AutoSize = true;
             this.enterStrengthData.BackColor = System.Drawing.Color.Transparent;
             this.enterStrengthData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterStrengthData.Location = new System.Drawing.Point(165, 127);
+            this.enterStrengthData.Location = new System.Drawing.Point(165, 123);
             this.enterStrengthData.Name = "enterStrengthData";
-            this.enterStrengthData.Size = new System.Drawing.Size(278, 37);
+            this.enterStrengthData.Size = new System.Drawing.Size(143, 20);
             this.enterStrengthData.TabIndex = 5;
             this.enterStrengthData.Text = "enterStrengthData";
             // 
@@ -1888,9 +1944,9 @@ namespace RPGLab.Networking
             this.StrengthLabel.AutoSize = true;
             this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
             this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel.Location = new System.Drawing.Point(32, 130);
+            this.StrengthLabel.Location = new System.Drawing.Point(32, 126);
             this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(156, 37);
+            this.StrengthLabel.Size = new System.Drawing.Size(79, 20);
             this.StrengthLabel.TabIndex = 4;
             this.StrengthLabel.Text = "Strength :";
             // 
@@ -1901,7 +1957,7 @@ namespace RPGLab.Networking
             this.EnterCarryingWeightData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterCarryingWeightData.Location = new System.Drawing.Point(227, 56);
             this.EnterCarryingWeightData.Name = "EnterCarryingWeightData";
-            this.EnterCarryingWeightData.Size = new System.Drawing.Size(378, 37);
+            this.EnterCarryingWeightData.Size = new System.Drawing.Size(189, 20);
             this.EnterCarryingWeightData.TabIndex = 3;
             this.EnterCarryingWeightData.Text = "enterCarryingWeightData";
             // 
@@ -1912,7 +1968,7 @@ namespace RPGLab.Networking
             this.CapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CapacityLabel.Location = new System.Drawing.Point(38, 56);
             this.CapacityLabel.Name = "CapacityLabel";
-            this.CapacityLabel.Size = new System.Drawing.Size(265, 37);
+            this.CapacityLabel.Size = new System.Drawing.Size(129, 20);
             this.CapacityLabel.TabIndex = 2;
             this.CapacityLabel.Text = "Carrying Weight :";
             // 
@@ -1923,7 +1979,7 @@ namespace RPGLab.Networking
             this.enterExperienceData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterExperienceData.Location = new System.Drawing.Point(227, 26);
             this.enterExperienceData.Name = "enterExperienceData";
-            this.enterExperienceData.Size = new System.Drawing.Size(314, 37);
+            this.enterExperienceData.Size = new System.Drawing.Size(160, 20);
             this.enterExperienceData.TabIndex = 1;
             this.enterExperienceData.Text = "enterExperienceData";
             // 
@@ -1934,7 +1990,7 @@ namespace RPGLab.Networking
             this.xpToLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xpToLevelLabel.Location = new System.Drawing.Point(38, 26);
             this.xpToLevelLabel.Name = "xpToLevelLabel";
-            this.xpToLevelLabel.Size = new System.Drawing.Size(368, 37);
+            this.xpToLevelLabel.Size = new System.Drawing.Size(183, 20);
             this.xpToLevelLabel.TabIndex = 0;
             this.xpToLevelLabel.Text = "Experience to next level :";
             // 
@@ -2030,40 +2086,40 @@ namespace RPGLab.Networking
             ((System.ComponentModel.ISupportInitialize)(this.GamePanelPlayerAvatar)).EndInit();
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.ContainerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemInContainerPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameRenderer)).EndInit();
+            this.InventoryPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryPictureBox1)).EndInit();
+            this.EquipmentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FeetSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmmoSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegsSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RingSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OffHandSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChestSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackpackSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainWeaponSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeadSlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmuletSlot)).EndInit();
             this.SkillsPanel.ResumeLayout(false);
             this.SkillsPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -2137,8 +2193,8 @@ namespace RPGLab.Networking
         private Label GamePanelPlayerManaAmountLabel;
         private Label GamePanelPlayerExperienceAmountPercentLabel;
         private Button GamePanelPlayerSkillsButton;
-        private Button button3;
-        private Button button4;
+        private Button MainInventoryButton;
+        private Button EquipmentButton;
         private Button button5;
         private ListBox GameChatBox;
         private TextBox GameChatTextBox;
@@ -2179,37 +2235,37 @@ namespace RPGLab.Networking
         private Label LoadingBarLabel;
         private ProgressBar LoadingStartBar;
         private FolderBrowserDialog folderBrowserDialog1;
-        public Panel ContainerPanel;
-        private PictureBox pictureBox26;
-        private PictureBox pictureBox27;
-        private PictureBox pictureBox28;
-        private PictureBox pictureBox29;
-        private PictureBox pictureBox30;
-        private PictureBox pictureBox21;
-        private PictureBox pictureBox22;
-        private PictureBox pictureBox23;
-        private PictureBox pictureBox24;
-        private PictureBox pictureBox25;
-        private PictureBox pictureBox16;
-        private PictureBox pictureBox17;
-        private PictureBox pictureBox18;
-        private PictureBox pictureBox19;
-        private PictureBox pictureBox20;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox13;
-        private PictureBox pictureBox15;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
-        private PictureBox ItemInContainerPictureBox5;
-        private PictureBox ItemInContainerPictureBox4;
-        private PictureBox ItemInContainerPictureBox3;
-        private PictureBox ItemInContainerPictureBox2;
-        private PictureBox ItemInContainerPictureBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel EquipmentPanel;
+        private PictureBox FeetSlot;
+        private PictureBox AmmoSlot;
+        private PictureBox LegsSlot;
+        private PictureBox RingSlot;
+        private PictureBox OffHandSlot;
+        private PictureBox ChestSlot;
+        private PictureBox BackpackSlot;
+        private PictureBox MainWeaponSlot;
+        private PictureBox HeadSlot;
+        private PictureBox AmuletSlot;
+        private Panel InventoryPanel;
+        private PictureBox InventoryPictureBox20;
+        private PictureBox InventoryPictureBox19;
+        private PictureBox InventoryPictureBox18;
+        private PictureBox InventoryPictureBox17;
+        private PictureBox InventoryPictureBox16;
+        private PictureBox InventoryPictureBox15;
+        private PictureBox InventoryPictureBox14;
+        private PictureBox InventoryPictureBox13;
+        private PictureBox InventoryPictureBox12;
+        private PictureBox InventoryPictureBox11;
+        private PictureBox InventoryPictureBox10;
+        private PictureBox InventoryPictureBox5;
+        private PictureBox InventoryPictureBox9;
+        private PictureBox InventoryPictureBox8;
+        private PictureBox InventoryPictureBox4;
+        private PictureBox InventoryPictureBox7;
+        private PictureBox InventoryPictureBox3;
+        private PictureBox InventoryPictureBox6;
+        private PictureBox InventoryPictureBox2;
+        private PictureBox InventoryPictureBox1;
     }
 }
