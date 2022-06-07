@@ -114,7 +114,7 @@ namespace RPGLab.Networking
             {
                 _packet.Write(monsterKey);
                 _packet.Write(location);
-            
+
                 SendUDPData(_packet);
             }
         }
@@ -149,5 +149,16 @@ namespace RPGLab.Networking
             }
         }
         #endregion
+        public static void ClientItemToPickUp(Vector2 position, int inventorySlot, int itemID)
+        {
+            using (Packet _packet = new Packet((int)ClientPackets.ClientItemToPickUp))
+            {
+                _packet.Write(position);
+                _packet.Write(inventorySlot);
+                _packet.Write(itemID);
+
+                SendTCPData(_packet);
+            }
+        }
     }
 }

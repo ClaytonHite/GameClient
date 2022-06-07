@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RPGLab.Entities.Items;
 using RPGLab.Networking;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace RPGLab.RPGLab
         public static string[] mapTileNames = {"Grass", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DirtRoad", "DungeonFortress", "DungeonTower", "MainCity", "DeadTree", "GreenTree", "TealTree", "MapleTree", "Autumn Tree", "RedoTree", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "CobblestoneRoad", "DoubleCabin", "Cabin", "TripleCabin", "MowedGrass", "Water", "SandWaterSW", "SandWaterSE", "SandWaterNE", "SandWaterNW", "Sand", "GrassWaterNW", "GrassWaterSW", "GrassWaterSE", "GrassWaterNE", "MountainSnow", "Mountain", "Mountain", "Mountain", "CaveEntrance", "MountainSnow" };
         static string[] mapTileColliders = { "Water", "Mountain" };
         public static Vector2 CurrentWindowPosition = new Vector2(0, 0);
+        public static ItemsAtPosition[,] itemsAtPositions = new ItemsAtPosition[mapSize, mapSize];
         public static void OnLoad()
         {
             using (StreamReader file = new StreamReader(@".\MainMap.json"))
@@ -34,6 +36,7 @@ namespace RPGLab.RPGLab
                     int y = j;
                     if (MainMap[y, x] != ".")
                     {
+                        itemsAtPositions[y, x] = new ItemsAtPosition();
                         string tileName = mapTileNames[Convert.ToInt32(MainMap[y, x])];
                         for (int k = 0; k < mapTileColliders.Length; k++)
                         {

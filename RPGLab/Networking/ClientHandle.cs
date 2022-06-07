@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using RPGLab.RPGLab;
 using System.Drawing;
+using RPGLab.Entities.Items;
+using RPGLab.Entities.Items.ItemTypes;
 
 namespace RPGLab.Networking
 {
@@ -328,10 +330,57 @@ namespace RPGLab.Networking
         public static void DisconnectPlayer(Packet _packet)
         {
             int _id = _packet.ReadInt();
-            Log.Info($"DISCONNECT THIS PLAYER WITH ID {_id} AND REMOVE SPRITES.");
             player[_id].sprite.DestroySelf();
             player[_id].nameTag.DestroySelf();
             player.Remove(_id);
+        }
+        public static void DropItemOnGround(Packet _packet)
+        {
+            string _itemType = _packet.ReadString();
+            Vector2 position = _packet.ReadVector2();
+            switch (_itemType)
+            {
+                case "Item":
+                    Item _item = _packet.ReadItem();
+                    new ItemsAtPosition(_item, position);
+                    break;
+                case "Ammo":
+                    Ammo _ammo = _packet.ReadItemAmmo();
+                    _ammo.AmountOfItem = _packet.ReadInt();
+                    new ItemsAtPosition(_ammo, position);
+                    break;
+                case "Armor":
+                    Armor _armor = _packet.ReadItemArmor();
+                    new ItemsAtPosition(_armor, position);
+                    break;
+                case "Consumable":
+                    Consumable _consumable = _packet.ReadItemConsumable();
+                    _consumable.AmountOfItem = _packet.ReadInt();
+                    new ItemsAtPosition(_consumable , position);
+                    break;
+                case "Container":
+                    Container _container = _packet.ReadItemContainer();
+                    new ItemsAtPosition(_container, position);
+                    break;
+                case "Currency":
+                    Currency _currency = _packet.ReadItemCurrency();
+                    _currency.SetAmountOfItem(_packet.ReadInt());
+                    new ItemsAtPosition(_currency, position);
+                    break;
+                case "Miscellaneous":
+                    Miscellaneous _miscellaneous = _packet.ReadItemMiscellaneous();
+                    _miscellaneous.AmountOfItem = _packet.ReadInt();
+                    new ItemsAtPosition(_miscellaneous, position);
+                    break;
+                case "Tool":
+                    Tool _tool = _packet.ReadItemTool();
+                    new ItemsAtPosition(_tool, position);
+                    break;
+                case "Weapon":
+                    Weapon _weapon = _packet.ReadItemWeapon();
+                    new ItemsAtPosition(_weapon, position);
+                    break;
+            }
         }
     }
 }

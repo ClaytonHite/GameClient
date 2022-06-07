@@ -1,4 +1,6 @@
-﻿using RPGLab.RPGLab;
+﻿using RPGLab.Entities.Items;
+using RPGLab.Entities.Items.ItemTypes;
+using RPGLab.RPGLab;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +25,8 @@ namespace RPGLab.Networking
         private static int classIndexList;
         public Color BackgroundColor = Color.Black;
         public static Vector2 CameraPosition = Vector2.Zero();
-        static List<Image> ImageNumber = new List<Image>();
+        static Image[] ImageNumber = new Image[3000];
+        static List<Image> ItemImageNumbers = new List<Image>();
         static int counter;
         static string periodCount;
         Button button = null;
@@ -32,6 +35,9 @@ namespace RPGLab.Networking
         bool MovePanel = false;
         int firstXPos;
         int firstYPos;
+        Item _itemToPickUp;
+        Vector2 ItemToPickUpLocation;
+        PictureBox focusedInventorySlot;
         public AdventuresOnlineWindow()
         {
             InitializeComponent();
@@ -40,9 +46,12 @@ namespace RPGLab.Networking
             GameRenderer.Paint += Renderer;
             TileMap.LoadMapSprites(MainMapImageList);
             loginWindow = this;
-            for (int i = 0; i < 52; i++)
+            for (int i = 0; i < 3000; i++)
             {
-                ImageNumber.Add((Image)Properties.Resources.ResourceManager.GetObject("_" + i));
+                if ((Image)Properties.Resources.ResourceManager.GetObject("_" + i) != null)
+                {
+                    ImageNumber[i] = (Image)Properties.Resources.ResourceManager.GetObject("_" + i);
+                }
             }
             //DOUBLE BUFFERING ON PANELS.... SWEEETTTT
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, LoginPanel, new object[] { true });
@@ -628,6 +637,10 @@ namespace RPGLab.Networking
             {
                 g.DrawImage(ImageNumber[MapTileSprite.ImageNumber], MapTileSprite.Position.X * 96, MapTileSprite.Position.Y * 64, MapTileSprite.Scale.X, MapTileSprite.Scale.Y);
             }
+            foreach (Item2D _item in Item2D.GetSprites())
+            {
+                g.DrawImage(ImageNumber[_item.ImageNumber], (_item.Position.X * 96) + 24, (_item.Position.Y * 64) + 8, _item.Scale.X, _item.Scale.Y);
+            }
             foreach (Sprite2D sprite in Sprite2D.GetSprites())
             {
                 g.DrawImage(sprite.Sprite, sprite.Position.X * 96, sprite.Position.Y * 64, sprite.Scale.X, sprite.Scale.Y);
@@ -938,6 +951,56 @@ namespace RPGLab.Networking
                 EquipmentPanel.Hide();
                 GamePanel.Focus();
             }
+        }
+        
+        private void GameRenderer_MouseDown(object sender, MouseEventArgs e)
+        {
+            ItemToPickUpLocation = new Vector2((CameraPosition.X + e.X - 672) / 96, (CameraPosition.Y + e.Y - 384) / 64);
+            _itemToPickUp = TileMap.itemsAtPositions[(int)ItemToPickUpLocation.X, (int)ItemToPickUpLocation.Y].itemsAtPosition.LastOrDefault();
+            if (_itemToPickUp != null)
+            {
+                Console.WriteLine($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be picked up.");
+            }
+        }
+
+        private void GameRenderer_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (_itemToPickUp != null)
+            {
+                focusedInventorySlot = FindControlAtCursor(this) as PictureBox;
+                if (focusedInventorySlot != null)
+                {
+                    Console.WriteLine($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be placed at {focusedInventorySlot.Name}");
+                    string inventorySlotPosition = new String(focusedInventorySlot.Name.Where(Char.IsDigit).ToArray());
+                    Console.WriteLine($"{inventorySlotPosition}");
+                    ClientSend.ClientItemToPickUp(ItemToPickUpLocation, Convert.ToInt32(inventorySlotPosition), _itemToPickUp.ID);
+                    ItemToPickUpLocation = null;
+                    focusedInventorySlot = null;
+                    _itemToPickUp = null;
+                }
+            }
+        }
+        public static Control FindControlAtPoint(Control container, Point pos)
+        {
+            Control child;
+            foreach (Control c in container.Controls)
+            {
+                if (c.Visible && c.Bounds.Contains(pos))
+                {
+                    child = FindControlAtPoint(c, new Point(pos.X - c.Left, pos.Y - c.Top));
+                    if (child == null) return c;
+                    else return child;
+                }
+            }
+            return null;
+        }
+
+        public static Control FindControlAtCursor(Form form)
+        {
+            Point pos = Cursor.Position;
+            if (form.Bounds.Contains(pos))
+                return FindControlAtPoint(form, form.PointToClient(pos));
+            return null;
         }
     }
 }

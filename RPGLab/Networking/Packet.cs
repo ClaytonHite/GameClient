@@ -1,4 +1,6 @@
-﻿using RPGLab.RPGLab;
+﻿using RPGLab.Entities.Items;
+using RPGLab.Entities.Items.ItemTypes;
+using RPGLab.RPGLab;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +25,8 @@ public enum ServerPackets
     updatePlayer,
     wrongAccountorPassword,
     ChatBox,
-    DisconnectPlayer
+    DisconnectPlayer,
+    DropItemOnGround
 }
 
 /// <summary>Sent from client to server.</summary>
@@ -39,7 +42,8 @@ public enum ClientPackets
     addSkill,
     CharacterToDelete,
     AccountToDelete,
-    ChatBox
+    ChatBox,
+    ClientItemToPickUp
 }
 
 public class Packet : IDisposable
@@ -189,6 +193,155 @@ public class Packet : IDisposable
     {
         Write(_value.X);
         Write(_value.Y);
+    }
+    public void Write(Container _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.InventorySlots);
+        Write(_value.Price);
+        Write(_value.container.ammoInInventory.Count);
+        foreach (Ammo ammo in _value.container.ammoInInventory)
+        {
+            Write(ammo);
+        }
+        Write(_value.container.armorsInInventory.Count);
+        foreach (Armor armors in _value.container.armorsInInventory)
+        {
+            Write(armors);
+        }
+        Write(_value.container.consumableInInventory.Count);
+        foreach (Consumable consumable in _value.container.consumableInInventory)
+        {
+            Write(consumable);
+        }
+        Write(_value.container.containersInInventory.Count);
+        foreach (Container container in _value.container.containersInInventory)
+        {
+            Write(container);
+        }
+        Write(_value.container.currencyInInventory.Count);
+        foreach (Currency currency in _value.container.currencyInInventory)
+        {
+            Write(currency);
+        }
+        Write(_value.container.miscInInventory.Count);
+        foreach (Miscellaneous misc in _value.container.miscInInventory)
+        {
+            Write(misc);
+        }
+        Write(_value.container.toolsInInventory.Count);
+        foreach (Tool tool in _value.container.toolsInInventory)
+        {
+            Write(tool);
+        }
+        Write(_value.container.weaponsInInventory.Count);
+        foreach (Weapon weapon in _value.container.weaponsInInventory)
+        {
+            Write(weapon);
+        }
+    }
+    public void Write(Item _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+    }
+    public void Write(Ammo _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.Damage);
+        Write(_value.Price);
+    }
+    public void Write(Armor _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.ArmorType);
+        Write(_value.ArmorAmount);
+        Write(_value.Price);
+    }
+    public void Write(Consumable _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.HealthAmountPerTick);
+        Write(_value.ManaAmountPerTick);
+        Write(_value.FullDuration);
+        Write(_value.Price);
+    }
+    public void Write(Currency _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.Price);
+    }
+    public void Write(Miscellaneous _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+    }
+    public void Write(Tool _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.ToolType);
+        Write(_value.ToolDamage);
+        Write(_value.Price);
+    }
+    public void Write(Weapon _value)
+    {
+        Write(_value.ID);
+        Write(_value.Article);
+        Write(_value.Name);
+        Write(_value.ImageNumber);
+        Write(_value.Weight);
+        Write(_value.Stackable);
+        Write(_value.ItemType);
+        Write(_value.WeaponType);
+        Write(_value.Damage);
+        Write(_value.Hands);
+        Write(_value.Price);
     }
     #endregion
 
@@ -367,6 +520,107 @@ public class Packet : IDisposable
     public Vector2 ReadVector2(bool _moveReadPos = true)
     {
         return new Vector2(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
+    }
+    public Item ReadItem(bool _moveReadPos = true)
+    {
+        return new Item(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos));
+    }
+    public Ammo ReadItemAmmo(bool _moveReadPos = true)
+    {
+        return new Ammo(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos));
+    }
+    public Armor ReadItemArmor(bool _moveReadPos = true)
+    {
+        return new Armor(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos));
+    }
+    public Consumable ReadItemConsumable(bool _moveReadPos = true)
+    {
+        return new Consumable(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos));
+    }
+    public Container ReadItemContainer(bool _moveReadPos = true)
+    {
+        int _id = ReadInt(_moveReadPos);
+        string article = ReadString(_moveReadPos);
+        string _name = ReadString(_moveReadPos);
+        int _imageNumber = ReadInt(_moveReadPos);
+        int _weight = ReadInt(_moveReadPos);
+        bool _stackable = ReadBool(_moveReadPos);
+        string _slotType = ReadString(_moveReadPos);
+        int _inventorySlots = ReadInt(_moveReadPos);
+        int _price = ReadInt(_moveReadPos);
+        List<Ammo> _ammoInInventory = new List<Ammo>();
+        List<Armor> _armorsInInventory = new List<Armor>();
+        List<Consumable> _consumableInInventory = new List<Consumable>();
+        List<Currency> _currencyInInventory = new List<Currency>();
+        List<Miscellaneous> _miscInInventory = new List<Miscellaneous>();
+        List<Tool> _toolsInInventory = new List<Tool>();
+        List<Weapon> _weaponsInInventory = new List<Weapon>();
+        List<Container> _containersInInventory = new List<Container>();
+        int _ammoCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _ammoCount; i++)
+        {
+            Ammo ammo = ReadItemAmmo(_moveReadPos);
+            _ammoInInventory.Add(ammo);
+        }
+        int _armorCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _armorCount; i++)
+        {
+            Armor armor = ReadItemArmor(_moveReadPos);
+            _armorsInInventory.Add(armor);
+        }
+        int _consumableCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _consumableCount; i++)
+        {
+            Consumable consumable = ReadItemConsumable(_moveReadPos);
+            _consumableInInventory.Add(consumable);
+        }
+        int _containerCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _containerCount; i++)
+        {
+            Container container = ReadItemContainer(_moveReadPos);
+            _containersInInventory.Add(container);
+        }
+        int _currencyCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _currencyCount; i++)
+        {
+            Currency currency = ReadItemCurrency(_moveReadPos);
+            _currencyInInventory.Add(currency);
+        }
+        int _miscCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _miscCount; i++)
+        {
+            Miscellaneous misc = ReadItemMiscellaneous(_moveReadPos);
+            _miscInInventory.Add(misc);
+        }
+        int _toolCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _toolCount; i++)
+        {
+            Tool tool = ReadItemTool(_moveReadPos);
+            _toolsInInventory.Add(tool);
+        }
+        int _weaponCount = ReadInt(_moveReadPos);
+        for (int i = 1; i < _weaponCount; i++)
+        {
+            Weapon weapon = ReadItemWeapon(_moveReadPos);
+            _weaponsInInventory.Add(weapon);
+        }
+        return new Container(_id, article, _name, _imageNumber, _weight, _stackable, _slotType, _inventorySlots, _price, _ammoInInventory, _armorsInInventory, _consumableInInventory, _currencyInInventory, _miscInInventory, _toolsInInventory, _weaponsInInventory, _containersInInventory);
+    }
+    public Currency ReadItemCurrency(bool _moveReadPos = true)
+    {
+        return new Currency(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos));
+    }
+    public Miscellaneous ReadItemMiscellaneous(bool _moveReadPos = true)
+    {
+        return new Miscellaneous(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos));
+    }
+    public Tool ReadItemTool(bool _moveReadPos = true)
+    {
+        return new Tool(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos));
+    }
+    public Weapon ReadItemWeapon(bool _moveReadPos = true)
+    {
+        return new Weapon(ReadInt(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadString(_moveReadPos), ReadString(_moveReadPos), ReadInt(_moveReadPos), ReadBool(_moveReadPos), ReadInt(_moveReadPos));
     }
     #endregion
 

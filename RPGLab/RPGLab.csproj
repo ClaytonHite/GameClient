@@ -71,6 +71,18 @@
   <ItemGroup>
     <Compile Include="AdventuresOnline.cs" />
     <Compile Include="Combat\Combat.cs" />
+    <Compile Include="Entities\Items\Attributes\ContainerInventory.cs" />
+    <Compile Include="Entities\Items\Attributes\ItemAttribute.cs" />
+    <Compile Include="Entities\Items\Item.cs" />
+    <Compile Include="Entities\Items\ItemsAtPosition.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Ammo.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Armor.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Consumable.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Container.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Currency.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Miscellaneous.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Tool.cs" />
+    <Compile Include="Entities\Items\ItemTypes\Weapon.cs" />
     <Compile Include="Networking\Client.cs" />
     <Compile Include="Networking\ClientHandle.cs" />
     <Compile Include="Networking\ClientSend.cs" />
@@ -93,6 +105,7 @@
     </Compile>
     <Compile Include="RPGLab\Collider.cs" />
     <Compile Include="RPGLab\Constants.cs" />
+    <Compile Include="RPGLab\Item2D.cs" />
     <Compile Include="RPGLab\Log.cs" />
     <Compile Include="RPGLab\MapTileSprites2D.cs" />
     <Compile Include="RPGLab\NameTag2D.cs" />
@@ -319,6 +332,138 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2006.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

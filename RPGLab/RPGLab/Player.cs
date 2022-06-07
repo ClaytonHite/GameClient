@@ -1,4 +1,5 @@
-﻿using RPGLab.Networking;
+﻿using RPGLab.Entities.Items;
+using RPGLab.Networking;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

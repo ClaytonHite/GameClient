@@ -335,7 +335,8 @@ public class Client
             { (int)ServerPackets.updatePlayer, ClientHandle.UpdatePlayer },
             { (int)ServerPackets.wrongAccountorPassword, ClientHandle.WrongAccountorPassword },
             { (int)ServerPackets.ChatBox, ClientHandle.ChatBox },
-            { (int)ServerPackets.DisconnectPlayer, ClientHandle.DisconnectPlayer }
+            { (int)ServerPackets.DisconnectPlayer, ClientHandle.DisconnectPlayer },
+            { (int)ServerPackets.DropItemOnGround, ClientHandle.DropItemOnGround }
         };
         Log.Info("Initialized packets.");
     }
