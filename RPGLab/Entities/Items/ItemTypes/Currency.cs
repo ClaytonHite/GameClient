@@ -51,5 +51,9 @@ namespace RPGLab.Entities.Items.ItemTypes
         {
             new ItemsAtPosition(item, position);
         }
+        public override Object GetItem()
+        {
+            return new Currency(ID, Article, Name, ImageNumber, Weight, Stackable, ItemType, Price);
+        }
     }
 }

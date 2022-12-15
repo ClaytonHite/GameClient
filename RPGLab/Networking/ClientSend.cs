@@ -1,4 +1,6 @@
-﻿using RPGLab.RPGLab;
+﻿using RPGLab.Entities.Items;
+using RPGLab.Entities.Items.ItemTypes;
+using RPGLab.RPGLab;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -149,13 +151,13 @@ namespace RPGLab.Networking
             }
         }
         #endregion
-        public static void ClientItemToPickUp(Vector2 position, int inventorySlot, int itemID)
+        public static void ClientItemToPickUp(Vector2 position, int inventorySlot, Item itemToPickUp)
         {
             using (Packet _packet = new Packet((int)ClientPackets.ClientItemToPickUp))
             {
                 _packet.Write(position);
                 _packet.Write(inventorySlot);
-                _packet.Write(itemID);
+                _packet.Write(itemToPickUp);
 
                 SendTCPData(_packet);
             }

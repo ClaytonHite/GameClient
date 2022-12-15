@@ -959,7 +959,7 @@ namespace RPGLab.Networking
             _itemToPickUp = TileMap.itemsAtPositions[(int)ItemToPickUpLocation.X, (int)ItemToPickUpLocation.Y].itemsAtPosition.LastOrDefault();
             if (_itemToPickUp != null)
             {
-                Console.WriteLine($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be picked up.");
+                Log.Info($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be picked up.");
             }
         }
 
@@ -970,10 +970,9 @@ namespace RPGLab.Networking
                 focusedInventorySlot = FindControlAtCursor(this) as PictureBox;
                 if (focusedInventorySlot != null)
                 {
-                    Console.WriteLine($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be placed at {focusedInventorySlot.Name}");
+                    Log.Info($"{_itemToPickUp.ID} {_itemToPickUp.Name} to be placed at {focusedInventorySlot.Name}");
                     string inventorySlotPosition = new String(focusedInventorySlot.Name.Where(Char.IsDigit).ToArray());
-                    Console.WriteLine($"{inventorySlotPosition}");
-                    ClientSend.ClientItemToPickUp(ItemToPickUpLocation, Convert.ToInt32(inventorySlotPosition), _itemToPickUp.ID);
+                    ClientSend.ClientItemToPickUp(ItemToPickUpLocation, Convert.ToInt32(inventorySlotPosition), _itemToPickUp);
                     ItemToPickUpLocation = null;
                     focusedInventorySlot = null;
                     _itemToPickUp = null;

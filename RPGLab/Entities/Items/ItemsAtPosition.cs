@@ -83,9 +83,37 @@ namespace RPGLab.Entities.Items
             TileMap.itemsAtPositions[(int)position.X, (int)position.Y].containersAtPosition.Add(_item);
         }
 
-        public static Item GetItemOnTopAtPosition(Vector2 position)
+        public Object GetItemOnTopAtPosition(Vector2 position)
         {
-            return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].itemsAtPosition.LastOrDefault<Item>();
+            Item item = TileMap.itemsAtPositions[(int)position.X, (int)position.Y].itemsAtPosition.LastOrDefault<Item>();
+            switch (item.ItemType)
+            {
+                case "Ammo":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].ammoAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Armor":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].armorsAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Consumable":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].consumableAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Container":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].containersAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Currency":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].currencyAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Miscellaneous":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].miscAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Tool":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].toolsAtPosition.LastOrDefault<Item>();
+                    break;
+                case "Weapon":
+                    return TileMap.itemsAtPositions[(int)position.X, (int)position.Y].weaponsAtPosition.LastOrDefault<Item>();
+                    break;
+            }
+            return item;
         }
         public static Ammo GetSpecificItemOnTop(Vector2 position, Ammo item)
         {

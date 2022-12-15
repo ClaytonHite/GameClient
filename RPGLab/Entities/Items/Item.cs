@@ -101,5 +101,9 @@ namespace RPGLab.Entities.Items
         {
             return new Item(ID, Article, Name, ImageNumber, Weight, Stackable, ItemType);
         }
+        public virtual Object GetItem()
+        {
+            return new Item(ID, Article, Name, ImageNumber, Weight, Stackable, ItemType);
+        }
     }
 }

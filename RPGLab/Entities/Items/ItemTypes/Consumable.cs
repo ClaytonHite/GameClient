@@ -47,5 +47,9 @@ namespace RPGLab.Entities.Items.ItemTypes
         {
             TileMap.itemsAtPositions[(int)position.X, (int)position.Y] = new ItemsAtPosition(item, position);
         }
+        public override Object GetItem()
+        {
+            return new Consumable(ID, Article, Name, ImageNumber, Weight, Stackable, ItemType, HealthAmountPerTick, ManaAmountPerTick, FullDuration, Price);
+        }
     }
 }

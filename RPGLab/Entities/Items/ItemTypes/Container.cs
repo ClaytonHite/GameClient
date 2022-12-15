@@ -43,5 +43,9 @@ namespace RPGLab.Entities.Items.ItemTypes
         {
             TileMap.itemsAtPositions[(int)position.X, (int)position.Y] = new ItemsAtPosition(item, position);
         }
+        public override Object GetItem()
+        {
+            return new Container(ID, Article, Name, ImageNumber, Weight, Stackable, ItemType, InventorySlots, Price, container.ammoInInventory, container.armorsInInventory, container.consumableInInventory, container.currencyInInventory, container.miscInInventory, container.toolsInInventory, container.weaponsInInventory, container.containersInInventory);
+        }
     }
 }
