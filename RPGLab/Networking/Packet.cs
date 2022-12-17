@@ -1,5 +1,7 @@
-﻿using RPGLab.Entities.Items;
+﻿using Newtonsoft.Json.Linq;
+using RPGLab.Entities.Items;
 using RPGLab.Entities.Items.ItemTypes;
+using RPGLab.Entities.Players;
 using RPGLab.RPGLab;
 using System;
 using System.Collections;
@@ -194,6 +196,35 @@ public class Packet : IDisposable
         Write(_value.X);
         Write(_value.Y);
     }
+    /// <summary>Adds a Player to the packet.</summary>
+    /// <param name="_value">The Player to add.</param>
+    public void Write(Player _value)
+    {
+        Write(_value.id);
+        Write(_value.username);
+        Write(_value.playerInfo.playerAvatar);
+        Write(_value.playerInfo.playerRace);
+        Write(_value.playerInfo.playerClass);
+        Write(_value.playerInfo.playerBusy);
+        Write(_value.playerInfo.isStealth);
+        Write(_value.stats.strength);
+        Write(_value.stats.dexterity);
+        Write(_value.stats.constitution);
+        Write(_value.stats.intellect);
+        Write(_value.stats.charisma);
+        Write(_value.stats.level);
+        Write(_value.stats.currentHitPoints);
+        Write(_value.stats.maxHitPoints);
+        Write(_value.stats.currentManaPoints);
+        Write(_value.stats.maxManaPoints);
+        Write(_value.stats.playerCarryingWeight);
+        Write(_value.stats.playerExperience);
+        Write(_value.stats.ExperienceRequired);
+        Write(_value.stats.playerSkillPoints);
+        Write(_value.position);
+    }
+    /// <summary>Adds a Container to the packet.</summary>
+    /// <param name="_value">The Container to add.</param>
     public void Write(Container _value)
     {
         Write(_value.ID);
@@ -520,6 +551,22 @@ public class Packet : IDisposable
     public Vector2 ReadVector2(bool _moveReadPos = true)
     {
         return new Vector2(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
+    }
+    /// <summary>Reads a Player from the packet.</summary>
+    /// <param name="_moveReadPos">Whether or not to move the buffer's read position.</param>
+    public Player ReadPlayer(bool _moveReadPos = true)
+    {
+        int _id = ReadInt(_moveReadPos);
+        string _username = ReadString(_moveReadPos);
+        PlayerInfo _playerInfo = new PlayerInfo(ReadString(_moveReadPos), ReadString(_moveReadPos),
+            ReadString(_moveReadPos), ReadBool(_moveReadPos), ReadBool(_moveReadPos));
+        Stats _playerStats = new Stats(ReadInt(_moveReadPos), ReadInt(_moveReadPos),
+            ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos),
+            ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos),
+            ReadInt(_moveReadPos), ReadInt(_moveReadPos), ReadInt(_moveReadPos),
+            ReadInt(_moveReadPos), ReadLong(_moveReadPos), ReadLong(_moveReadPos), ReadInt(_moveReadPos));
+        Vector2 _position = ReadVector2(_moveReadPos);
+        return new Player(_id, _username, _position, _playerStats, _playerInfo);
     }
     public Item ReadItem(bool _moveReadPos = true)
     {

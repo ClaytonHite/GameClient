@@ -6,6 +6,7 @@ using RPGLab;
 using RPGLab.Networking;
 using System.Windows.Forms;
 using System;
+using RPGLab.Entities.Players;
 
 namespace RPGLab
 {
@@ -19,18 +20,17 @@ namespace RPGLab
         public static Dictionary<int, MonsterManager> monsters = new Dictionary<int, MonsterManager>();
         public static PlayerManager _player = new PlayerManager();
 
-        public static void SpawnPlayer(int _id, string _username, Vector2 _position, List<int> Stats, List<string> Info, Image CharImage, bool isStealth, int experienceNeeded)
+        public static void SpawnPlayer(Player _player)
         {
-            Player _player = new Player(_id, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
-            Log.Info($"Registering client {_id}");
-            if(players.ContainsKey(_id))
+            Log.Info($"Registering client {_player.id}");
+            if(players.ContainsKey(_player.id))
             {
-                players.Remove(_id);
-            }//Make Disconnect function to remove plyaer from dictionary, sprite, nametag, and collider
-            players.Add(_id, _player);
-            if(Client.instance.myId == _id)
+                players.Remove(_player.id);
+            }//Make Disconnect function to remove player from dictionary, sprite, nametag, and collider
+            players.Add(_player.id, _player);
+            if(Client.instance.myId == _player.id)
             {
-                AdventuresOnlineWindow.ChaseCamera(_position);
+                AdventuresOnlineWindow.ChaseCamera(_player.position);
             }
         }
         public static void SpawnMonster(int _id, string monsterName, Vector2 _position, string CharImage)

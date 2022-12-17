@@ -1,4 +1,5 @@
-﻿using RPGLab.Networking;
+﻿using RPGLab.Entities.Players;
+using RPGLab.Networking;
 using RPGLab.RPGLab;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace RPGLab.Combat
         {
             if (player.ContainsKey(Client.instance.myId))
             {
-                if (!player[Client.instance.myId].playerBusy)
+                if (!player[Client.instance.myId].playerInfo.playerBusy)
                 {
                     Vector2 playerPos = player[Client.instance.myId].position;
                     foreach (KeyValuePair<int, MonsterManager> monster in monsters)

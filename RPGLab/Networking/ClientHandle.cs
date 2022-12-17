@@ -9,6 +9,7 @@ using RPGLab.RPGLab;
 using System.Drawing;
 using RPGLab.Entities.Items;
 using RPGLab.Entities.Items.ItemTypes;
+using RPGLab.Entities.Players;
 
 namespace RPGLab.Networking
 {
@@ -103,107 +104,27 @@ namespace RPGLab.Networking
         }
         public static void SpawnPlayer(Packet _packet)
         {
-            int _clientID = _packet.ReadInt();
-            string _username = _packet.ReadString();
-            Vector2 _position = _packet.ReadVector2();
-            int _playerLevel = _packet.ReadInt();
-            string playerAvatar = _packet.ReadString();
-            int currentHitPoints = _packet.ReadInt();
-            int maxHitPoints = _packet.ReadInt();
-            int currentManaPoints = _packet.ReadInt();
-            int maxManaPoints = _packet.ReadInt();
-            string playerRace = _packet.ReadString();
-            string playerClass = _packet.ReadString();
-            int playerStrength = _packet.ReadInt();
-            int playerDexterity = _packet.ReadInt();
-            int playerConstitution = _packet.ReadInt();
-            int playerIntellect = _packet.ReadInt();
-            int playerWisdom = _packet.ReadInt();
-            int playerCharisma = _packet.ReadInt();
-            int playerCarryingWeight = _packet.ReadInt();
-            int playerExperience = _packet.ReadInt();
-            int playerSkillPoints = _packet.ReadInt();
-            bool isStealth = _packet.ReadBool();
-            int experienceNeeded = _packet.ReadInt();
-            int previousExperienceNeeded = _packet.ReadInt();
-
-            List<int> Stats = new List<int>();
-            Stats.Add(_playerLevel);
-            Stats.Add(currentHitPoints);
-            Stats.Add(maxHitPoints);
-            Stats.Add(currentManaPoints);
-            Stats.Add(maxManaPoints);
-            Stats.Add(playerStrength);
-            Stats.Add(playerDexterity);
-            Stats.Add(playerConstitution);
-            Stats.Add(playerIntellect);
-            Stats.Add(playerWisdom);
-            Stats.Add(playerCharisma);
-            Stats.Add(playerCarryingWeight);
-            Stats.Add(playerExperience);
-            Stats.Add(playerSkillPoints);
-
-            List<string> Info = new List<string>();
-            Info.Add(playerAvatar);
-            Info.Add(playerRace);
-            Info.Add(playerClass);
-
-            Image CharImage = AdventuresOnlineWindow.GetAvatarImage(playerRace, playerAvatar);
-            GameManager.SpawnPlayer(_clientID, _username, _position, Stats, Info, CharImage, isStealth, experienceNeeded);
-            if (Client.instance.myId == _clientID)
+            Player _player = _packet.ReadPlayer();
+            Image CharImage = AdventuresOnlineWindow.GetAvatarImage(_player.playerInfo.playerRace, _player.playerInfo.playerAvatar);
+            GameManager.SpawnPlayer(_player);
+            if (Client.instance.myId == _player.id)
             {
-                AdventuresOnlineWindow.loginWindow.SpawnPlayer(_clientID, _username, _position, Stats, Info, isStealth, experienceNeeded, previousExperienceNeeded);
+                AdventuresOnlineWindow.loginWindow.SpawnPlayer(_player);
                 isOnline = true;
             }
         }
         public static void UpdatePlayer(Packet _packet)
         {
-            int _clientID = _packet.ReadInt();
-            Vector2 _position = _packet.ReadVector2();
-            int _playerLevel = _packet.ReadInt();
-            int currentHitPoints = _packet.ReadInt();
-            int maxHitPoints = _packet.ReadInt();
-            int currentManaPoints = _packet.ReadInt();
-            int maxManaPoints = _packet.ReadInt();
-            int playerStrength = _packet.ReadInt();
-            int playerDexterity = _packet.ReadInt();
-            int playerConstitution = _packet.ReadInt();
-            int playerIntellect = _packet.ReadInt();
-            int playerWisdom = _packet.ReadInt();
-            int playerCharisma = _packet.ReadInt();
-            int playerCarryingWeight = _packet.ReadInt();
-            int playerExperience = _packet.ReadInt();
-            int playerSkillPoints = _packet.ReadInt();
-            bool isStealth = _packet.ReadBool();
-            long experienceRequired = _packet.ReadLong();
-            long previousExperienceRequired = _packet.ReadLong();
-            if (player.ContainsKey(_clientID))
-            {
-                player[_clientID].position = _position;
-                player[_clientID].sprite.Position = _position;
-                player[_clientID].nameTag.Position = _position;
-                player[_clientID].level = _playerLevel;
-                player[_clientID].currentHitPoints = currentHitPoints;
-                player[_clientID].maxHitPoints = maxHitPoints;
-                player[_clientID].currentManaPoints = currentManaPoints;
-                player[_clientID].maxManaPoints = maxManaPoints;
-                player[_clientID].strength = playerStrength;
-                player[_clientID].dexterity = playerDexterity;
-                player[_clientID].constitution = playerConstitution;
-                player[_clientID].intellect = playerIntellect;
-                player[_clientID].wisdom = playerWisdom;
-                player[_clientID].charisma = playerCharisma;
-                player[_clientID].playerCarryingWeight = playerCarryingWeight;
-                player[_clientID].playerExperience = playerExperience;
-                player[_clientID].playerSkillPoints = playerSkillPoints;
-                player[_clientID].isStealth = isStealth;
-                player[_clientID].ExperienceRequired = experienceRequired;
-                player[_clientID].PreviousExperienceRequired = previousExperienceRequired;
+            Player _player = _packet.ReadPlayer();
 
-                if (Client.instance.myId == _clientID)
+            if (player.ContainsKey(_player.id))
+            {
+                player[_player.id] = _player;
+
+                if (Client.instance.myId == _player.id)
                 {
                     AdventuresOnlineWindow.ChaseCamera(player[Client.instance.myId].sprite.Position);
-                    AdventuresOnlineWindow.UpdateNameLevelRaceLabel(_clientID);
+                    AdventuresOnlineWindow.UpdateNameLevelRaceLabel(_player.id);
                 }
             }
         }
@@ -289,7 +210,7 @@ namespace RPGLab.Networking
             {
                 if (Client.instance.myId == _toClient)
                 {
-                    GameManager.players[_toClient].currentHitPoints = playerHealth;
+                    GameManager.players[_toClient].stats.currentHitPoints = playerHealth;
                     if (monsters.ContainsKey(monsterID))
                     {
                         if (damage != 0)

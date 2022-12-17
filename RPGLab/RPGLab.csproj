@@ -83,6 +83,7 @@
     <Compile Include="Entities\Items\ItemTypes\Miscellaneous.cs" />
     <Compile Include="Entities\Items\ItemTypes\Tool.cs" />
     <Compile Include="Entities\Items\ItemTypes\Weapon.cs" />
+    <Compile Include="Entities\Players\PlayerInfo.cs" />
     <Compile Include="Networking\Client.cs" />
     <Compile Include="Networking\ClientHandle.cs" />
     <Compile Include="Networking\ClientSend.cs" />
@@ -109,10 +110,11 @@
     <Compile Include="RPGLab\Log.cs" />
     <Compile Include="RPGLab\MapTileSprites2D.cs" />
     <Compile Include="RPGLab\NameTag2D.cs" />
-    <Compile Include="RPGLab\Player.cs" />
+    <Compile Include="Entities\Players\Player.cs" />
     <Compile Include="RPGLab\RPGLab.cs" />
     <Compile Include="RPGLab\Shape2D.cs" />
     <Compile Include="RPGLab\Sprite2D.cs" />
+    <Compile Include="Entities\Players\Stats.cs" />
     <Compile Include="RPGLab\TileMap.cs" />
     <Compile Include="RPGLab\UpdateMethod.cs" />
     <Compile Include="RPGLab\Vector2.cs" />

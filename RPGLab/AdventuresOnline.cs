@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Collections;
 using RPGLab.Networking;
 using System.Threading.Tasks;
+using RPGLab.Entities.Players;
 
 namespace RPGLab
 {

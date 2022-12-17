@@ -39,6 +39,10 @@ namespace RPGLab.RPGLab
         {
             NameTags.Remove(nameTag);
         }
+        public NameTag2D GetNameTag()
+        {
+            return this;
+        }
         public static List<NameTag2D> GetNameTags()
         {
             return NameTags;
